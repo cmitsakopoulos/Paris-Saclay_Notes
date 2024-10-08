@@ -1,0 +1,25 @@
+PAPER: Genomic signatures reveal DNA damage response deficiency in colorectal cancer brain metastases.
+
+* Figures representing mutations per certain measurements, ex. mutations per megabase, they always include data from the entire genome unless they’ve said so.  
+* **Mutation burden**: Number of **detrimental** mutations within a given sequence or entire genome.  
+* **Decile**: Each of ten equal groups into which a population can be divided according to the distribution of values of a particular variable.  
+* When calculating the expected number of mutations, you have to include the mutation rate; the number of mutations per megabase. But look out to make sure that you calculate it with information that is pertinent to a small group which you want to research, not including random numbers that could include a larger, unrelated group.  
+* Q2: **Tumours** have **clones** and a very **high level of mutation** (**de novo**), which could be acquired through **clone selection** in the tumour. Keep in mind that the 30% of mutations that are already identified within CRC that metastases to BM, are normal; **driver mutations**.  
+* Q3: Mutations are not usually random, they are caused by **carcinogens** for example. The figure does not contain numbers, **only proportion** (in %), therefore only qualitative observations can be made.  
+  * Proportions for C-\>T and T-\>G are **statistically** (significantly) different to the **primary**. However the **spread is large**. Mutation proportions favour specific substitutions compared to the **primary form of cancer**. (We are comparing **brain metastasis** to **primary brain cancer**)  
+  * Decrease in the proportion of **C-\>T** compared to the primary form, **T\>G** substitutions are significantly higher than the **primary**. These are **preferential substitutions**.  
+  * By identifying proportions you can perform **mutational signature analysis**.  
+* Q4: For each substitution there are **96 possibilities**, which contribute to the **signature that arises**. Look for the graph to understand the frequency of mutation possibilities.   
+  * In even a single sample, you can locate **multiple** causes for a cancer, specifically expressed by a **larger** **number of signatures**.  
+  * Cross reference **2b** to **2c** to understand what causes the most represented signatures. Look for the most proportionally represented signatures and record with additional information on the **substitutions** associated with those signatures. For brain samples, **ageing signature (1)** is the most represented, second is **signature 17**, **mismatch repair deficiency**.   
+* Q5: The **earliest mutations** are the ones which are **shared** between the metastasis and the **primary cancer**.   
+  * As you can see in **2d**, **signature 1** is the highest proportionally, second being **signature 18**, which are **shared** aka **earliest mutations**.   
+  * **Signature 3** is **homogeneous,** it's more random due to **recombination deficiency** and therefore less preferential in **mutations**.   
+  * Signature 17 has been **increased** despite being shared, evolved due to **tumour** selection etc. This points to a particular **genomic instability** of the tumour. This could mean an instability in which **microsatellites** are prevalent: **microsatellite instability (MSI)**.  
+* Q6: With genomic instabilities such as the likes of MSIs, **errors can occur** as microsatellites are repeated throughout the genome. Figure 3:  
+  * **Median values** for MS in Brain metastasis compared to primary are significantly higher. Also account for the **p \= 0.004, solid statistical relationship**.   
+  * The **Liver analysis** on the right is used as a **control**, to observe if the features of **brain metastases** are attributed to just being **brain metastases,** or because they **originate from colorectal cancer**.  
+  * In 3b we observe that the patients have **differing** signature presence. Signature 6 therefore was **preferred** in patient 3 (BM003), than it was in patient 9\. The point of this panel is to demonstrate the spread, the **heterogeneity** between patients in a cohort.   
+* Q7: Columns in Figure 4 represent **samples**, could be from the same patient. Percentages represent the amount of **samples** presenting a mutation in a particular gene. This figure is aimed at demonstrating which genes are most often mutated within a cohort of patients. It also demonstrates the association of certain samples with **preferred mutations**; aka, **missense mutations** shared between samples.   
+  * Could create a subgroup with phenotype of near identical mutations in TPC53, APC and KRAS. Should it be by gene only, or by mutation only?  
+  * By manipulating the treatment, you could use survival rate on new treatments on previously suggested subgroups to see if they should be kept together. That is, those who die should be into other subgroups, those who live together are within a group. **Prefer clinic solutions** if the group is too small to divide into **subgroups**. 
