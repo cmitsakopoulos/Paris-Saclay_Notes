@@ -32,6 +32,15 @@ class Mylist:
             while current_node is not None:
                 counter +=1
                 current_node = current_node.next
+            return counter
+
+        def map(self, func):
+            current_node = self.head
+             while current_node is not None:
+                current_node.data = func(current_node.data) 
+                current_node = current_node.next
+            return current_node #NOT SURE CROSS REFERENCE
+
 
 if __name__ = "__main__":
     ml = Mylist()
