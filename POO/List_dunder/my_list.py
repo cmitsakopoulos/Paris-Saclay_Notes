@@ -14,6 +14,12 @@ class MyList:
         while current_node.next is not None:
             current_node = current_node.next
         current_node.next = new_node
+    
+    def __iter__(self):
+        current_node = self.head
+        while current_node is not None:
+            yield current_node.data
+            current_node = current_node.next
 
 
 if __name__=='__main__':
