@@ -19,7 +19,7 @@ class User:
     def __repr__(self):
         return f"User: {self.name}"
 ```
-Using `from typing import Dict, List` your data types can
+Using `from typing import Dict, List` your data types can be represented by test instead of symbols; aka List, instead of [].
 
 ## main.py
 ```python
