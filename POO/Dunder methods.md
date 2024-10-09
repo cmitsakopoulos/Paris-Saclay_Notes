@@ -1,7 +1,7 @@
 ## Using dunder methods in the magazines and books example
 
+# jPLEASE PUSH ADDITIONS TO CODE, SOME .py files are INCOMPLETE, DELETE WHEN DONE PLS
 ### user.py
-
 ```python
 class User:
     def __init__(self, name:str, deposit:int):
