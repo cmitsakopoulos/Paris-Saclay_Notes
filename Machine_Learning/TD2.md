@@ -1,4 +1,4 @@
-## Working with Agglomerative Cloustering
+## Working with Agglomerative Cloustering (By hand)
 
 We have the following data points, which in **Aglomerative clustering** (in the initial stage), all are treated as a cluster by themselves:
 
@@ -84,3 +84,6 @@ Data merges into a single cluster, with the final distance of E to the rest bein
 Considering that the rest of the data points **converged** easily, with small distances:
 
     Conclusion: point E could be an outlier
+
+
+
