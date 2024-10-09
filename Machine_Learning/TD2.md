@@ -31,15 +31,14 @@ Next, a distance matrix is recalculated accounting for the new cluster.
 
 To calculate the distance of a cluster to a single point (ex. {A, B} to C), we can either use:
 
- **Single linkage**: 
- In statistics, single-linkage clustering is one of several methods of hierarchical clustering. It is based on grouping clusters in bottom-up fashion (agglomerative clustering), at each step combining two clusters that contain the closest pair of elements not yet belonging to the same cluster as each other. You therefore use **the minimum distance** to cluster. 
- 
-In other words: 
+Single linkage
+: In statistics, **single-linkage** clustering is one of several methods of hierarchical clustering. It is based on grouping clusters in a **bottom-up fashion** (agglomerative clustering), at each step combining two clusters that contain the closest pair of elements not yet belonging to the same cluster as each other. You use **the minimum distance** to cluster. 
 
-    d({A, B}, C) = min({A, C}, {B, C})
+Single-Linkage in mathematical terms:
+>  d({A, B}, C) = min({A, C}, {B, C})
 
-**Complete linkage**:
- Computing the distance between clusters using their outermost points to link them to each other, the **maximum distance** therefore between the points within these clusters.  
+Complete linkage
+: Computing the distance between clusters using their outermost points to link them to each other, the **maximum distance** therefore between the points within these clusters.  
 
  ADD FORMULA
 
