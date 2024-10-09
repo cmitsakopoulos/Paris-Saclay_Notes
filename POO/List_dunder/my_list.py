@@ -20,7 +20,12 @@ class MyList:
         while current_node is not None:
             yield current_node.data
             current_node = current_node.next
-
+    
+    def __getitem__(self, index):
+        current_node = self.head
+        for i in range(index):
+            current_node = current_node.next
+        return current_node.data
 
 if __name__=='__main__':
     ml = MyList()
