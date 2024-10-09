@@ -1,5 +1,14 @@
-In order to characterise genetic risk factors within families, therefore calculate risk of germinal disease within a group of **relatives**, you must quantify the **number of cases* within that group, compared to the **control**; the proportion of disease presence within the larger population.  
-   INSERT FORMULA HERE  
+
+Relative risk
+: To quantify the **number of cases** within a group of relatives, compared to a **control**; calculate risk of germinal disease within a group of **relatives**.  
+
+  ==RR(Relative Risk)== = (**a / z**) / (**c / y**)
+
+| MIAULER | Cases | Controls | Total |
+| ----------- | -------- | -------- | -------- |
+| Relatives  | a | b | z |
+| General Population | c | d | y |
+
 For the aforementioned, if there are **twins* within the group of relatives, or within the confines of a larger study, **twins* are able to give you information to log the **concordance rate* of **germinal disease* between **monozygous and dizygous twins**.   
   Obviously, **monozygous twins* have a higher **concordance* rate, owing to their sharing more of the genome than dizygous.   
   **Environmental factors* mean that monozygous twins **can never have a 100%* **concordance rate**.  
