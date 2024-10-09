@@ -4,7 +4,6 @@ class MyList:
     def __init__(self):
         self.head = None
     
-    
     def append(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -26,7 +25,15 @@ class MyList:
         for i in range(index):
             current_node = current_node.next
         return current_node.data
-
+    
+    def __len__(self):
+        current_node = self.head
+        counter = 0
+        while current_node is not None:
+            counter += 1
+            current_node = current_node.next
+        return counter
+    
 if __name__=='__main__':
     ml = MyList()
     ml.append("A")
