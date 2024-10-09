@@ -25,7 +25,14 @@ class Mylist:
             for i in range(index)
                 current_node = current_node.next
             return current_node.data
-            
+
+        def __len__(self):
+            current_ndoe = self.head
+            counter = 0
+            while current_node is not None:
+                counter +=1
+                current_node = current_node.next
+
 if __name__ = "__main__":
     ml = Mylist()
     ml.append("A")
