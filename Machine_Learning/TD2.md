@@ -82,7 +82,7 @@ Data merges into a single cluster, with the final distance of E to the rest bein
 
 Considering that the rest of the data points **converged** easily, with small distances:
 
-    Conclusion: point E could be an outlier
+**==Conclusion: E could be an outlier==**
 
 
 
