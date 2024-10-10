@@ -23,7 +23,9 @@ Human ethnic groups display different disease pathogeny when compared against ea
 **Allele** frequency in patients of African origin is higher, hence **variation** is higher. Therefore, careful **filtering** is to be applied for genotypic analysis of such populations. Explanation:
 * Say you have allele a and allele b, which are possible causes of BDS(Big Dick Syndrome). In analysing a single ethnic group you observe allele b to b(e) more frequent than allele a. However, when comparing ethnic groups, you might discover that allele b and allele a, equally contribute to disease, and that the ethnic group you looked at first has a **natural higher frequency** for allele b; as such, filtering has to be adapted to account for these varying frequencies.
 
-Having said that: Research to ascertain country specific variation is important, as filtering methods should be adapted per region, to ensure that information is not being left out. **Or** it could be a small **niche population**. The main problem, is to identify **a good reference** group, which is homogeneous.
+Having said that: Research to ascertain country specific variation is important, as filtering methods should be adapted per region, to ensure that information is not being misinterpreted. 
+
+The main problem, is to identify **a good reference** group ont that is **homogeneous**.
 
 Side note
 : **EthSeq**: Annotations for whole-genome sequencing of ethnic group genetic data. **TCGA, ICGC**: Information on **cancer** **genes**, **variation locations**, on reference genomes. Discovering function of non-coding areas of DNA can identify dynamics of gene expression regulation that are otherwise indiscernible. 
