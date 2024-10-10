@@ -27,13 +27,16 @@ Having said that: Research to ascertain country specific variation is important,
 
 The main problem, is to identify **a good reference** group ont that is **homogeneous**.
 
-Side note
-: **EthSeq**: Annotations for whole-genome sequencing of ethnic group genetic data. **TCGA, ICGC**: Information on **cancer** **genes**, **variation locations**, on reference genomes. Discovering function of non-coding areas of DNA can identify dynamics of gene expression regulation that are otherwise indiscernible. 
+#### *Side note*:
+**EthSeq**: Annotations for whole-genome sequencing of ethnic group genetic data. **TCGA, ICGC**: Information on **cancer** **genes**, **variation locations**, on reference genomes. Discovering function of non-coding areas of DNA can identify dynamics of gene expression regulation that are otherwise indiscernible. 
 
-**Cohort based analysis**: Analysis of **distinct** patients instead of an individual to uncover **recurrent alterations** in the DNA that lead to disease. Can aid in the understanding of the development of the disease, based on the availability of patients for **an analysis cohort** you can obviously figure out the rarity of a disease.  
-  * From this analysis one could generate a **genomic landscape**, a **comparative** graph to represent genetic variation for diseases between **cohort individuals**.   
-  * **Sub-groups** can be generated within cohorts, which have slightly **different mutations** in distinct individuals.  
-    * Essentially, these graphical maps are useful in discerning **disease mutation heterogeneity.**  
+Cohort based analysis
+: Analysis of a cohort of **distinct** patients instead of an specific individual, in order to uncover **recurrent alterations** in the DNA which incur disease. This analysis broadens undestanding of the development of a disease and based on the availability of patients for **an analysis cohort** you can obtain a large enough sample to determine disease rarity/frequency.
+
+  * From this analysis one could generate a **genomic landscape**, a **comparative** graph to represent genetic variation for diseases between **cohort individuals** which accounts for environmental and genetic factors.   
+  * **Sub-groups** of **distinct mutations** arise from this analysis.  
+    * These graphical maps essentially represent **disease mutation heterogeneity.**  
+
 * Identifying the **initial** genetic alterations that can affect **signalling pathways**, **protein interactions** etc, are the most important to **identify**. The **first dominoes to a domino cascade**.   
 * You can’t just **remove genes**, you need to see if there are **alterations** after **expression possibly**, or ones that show up **once pathways have been altered** in a cascade, by one mutation; some genes could be **vital** survival genes.  
 * **Over-mutation** in cancer cells can lead to cancerous clonal cells with **marginal genetic difference.**  
