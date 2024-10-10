@@ -37,13 +37,22 @@ Cohort based analysis
   * **Sub-groups** of **distinct mutations** arise from this analysis.  
     * These graphical maps essentially represent **disease mutation heterogeneity.**  
 
-* Identifying the **initial** genetic alterations that can affect **signalling pathways**, **protein interactions** etc, are the most important to **identify**. The **first dominoes to a domino cascade**.   
-* You can’t just **remove genes**, you need to see if there are **alterations** after **expression possibly**, or ones that show up **once pathways have been altered** in a cascade, by one mutation; some genes could be **vital** survival genes.  
-* **Over-mutation** in cancer cells can lead to cancerous clonal cells with **marginal genetic difference.**  
-* Therefore, it is important to **recreate the** “genetic mutation story”, of a tumour to discover its **progress** and importantly, the **transformation genes**, which converted a susceptible cell into a tumour. As the tumour grows and the cell number increases, uncovering the story is more tricky, due to the aforementioned marginal differences.   
-* Using the history of development, you can **identify the point** at which **alleles** are generated off of the **transformational genes**, making it easier to analyse patients which, depending on disease duration etc, will differ from the **reference group**.  
-  * **Personalised medicine**.  
-  * To measure the probability of survival in **personalised** medicine study, you use a **Kaplan Meir curve; survival curve**, against time (in ex. days).  
+Identifying the **initial** genetic alterations that can affect **signalling pathways**, **protein interactions** etc, are the most important to **identify**. The **first dominoes to a domino cascade**. 
+
+Importantly, genetic alterations can affect the body in multiple ways; some are components of **signalling pathways**, others are involved in **metabolic pathways**, if such pathways are to *unperform/or cease to exist*, genes of interest become **vital** genes.
+
+## Cancer
+**Over-mutation** in cancer cells can lead to cancerous clonal cells with **marginal genetic difference**. Therefore, you should **recreate the** **“genetic mutation story”** of a tumour, to discover its **progress** and importantly, the **transformation genes**: those which converted a susceptible cell into a tumourous cell. 
+
+The **compounding effect** of tumour **over-mutation** complicates the recreation of the tumour progression history, with many marginal differences to account for.
+
+Given a tumour history graph, you can observe **allele** onset alongside **transformational genes**, with which information you can infer a therapeutic target for a possible patient; comparing the total time that they have been sick, to the historical progression of a tumour. AKA:
+
+**Personalised medicine** 
+
+### Applications in personal medicine and difficulties to face
+
+To measure the probability of survival in a **personalised** medicine study, you use a **Kaplan Meir curve; survival curve**, against time (in ex. days).  
   * Treatments are useful if the **overall median survival** is higher than **untreated** or **previous treatments** (control).  
   * When analysing this **median survival** rate, if patients die **due to other causes**, or don’t even show for check ups, they are considered **Censored data points**.  
   * Often when patients present at the onset of a disease, an autopsy with omic analysis will provide valuable starter info, which can then be built on with a future autopsy, as or if **the disease progresses**.   
