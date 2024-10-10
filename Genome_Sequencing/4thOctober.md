@@ -65,6 +65,9 @@ With each nucleotide addition during sequencing, the **bead will emit fluorescen
 LD
 : The **non-random** association of a number of alleles due to their **proximity on the same chromosome/locus** and thereby subsequent **co-inheritance**, *despite recombinatory events chromosomes undergo*.
 
+Mathematics of LD as presented in NCBI
+: D = p A B − p A p B , where pA and pB represent the frequencies of alleles A and B, respectively, and pAB is the frequency of the two-locus haplotype containing alleles A and B 
+
 In other words, a value which determines the 
    
 Say you have **SNP1* with Allele 1 and 3, and **SNP2* with allele 2 and 4. The genotype for **SNP1* therefore will be Al1/Al2, Al1/Al1 and Al2/Al2. The genotype for **SNP2* will be Al4/Al2, Al4/Al4 and Al2/Al2  
