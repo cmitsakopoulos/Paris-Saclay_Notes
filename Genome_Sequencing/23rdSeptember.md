@@ -1,6 +1,30 @@
-* Variants observed in genes can have massive implications for the proteins they encode, and the scale at which they affect the body are **gradual**.  
-* Human populations across the planet, grouped on ethnic origin, will have different pathogeny from a disease compared to each other. **Population dependent variation**; can affect the **number of variants** per **kb**.   
-  * **Allele** frequency in African origin patients is higher, **variation** is higher. Therefore, careful **filtering** has to be done for these populations.  
+## Variance, Ethnic Groups and Germinal Disease Understanding
+
+SNVs in genes can incur significant implications for their encoded proteins, by extension, the effect these variations cause for the human body vary depending on the, location and severity of the variation:
+
+### Types of mutations of concern
+
+Coding variations
+: Mutations which **occur at the open-reading frame** (ORF), *altering the final product of translation*. (ORF: code within the start and stop codon area)
+Non-coding variation
+: Mutations **outside the ORF**, this could for example affect *introns, UTRs, etc.*
+splice sites: special status, can affect open-reading frame (alternative splicing).
+We may want to focus on coding mutations.
+nb. this may lead to miss of information, as non-coding variation can also have an impact on
+diseases.
+non-sense mutation (stop codon insertion) leads probably to the worst impact on the protein
+sequence.
+the sooner the mutation occur in the coding sequence the more impact it will have on the
+associated peptid.
+• missense mutation (codon change leading to amino acid change)
+– conservative missense: keep amino-acid charge (positively charged vs negatively charge) – non-conservative: does not keep the charge.
+• silent mutation: no change in the amino-acid sequence
+• indel & insertion/deletion: frameshift, when n mod 3 ̸= 3, leading often to appearance of a stop codon.
+it is difficult to get insight on the effect of the point mutation on the protein function. • loss of function;
+
+* Human populations across the planet, grouped on ethnic origin, will have different pathogeny from a disease compared to each other. **Population dependent variation**; can affect the **number of variants** per **kb** identified during annotation.
+
+* **Allele** frequency in African origin patients is higher, **variation** is higher. Therefore, careful **filtering** has to be done for these populations.  
 * Research to ascertain country specific variation is important, as filtering methods should be adapted per region, to ensure that information is not being left out. **Or** it could be a small **niche population**. The main problem, is to identify **a good reference** group, which is homogeneous.  
 *  **EthSeq**: Annotations for whole-genome sequencing of ethnic group genetic data.  
 * **TCGA, ICGC**: Information on **cancer** **genes**, **variation locations**, on reference genomes.  
@@ -24,7 +48,7 @@
     * **Stochastic**: **Environment, Random Mutations.**  
     * **Non-genetic**: **Lifestyle related.**
 
-# Functional Annotation
+## Functional Annotation
 
 * Instead of just annotating the gene, you collect the genes responsible for, ex. **a signalling pathway**, and **congregate them** into a **functional** annotation. **A genelist** involved in a disease.   
   * A single gene cannot bring about an entire disease, **can bring about a cascade**, but the whole picture is needed. IE, protein interaction etc.  
@@ -37,7 +61,7 @@
     * You can have a (gene) **family wise error rate**.    
     * To account for **false discovery in multiple discovery** (like making this tree), correction methods are used: ex. **Bonferroni correction**.
 
-# Re-sequencing
+## Re-sequencing
 
 * Comparative genomics for genome evolutionary and adaptation mechanisms.  
   * Ex. used for bacterial antibiotic resistance mechanisms.  
@@ -46,7 +70,7 @@
 * You can also use this method in identifying **virus inserted** genetic sequences in the human genome. (ex. papiloma, herpes)  
   * This would involve comparing annotated pathogenic genomic sequences with human reference genomes.
 
-# Single Cell Genomics
+## Single Cell Genomics
 
 * Useful for **complex tissue types**, such as the nervous system which would require large samples. Otherwise, could perform on **embryos**, analyse development trajectory.  
   * You can study tissue composition and function of individual **constituent cells** independently. Single cell sequencing is **mostly RNA-seq, not DNA seq usually**.  
