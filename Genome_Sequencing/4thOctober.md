@@ -22,8 +22,13 @@ This measurement differs between **monozygous and dizygous twins**. That is to s
 
 * **Environmental factors** mean that ==monozygous twins== can **never** have a **100%** concordance rate.  
 
-**Segregation study**: Generate a hypothesis on transmission for the disease, tricky as the phenotype for some diseases appears later in some than in others, or even just late in life, where sometimes you cannot measure its presence as they might have died already, or die due to other causes.  
-**Heterogeneity**, as well as lack of a data set for multiple generations, as you won't know what happened to the 18th century generation LOL.  
+**Segregation study**
+: To satisfy a **hypothesis** on the transmission rate for the disease. This can be tricky as the phenotype for some diseases appears later in some people, than others.
+
+Where sometimes you cannot measure its presence as they might have died already, or die due to other causes.
+
+**Heterogeneity**, as well as lack of a data set for multiple generations, as you won't know what happened to the 18th century generation LOL.
+
 If one wants to analyse **common variance* in a population, **single nucleotide polymorphisms* are a good start; each SNP should be characterised by a **minor allele frequency (MAF**\-number of times its present within a population and which causes alleles**)**, and its **rs number**.   
 **Illumina* is most commonly used for **genotyping**. However, depending on the **sample size* among other factors, other technologies might be preferred.   
 In **beadchip* DNA sequencing (**Illumina**), the sequence (not just the one attached) most proximal to the bead, will be the one containing the SNPs. Remember that initially hybridisation must occur between the beads and the DNA sequences of interest, which then be sequenced extending from the bead.  
