@@ -87,7 +87,7 @@ For an **LD* to be statistically significant, usually you want an **r squared* e
 
 ## SNPs in GWAS
 
- Analysis which concerns the **entire genome**, studying the **association* of **SNPs* across an entire genome.  
+ Analysis which concerns the **entire genome**, studying the **association** of **SNPs** across an entire genome.  
  To test association of SNPs alleles with one disease or one phenotype using a group of patients ‘cases’ and a group of healthy people ‘controls’.
 
 Cases  
