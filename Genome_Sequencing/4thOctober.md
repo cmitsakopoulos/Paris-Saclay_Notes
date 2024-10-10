@@ -1,6 +1,13 @@
+## Sequencing for complex genetic diseases
+
+SNVs are paramount in genotyping genetic variants, grouping afflicted populations in GWAS and for understanding mutational mechanisms.
+
+Using sequencing data from **Whole Exome Sequencing** (WES) or **Whole Genome Sequencing** (WGS), you can filter for these SNVs to identify rare variants related to **germinal disease**. 
+
+When assigning these rare variants to phenotypes, one must consider the effects of both environment and genomic variaton. One way to more easily discern the possibility of germinal inheritance within families is the following:
 
 Relative risk
-: To quantify the **number of cases** within a group of relatives, compared to a **control**; calculate risk of germinal disease within a group of **relatives**.  
+: To quantify the **number of cases** within a group of relatives, compared to a **control** and calculate the **hypothetical risk** of germinal disease between relatives.  
 
   ==RR(Relative Risk)== = (**a / z**) / (**c / y**)
 
