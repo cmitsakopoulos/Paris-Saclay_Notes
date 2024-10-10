@@ -47,7 +47,7 @@ Whereas, if **allele frequency is high**, you have **common** diseases which can
 When one wants to analyse **common variance** within a population, **single nucleotide polymorphisms** are a critical clinical target. 
 
 Each phenotypic SNP should be characterised by:
-* **Minor Allele Frequency** (**MAF** = the number of times its present within a population within a certain allele**)
+* **Minor Allele Frequency** (**MAF** = the number of times its present within a population within a certain allele**): A MAF value associated with a common variant should exceed >1%, while rare variants should lie at <1%.
 * **rs number** (= a unique identification number for the SNP).
 
 
