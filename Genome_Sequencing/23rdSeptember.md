@@ -10,7 +10,9 @@ Non-coding variation
 : Mutations **outside the ORF**, this could for example affect *Introns, UTRs (Untraslated regions), etc.*
 splice sites: special status, can affect open-reading frame (alternative splicing).
 
-While coding mutations are obviously important, one should pay attention to non-coding mutations as well; owing to their ability to affect transcription, in the form of for example, **non-sense mutations** (= SNV which triggers the **incidental** formation of a **stop codon**, its unatural position *renders the protein transcribed*, **impotent**).
+Remember **non-sense mutations** (= SNV which triggers the **incidental** formation of a **stop codon**, its unatural position *renders the protein transcribed*, **impotent**).
+
+
 
 Coding mutations usually concern **missense mutations**, as obvs you have a base change leading to **coding complications** during transcriplation.
 
