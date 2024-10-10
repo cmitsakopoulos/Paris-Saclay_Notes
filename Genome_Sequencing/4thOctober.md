@@ -54,18 +54,27 @@ Each phenotypic SNP should be characterised by:
 
 
 **Illumina* is most commonly used for **genotyping**. However, depending on the **sample size* among other factors, other technologies might be preferred.   
+
 In **beadchip* DNA sequencing (**Illumina**), the sequence (not just the one attached) most proximal to the bead, will be the one containing the SNPs. Remember that initially hybridisation must occur between the beads and the DNA sequences of interest, which then be sequenced extending from the bead.  
 With each nucleotide addition during sequencing, the **bead will emit fluorescent light* which is picked up then blah blah.
 
 ## SNP Analysis
 
- Following sequencing etc, one must then identify the **linkage disequilibrium (LD)**;   
-   The measure of the relationship between two SNPs. Say you have **SNP1* with Allele 1 and 3, and **SNP2* with allele 2 and 4\. The genotype for **SNP1* therefore will be Al1/Al2, Al1/Al1 and Al2/Al2. The genotype for **SNP2* will be Al4/Al2, Al4/Al4 and Al2/Al2  
+ Following sequencing etc, one must then identify the **Linkage Disequilibrium (LD)**;   
+
+LD
+: The **non-random** association of a number of alleles due to their **proximity on the same chromosome/locus** and thereby subsequent **co-inheritance**, *despite recombinatory events chromosomes undergo*.
+
+In other words, a value which determines the 
+   
+Say you have **SNP1* with Allele 1 and 3, and **SNP2* with allele 2 and 4\. The genotype for **SNP1* therefore will be Al1/Al2, Al1/Al1 and Al2/Al2. The genotype for **SNP2* will be Al4/Al2, Al4/Al4 and Al2/Al2  
    **Haplotype**: Al/Al2, Al1/4, Al3/Al2, Al3/4  
    So you must calculate the **Dgt \= observed frequency \- theoretical frequency* of the haplotype genome type. To normalise this value, you would calculate the **r value squared**. (add from ppt)  
-   For an **LD* to be statistically significant, usually you want an **r squared* equal to or above **0.8**.  
+
+For an **LD* to be statistically significant, usually you want an **r squared* equal to or above **0.8**.  
    Important information on calculations in the slides.  
- **LD* can decrease depending on the **genetic disease type* or even the **recombination* rate.  
+ **LD* can decrease depending on the **genetic disease type* or even the **recombination* rate. 
+ 
  Hapmap, **ensemlb* and 1000genomes are databases which contain **SNPs* and their related **LD* values.
 
 ## SNPs in GWAS
