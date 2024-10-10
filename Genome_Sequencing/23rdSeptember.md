@@ -20,12 +20,15 @@ Importantly, **silent mutations** can mean that there are **SNVs which do not tr
 
 Human ethnic groups display different disease pathogeny when compared against each other. This is termed as **Population dependent variation** and can affect the **number of variants** per **kb** that are identified during disease phenotype annotation.
 
-* **Allele** frequency in African origin patients is higher, **variation** is higher. Therefore, careful **filtering** has to be done for these populations.  
-* Research to ascertain country specific variation is important, as filtering methods should be adapted per region, to ensure that information is not being left out. **Or** it could be a small **niche population**. The main problem, is to identify **a good reference** group, which is homogeneous.  
-*  **EthSeq**: Annotations for whole-genome sequencing of ethnic group genetic data.  
-* **TCGA, ICGC**: Information on **cancer** **genes**, **variation locations**, on reference genomes.  
-* By discovering the knowledge about the non-coding areas of DNA could provide valuable information for treatment, dynamics in gene expression regulation which might not be apparent otherwise.   
-* **Cohort based analysis**: Analysis of **distinct** patients instead of an individual to uncover **recurrent alterations** in the DNA that lead to disease. Can aid in the understanding of the development of the disease, based on the availability of patients for **an analysis cohort** you can obviously figure out the rarity of a disease.  
+**Allele** frequency in patients of African origin is higher, hence **variation** is higher. Therefore, careful **filtering** is to be applied for genotypic analysis of such populations. Explanation:
+* Say you have allele a and allele b, which are possible causes of BDS(Big Dick Syndrome). In analysing a single ethnic group you observe allele b to b(e) more frequent than allele a. However, when comparing ethnic groups, you might discover that allele b and allele a, equally contribute to disease, and that the ethnic group you looked at first has a **natural higher frequency** for allele b; as such, filtering has to be adapted to account for these varying frequencies.
+
+Having said that: Research to ascertain country specific variation is important, as filtering methods should be adapted per region, to ensure that information is not being left out. **Or** it could be a small **niche population**. The main problem, is to identify **a good reference** group, which is homogeneous.
+
+Side note
+: **EthSeq**: Annotations for whole-genome sequencing of ethnic group genetic data. **TCGA, ICGC**: Information on **cancer** **genes**, **variation locations**, on reference genomes. Discovering function of non-coding areas of DNA can identify dynamics of gene expression regulation that are otherwise indiscernible. 
+
+**Cohort based analysis**: Analysis of **distinct** patients instead of an individual to uncover **recurrent alterations** in the DNA that lead to disease. Can aid in the understanding of the development of the disease, based on the availability of patients for **an analysis cohort** you can obviously figure out the rarity of a disease.  
   * From this analysis one could generate a **genomic landscape**, a **comparative** graph to represent genetic variation for diseases between **cohort individuals**.   
   * **Sub-groups** can be generated within cohorts, which have slightly **different mutations** in distinct individuals.  
     * Essentially, these graphical maps are useful in discerning **disease mutation heterogeneity.**  
