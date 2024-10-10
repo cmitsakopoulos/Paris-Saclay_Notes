@@ -5,24 +5,20 @@ SNVs in genes can incur significant implications for their encoded proteins, by 
 ### Types of mutations of concern
 
 Coding variations
-: Mutations which **occur at the open-reading frame** (ORF), *altering the final product of translation*. (ORF: code within the start and stop codon area)
+: Mutations which **occur at the open-reading frame** (ORF), *altering the final product of translation*. (ORF: protein coding sequence within the start and stop codon area)
 Non-coding variation
-: Mutations **outside the ORF**, this could for example affect *introns, UTRs, etc.*
+: Mutations **outside the ORF**, this could for example affect *Introns, UTRs (Untraslated regions), etc.*
 splice sites: special status, can affect open-reading frame (alternative splicing).
-We may want to focus on coding mutations.
-nb. this may lead to miss of information, as non-coding variation can also have an impact on
-diseases.
-non-sense mutation (stop codon insertion) leads probably to the worst impact on the protein
-sequence.
-the sooner the mutation occur in the coding sequence the more impact it will have on the
-associated peptid.
-• missense mutation (codon change leading to amino acid change)
-– conservative missense: keep amino-acid charge (positively charged vs negatively charge) – non-conservative: does not keep the charge.
-• silent mutation: no change in the amino-acid sequence
-• indel & insertion/deletion: frameshift, when n mod 3 ̸= 3, leading often to appearance of a stop codon.
-it is difficult to get insight on the effect of the point mutation on the protein function. • loss of function;
 
-* Human populations across the planet, grouped on ethnic origin, will have different pathogeny from a disease compared to each other. **Population dependent variation**; can affect the **number of variants** per **kb** identified during annotation.
+While coding mutations are obviously important, one should pay attention to non-coding mutations as well; owing to their ability to affect transcription, in the form of for example, **non-sense mutations** (= SNV which triggers the **incidental** formation of a **stop codon**, its unatural position *renders the protein transcribed*, **impotent**).
+
+Coding mutations usually concern **missense mutations**, as obvs you have a base change leading to **coding complications** during transcriplation.
+
+Importantly, **silent mutations** can mean that there are **SNVs which do not trigger a phenotype**, but are however dormant and can later be detrimental once paired with additional-randomly-occuring mutations.
+
+### Ethnic Groups
+
+Human ethnic groups display different disease pathogeny when compared against each other. This is termed as **Population dependent variation** and can affect the **number of variants** per **kb** that are identified during disease phenotype annotation.
 
 * **Allele** frequency in African origin patients is higher, **variation** is higher. Therefore, careful **filtering** has to be done for these populations.  
 * Research to ascertain country specific variation is important, as filtering methods should be adapted per region, to ensure that information is not being left out. **Or** it could be a small **niche population**. The main problem, is to identify **a good reference** group, which is homogeneous.  
