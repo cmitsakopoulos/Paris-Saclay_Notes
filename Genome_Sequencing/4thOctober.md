@@ -23,11 +23,15 @@ This measurement differs between **monozygous and dizygous twins**. That is to s
 * **Environmental factors** mean that ==monozygous twins== can **never** have a **100%** concordance rate.  
 
 **Segregation study**
-: To satisfy a **hypothesis** on the transmission rate for the disease. This can be tricky as the phenotype for some diseases appears later in some people, than others.
+: A segregation study concerns the use of historical data in ascertaining patterns. In our case, it would be used to satisfy a **hypothesis** on the transmission rate for a germinal disease within a familial lineage.
 
-Where sometimes you cannot measure its presence as they might have died already, or die due to other causes.
+This is tricky:
+* Due to lack of medical history records.
+* Phenotype onset (can vary between people). 
+* Phenotype being overshadowed by other ailments.
+* People dying before the disease can present itself. 
 
-**Heterogeneity**, as well as lack of a data set for multiple generations, as you won't know what happened to the 18th century generation LOL.
+Common theme? Complicating levels of **Heterogeneity**.
 
 If one wants to analyse **common variance* in a population, **single nucleotide polymorphisms* are a good start; each SNP should be characterised by a **minor allele frequency (MAF**\-number of times its present within a population and which causes alleles**)**, and its **rs number**.   
 **Illumina* is most commonly used for **genotyping**. However, depending on the **sample size* among other factors, other technologies might be preferred.   
