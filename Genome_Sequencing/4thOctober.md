@@ -1,4 +1,4 @@
-## Sequencing for complex genetic diseases
+## Mendelian Disease and Rare Variance
 
 SNVs are paramount in genotyping genetic variants, grouping afflicted populations in GWAS and for understanding mutational mechanisms.
 
@@ -33,7 +33,24 @@ This is tricky:
 
 Common theme? Complicating levels of **Heterogeneity**.
 
-If one wants to analyse **common variance* in a population, **single nucleotide polymorphisms* are a good start; each SNP should be characterised by a **minor allele frequency (MAF**\-number of times its present within a population and which causes alleles**)**, and its **rs number**.   
+Side note; 
+
+Mendelian Disease
+: Autosomal dominant disease, autosomal recessive disease, X-linked recessive disease and X-linked dominant disease
+
+When **allele frequency is low**, but disease impact is high, this is usually associated with **Mendelian Diseases**.
+
+Whereas, if **allele frequency is high**, you have **common** diseases which can frequently present themselves within the larger population and are therefore larger **targets for GWAS**.
+
+## Common Variance and GWAS
+
+When one wants to analyse **common variance** within a population, **single nucleotide polymorphisms** are a critical clinical target. 
+
+Each phenotypic SNP should be characterised by:
+* **Minor Allele Frequency** (**MAF** = the number of times its present within a population within a certain allele**)
+* **rs number** (= a unique identification number for the SNP).
+
+
 **Illumina* is most commonly used for **genotyping**. However, depending on the **sample size* among other factors, other technologies might be preferred.   
 In **beadchip* DNA sequencing (**Illumina**), the sequence (not just the one attached) most proximal to the bead, will be the one containing the SNPs. Remember that initially hybridisation must occur between the beads and the DNA sequences of interest, which then be sequenced extending from the bead.  
 With each nucleotide addition during sequencing, the **bead will emit fluorescent light* which is picked up then blah blah.
