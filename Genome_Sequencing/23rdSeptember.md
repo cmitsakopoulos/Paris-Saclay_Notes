@@ -12,9 +12,7 @@ splice sites: special status, can affect open-reading frame (alternative splicin
 
 Remember **non-sense mutations** (= SNV which triggers the **incidental** formation of a **stop codon**, its unatural position *renders the protein transcribed*, **impotent**).
 
-
-
-Coding mutations usually concern **missense mutations**, as obvs you have a base change leading to **coding complications** during transcriplation.
+Coding mutations lead to **coding complications** during transcriplation, while non-coding mutations can also affect disease by messing with the ability/frequency of protein transcriplation.
 
 Importantly, **silent mutations** can mean that there are **SNVs which do not trigger a phenotype**, but are however dormant and can later be detrimental once paired with additional-randomly-occuring mutations.
 
