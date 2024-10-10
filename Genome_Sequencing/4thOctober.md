@@ -16,9 +16,12 @@ Relative risk
 | Relatives  | a | b | z |
 | General Population | c | d | y |
 
-For the aforementioned, if there are **twins* within the group of relatives, or within the confines of a larger study, **twins* are able to give you information to log the **concordance rate* of **germinal disease* between **monozygous and dizygous twins**.   
-  Obviously, **monozygous twins* have a higher **concordance* rate, owing to their sharing more of the genome than dizygous.   
-  **Environmental factors* mean that monozygous twins **can never have a 100%* **concordance rate**.  
+In regard to **twins** within a group of relatives, or twin patients, you can determine the **concordance rate** of **germinal disease**; the chance of germinal disease between twins.
+
+This measurement differs between **monozygous and dizygous twins**. That is to say, **monozygous twins* have a higher **concordance* rate, owing to their sharing more of the genome than dizygous.
+
+* **Environmental factors** mean that ==monozygous twins== can **never** have a **100%** concordance rate.  
+
 **Segregation study**: Generate a hypothesis on transmission for the disease, tricky as the phenotype for some diseases appears later in some than in others, or even just late in life, where sometimes you cannot measure its presence as they might have died already, or die due to other causes.  
 **Heterogeneity**, as well as lack of a data set for multiple generations, as you won't know what happened to the 18th century generation LOL.  
 If one wants to analyse **common variance* in a population, **single nucleotide polymorphisms* are a good start; each SNP should be characterised by a **minor allele frequency (MAF**\-number of times its present within a population and which causes alleles**)**, and its **rs number**.   
