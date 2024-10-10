@@ -11,6 +11,8 @@ Relative risk
 
   ==RR(Relative Risk)== = (**a / z**) / (**c / y**)
 
+**a**: relatives cases, **z** total relatives, **c** total cases in the population, **y** total individuals in the population
+
 | MIAULER | Cases | Controls | Total |
 | ----------- | -------- | -------- | -------- |
 | Relatives  | a | b | z |
