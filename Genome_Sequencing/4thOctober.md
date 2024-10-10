@@ -75,9 +75,10 @@ What does this mean?
 ![alttext](LDCALC.png)
 
    
-Say you have **SNP1* with Allele 1 and 3, and **SNP2* with allele 2 and 4. The genotype for **SNP1* therefore will be Al1/Al2, Al1/Al1 and Al2/Al2. The genotype for **SNP2* will be Al4/Al2, Al4/Al4 and Al2/Al2  
-   **Haplotype**: Al/Al2, Al1/4, Al3/Al2, Al3/4  
-   So you must calculate the **Dgt \= observed frequency \- theoretical frequency* of the haplotype genome type. To normalise this value, you would calculate the **r value squared**. (add from ppt)  
+Another explanation:
+  : Say you have **SNP1* with Allele 1 and 3, and **SNP2* with allele 2 and 4. The genotype for **SNP1* therefore will be Al1/Al2, Al1/Al1 and Al2/Al2. The genotype for **SNP2* will be Al4/Al2, Al4/Al4 and Al2/Al2  
+    **Haplotype**: Al/Al2, Al1/4, Al3/Al2, Al3/4  
+    So you must calculate the **Dgt \= observed frequency \- theoretical frequency* of the haplotype genome type. To normalise this value, you would calculate the **r value squared**. (add from ppt)  
 
 For an **LD* to be statistically significant, usually you want an **r squared* equal to or above **0.8**.  
 
