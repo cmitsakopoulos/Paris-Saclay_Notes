@@ -24,7 +24,9 @@ You would identify overlapping reads, where some paired end reads are **not** ov
 
 ### Question 5
 
-Panel A displays a tendency of specific cancers asoociated with transfer of mtDNA into the nuclear genome. 
+* **Panel A**
+
+Displays a tendency of specific cancers asoociated with transfer of mtDNA into the nuclear genome. 
 
 Samples are arranged in 'subtypes', say it that way, subtypes of cancer samples; the x axis represents the tissue type on which the samples align ("incidentally", tissue type happens to align with cancer sample type).
 
@@ -35,3 +37,10 @@ mtDNA transfer is highest in lung, skin, breast and uterus samples. With the gla
 We can see that 1/3 of samples **do not** present mtDNA transfer, another third does so, but **not as much** as the final third, which is **highly associated** with mtDNA transfer. 
 
 Additionally, subtypes of lung cancer have heterogenous distribution of mtDNA transfer, as can be seen by the different proportions displayed by the different sample types of lung.
+
+* **Panel B**
+
+A box plot, plotting structural variation representing both samples with SMNTs and those without. Displays the statistical significance between cancer type and an increased level of SMNTs.
+
+Depending on the statistical significance observed, we can determine if SMNTs are a result of **genomic instability** incurred by cancer, or the effect of **selection/driver mutation**.
+
