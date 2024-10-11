@@ -44,3 +44,9 @@ A box plot, plotting structural variation representing both samples with SMNTs a
 
 Depending on the statistical significance observed, we can determine if SMNTs are a result of **genomic instability** incurred by cancer, or the effect of **selection/driver mutation**.
 
+We can see in this figure that despite lung cancer samples appeared to prefer SMNTs, this observation is not a statistically significant event; lung cancer is **not directly correlated**, or **driven** by SMNTs.
+
+Breast cancer is the clearest correlation of SMNTs to the development of the cancer; considering that samples are statistically adherent to SMNT.
+
+### Question 6
+
