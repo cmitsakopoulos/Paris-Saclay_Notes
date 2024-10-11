@@ -50,3 +50,9 @@ Breast cancer is the clearest correlation of SMNTs to the development of the can
 
 ### Question 6
 
+Box plot chart, plotting mtDNA copy number on y-axis and cancer type on the x-axis. Comparing the copy number variation between control (unaffected) and cancer tissue.
+
+Using a false discovery rate, they are using a more stringent measure of statistical significance than a p-value.
+
+Kidney, Liver cancer types display statistically significant reductions in mDNA copy numbers, whereas Lymph cancer tissue for example, displays statistically significant increase in mDNA copy number.
+
