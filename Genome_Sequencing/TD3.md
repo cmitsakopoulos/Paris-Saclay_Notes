@@ -56,3 +56,9 @@ Using a false discovery rate, they are using a more stringent measure of statist
 
 Kidney, Liver cancer types display statistically significant reductions in mDNA copy numbers, whereas Lymph cancer tissue for example, displays statistically significant increase in mDNA copy number.
 
+### Question 7
+
+The researchers want to examine if there might be fluctuation/CNV in the number of mDNA copies, depending on age; filter out age induced bias.
+
+Essentially, they are trying to answer the question of: Why is there heterogeneity in figure 3?
+
