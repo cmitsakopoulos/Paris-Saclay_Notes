@@ -80,14 +80,4 @@ df <- data.frame(hours=c(1, 2, 2, 4, 2, 1, 5, 4, 2, 4, 4, 3, 6, 5, 3),
                 score=c(76, 78, 85, 88, 72, 69, 94, 94, 88, 92, 90, 75, 96, 90, 82))
 ```
 
-Dear Yorgo,
-
-I am writing on behalf of four master's bioinformatics students, at Université Evry Paris-Saclay, who have all been accepted into the volunteer programme you are hosting for iGEM. Considering that on Friday the 25th of October we will have to present groupwork in front of a large cohort, we cannot re-arrange our schedule on that day, to accomodate for the volunterring duties at iGEM. In fact, we are interested if there are any VIP reception shifts available on the Tuesday, or Wednesday, for some of us to be assigned to. Additionally, we would greatly appreciate a Leave of Absence letter, which we would have to serve as proof of absence on the days of volunteering.
-
-
-We are currently Master's students at Université Evry Paris-Saclay in the Paris Metropolitan Area and we have a big presentation on Friday. Hopefully, it's still possible to volunteer for the VIP Reception on Tuesday or to move any appointments to either Wednesday or Thursday, as we will not be able to attend the conference on Friday. We wanted to ask you, as well, for a Leave of Absence letter for the corresponding days of the appointments. Thanks for all the help.
-
-Best wishes,
-
-Raul Duran De Alba
 
