@@ -69,5 +69,5 @@ Where the SLR formula would be calculated once per independent variable ($y$), f
 
 ## Coefficient of determination and standard error: R^2^ and STDEV
 
-To identify how well the line of best fit can represent the data points you have collected, one must calculate the R^2^; this value represents the **proportion of variance** wihtin a data set. Alongisde STDEV, it can help determine if the data is for one, **correlated** and by extension, represented through a liner relationship.
+R^2^ represents the **proportion of variance** wihtin a data set. Alongisde STDEV, it can help determine if the data is for one, **correlated** and by extension, represented through a liner relationship.
 
