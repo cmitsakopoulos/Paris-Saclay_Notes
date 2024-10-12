@@ -71,3 +71,23 @@ Where the SLR formula would be calculated once per independent variable ($y$), f
 
 R^2^ represents the **proportion of variance** wihtin a data set. Alongisde STDEV, it can help determine if the data is for one, **correlated** and by extension, represented through a liner relationship.
 
+Say we have a dataset which contains hours studied, exam score and preparation exams taken.
+
+Score is our dependent variable (criteria) and the independent variables are the hours and prep exams taken.
+```R
+df <- data.frame(hours=c(1, 2, 2, 4, 2, 1, 5, 4, 2, 4, 4, 3, 6, 5, 3),
+                prep_exams=c(1, 3, 3, 5, 2, 2, 1, 1, 0, 3, 4, 3, 2, 4, 4),
+                score=c(76, 78, 85, 88, 72, 69, 94, 94, 88, 92, 90, 75, 96, 90, 82))
+```
+
+Dear Yorgo,
+
+I am writing on behalf of four master's bioinformatics students, at Université Evry Paris-Saclay, who have all been accepted into the volunteer programme you are hosting for iGEM. Considering that on Friday the 25th of October we will have to present groupwork in front of a large cohort, we cannot re-arrange our schedule on that day to accomodate the volunterring duties at iGEM. In fact, we are interested if there are any shift
+
+
+We are currently Master's students at Université Evry Paris-Saclay in the Paris Metropolitan Area and we have a big presentation on Friday. Hopefully, it's still possible to volunteer for the VIP Reception on Tuesday or to move any appointments to either Wednesday or Thursday, as we will not be able to attend the conference on Friday. We wanted to ask you, as well, for a Leave of Absence letter for the corresponding days of the appointments. Thanks for all the help.
+
+Best wishes,
+
+Raul Duran De Alba
+
