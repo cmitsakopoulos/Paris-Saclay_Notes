@@ -22,7 +22,7 @@ Key:
 **Dependent** variable
 *Independent* variables
 
-## Simple Linear Regression (SLR)
+## Simple Linear Regression (SLR): Formula and theory.
 
 The aim of this statistical prediction model is to identify a relationship between **two** sets of data; 
 
@@ -51,3 +51,23 @@ $β$ are the model parameters;
 $ϵ$ is the random error term (residual).
 
 You would use this statistical model to characterise a **linear relationship** between given sets of values.
+
+When calculating the line of best fit, you want to discover the value of the coefficients, alpha and beta, using the **Ordinary Least Squares** method. 
+
+## Multivariate regression (MLR): Formula and theory.
+
+Not to be confused with multiple regression, you now have **multiple** dependent variables (aka, criteria) instead of one:
+
+* Here, you have the culmination of x mount of regression models, to reach a conclusion on x amount of criteria.
+
+Therefore, you would have the following transformation of the formula:
+### $ SLR = y = b * x + a$
+==>
+### $ MLR = y = b_1 * x_1 + b_2 * x_2 + ..... + b_9 * x_9 + a$ 
+
+Where the SLR formula would be calculated once per independent variable ($y$), for a single dependent, you know have multiple instances of dependents ($ b * x $) calculated for the **influence** a ***single independent variable*** has on them. (There can be many independent variables still)
+
+## Coefficient of determination and standard error: R^2^ and STDEV
+
+To identify how well the line of best fit can represent the data points you have collected, one must calculate the R^2^; this value represents the **proportion of variance** wihtin a data set. Alongisde STDEV, it can help determine if the data is for one, **correlated** and by extension, represented through a liner relationship.
+
