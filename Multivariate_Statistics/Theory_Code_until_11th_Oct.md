@@ -48,7 +48,7 @@ Y is the response, or **dependent** variable;
 $f$ is some mathematical function;
 X is a matrix of predictor (**independent**) variables;
 $β$ are the model parameters;
-$ϵ$ is the random error term (residual).
+$ϵ$ is the random error term ==(in modelling: a **residual**)==.
 
 You would use this statistical model to characterise a **linear relationship** between given sets of values.
 
@@ -102,6 +102,42 @@ Where:
 * The criteria (**dependent variable**) is placed before the **"~"**
 * The predictors (**independent variables**) are placed after the **"~"**, if there are multiple, use a **"+"** to join them.
 * data should be **assigned** to the **dataframe**.
+
+## Assumptions for linear models
+
+* Linearity: There must be a linear relationship between the dependent and independent variables.
+* Homoscedasticity: The residuals must have a constant variance.
+* Normality: Normally distributed error.
+* No multicollinearity: No high correlation between independent variables; where it is too difficult which independent variable is affecting the dependent the most.
+
+## Obtain OLS estimators; model parameters, the β~x~ (β-hat).
+
+## Student T-test
+
+## ANOVA
+
+![](ANOVA.png)
+
+A set of calculations pertaining to multiple intertwined statistical tests for data significance. The above table is an example of **one-way ANOVA**; for ***analysis of variance***.
+
+As posited in class, a method of ***testing significance through model comparison***;
+
+In R, this translates to:
+```R
+
+model_for_ANOVA <- lm(variable_x ~ 1, data = ur_dataframe)
+your_model <- lm(variable_x ~ variable_y, data = ur_dataframe)
+
+anova(model_for_ANOVA, your_model)
+```
+To obtain the **residuals** from your model comparison:
+
+```R
+variable_xy <- 3.4
+predict(your_model, data.frame(variable_x =variable_xy))
+
+
+
 
 
 
