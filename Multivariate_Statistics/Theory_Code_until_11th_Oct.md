@@ -78,14 +78,21 @@ Score is our dependent variable (criteria) and the independent variables are the
 df <- data.frame(hours=c(1, 2, 2, 4, 2, 1, 5, 4, 2, 4, 4, 3, 6, 5, 3),
                 prep_exams=c(1, 3, 3, 5, 2, 2, 1, 1, 0, 3, 4, 3, 2, 4, 4),
                 score=c(76, 78, 85, 88, 72, 69, 94, 94, 88, 92, 90, 75, 96, 90, 82))
+
 # Or:
+
 data <- load("path_to_data.RData") #Usually the information in these files should be in dataframe format.
 df <- data
+
 # If an RData file doesn't already format its data into dataframes:
+
 df <- as.data.dataframe(data) 
 
 #Now you need to create a linear model
+
 model <- lm(score~prep_exams+hours, data = df)  
+
+summary(model)
 ```
 ### Using the lm (linear model) function:
 ```R
