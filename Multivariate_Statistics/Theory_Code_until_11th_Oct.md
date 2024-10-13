@@ -92,7 +92,7 @@ df <- as.data.dataframe(data)
 
 model <- lm(score~prep_exams+hours, data = df)  
 
-summary(model)
+summary(model) #Or, if you only want to see the RSquared you can do the following: summary(model)$r.squared
 ```
 ### Using the lm (linear model) function:
 ```R
@@ -102,6 +102,7 @@ Where:
 * The criteria (**dependent variable**) is placed before the **"~"**
 * The predictors (**independent variables**) are placed after the **"~"**, if there are multiple, use a **"+"** to join them.
 * data should be **assigned** to the **dataframe**.
+
 
 
 
