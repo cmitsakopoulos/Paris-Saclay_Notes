@@ -130,11 +130,12 @@ your_model <- lm(variable_x ~ variable_y, data = ur_dataframe)
 
 anova(model_for_ANOVA, your_model)
 ```
-To obtain the **residuals** from your model comparison:
+To obtain the **residuals**, the error, by means of your model comparison:
 
 ```R
 variable_xy <- 3.4
 predict(your_model, data.frame(variable_x =variable_xy))
+```
 
 
 
