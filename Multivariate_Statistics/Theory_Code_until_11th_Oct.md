@@ -110,8 +110,19 @@ Where:
 * Normality: Normally distributed error.
 * No multicollinearity: No high correlation between independent variables; where it is too difficult which independent variable is affecting the dependent the most.
 
-## Obtain OLS estimators; model parameters, the β~x~ (β-hat).
+## Obtain OLS estimators; model parameter, the β~x~ (β-hat).
 
+To obtain 
+\[
+\hat{\boldsymbol{\beta}} = \left( \mathbf{X}^\text{T} \mathbf{X} \right)^{-1} \mathbf{X}^\text{T} \mathbf{y}
+\]
+
+In a way you could say, this is the method by which you can identify the **slopes** of your **dependent variables**; your **criteria**.
+
+To reproduce this in R:
+```R
+
+```
 ## Student T-test
 
 ## ANOVA
