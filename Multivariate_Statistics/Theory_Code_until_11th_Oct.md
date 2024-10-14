@@ -121,10 +121,23 @@ In a way you could say, this is the method by which you can identify the **slope
 
 To reproduce this in R:
 ```R
-
+X <- #Your dependent variable here
+y <- #Your independet variable here
+ur_hat_beta <- solve(t(X)%*%X)%*%t(X)%*%y
 ```
-## Student T-test
+## T-test
+The t-value is either produced by calling **summary()** on your model, or can be done manually;
 
+In the following function, you can perform a **one sample** t-test.
+```R
+t.test(your_variable, mu = X)
+```
+Where your_variable relates to either an independent or dependent variable and **mu** the *hypothesised mean for your population*; a metric for analysing the null hypothesis.
+
+For **multiple sample** t-tests, replace parts of code as required:
+```R
+t.test(dependent_variable ~ independent_variable, data = ur_dataframe)
+```
 ## ANOVA
 
 ![](ANOVA.png)
