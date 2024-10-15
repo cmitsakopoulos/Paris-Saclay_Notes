@@ -3,9 +3,9 @@
 In fucntional genomics two questions have to be answered:
 
 1. Where are the genes within the genome and how are they distributed?
-=> Structual Annotation
+=> **Structual Annotation**
 2. What fucntion do these genes have, does this relate to their position?
-=> Functional Annotation
+=> **Functional Annotation**
 
 ## Identifying genetic signals within sequences
 
@@ -43,7 +43,9 @@ The ***horizontal line corresponds to the statistical significance***, or otherw
 
 In the majority of cases **"GT" and "AG"** are the ***start and end of introns, respectively***. 
 
-Specifically, adapted agorithms look for ==***CAG|GT(or GC) and AG|G for start and end respectively***==.
+Specifically, adapted agorithms look for **motifs**, such as: ==***CAG|GT(or GC) and AG|G for start and end respectively***==.
+
+Lines in the produced graphs within NetGene2 **designate** the presence of a *critical motif*.
 
 
 
