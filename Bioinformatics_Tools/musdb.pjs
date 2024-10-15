@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "musdb",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "/Users/chrismitsacopoulos/Desktop/Paris-Saclay_Notes/Bioinformatics_Tools/musgene.fasta",
+  "number-of-letters": 93147,
+  "number-of-sequences": 187,
+  "last-updated": "2024-10-15T08:48:00",
+  "number-of-volumes": 1,
+  "bytes-total": 198928,
+  "bytes-to-cache": 94999,
+  "files": [
+    "musdb.pdb",
+    "musdb.phr",
+    "musdb.pin",
+    "musdb.pot",
+    "musdb.psq",
+    "musdb.ptf",
+    "musdb.pto"
+  ]
+}
