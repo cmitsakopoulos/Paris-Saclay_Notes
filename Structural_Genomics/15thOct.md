@@ -38,3 +38,10 @@ The **drops** in the above graph correspond to **introns**, while the **exons** 
 
 Per documentation of NetGene2
 :  In the "Donor" panel the activity of the ensemble of the donor site predicting networks is shown as impulses. An impulse with a height close to 1.0 indicates a strong A. thaliana donor site. ***A cyan impulse is a prediction that has been discarded*** during the refinement, and a **magenta colored impulse** is a ***prediction that has been changed by the rule based system***.
+
+## Detecting intron splice sites
+
+In the majority of cases **"GT" and "AG"** are the ***start and end of introns, respectively***. 
+
+Specifically, adapted agorithms look for ==***CAG|GT and AG|G for start and end respectively***==.
+
