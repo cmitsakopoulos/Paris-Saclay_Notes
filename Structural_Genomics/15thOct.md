@@ -39,7 +39,7 @@ Per documentation of NetGene2
 
 The ***horizontal line corresponds to the statistical significance***, or otherwise the confidence in the sites identified.
 
-## Detecting intron splice sites: theory
+## Detecting intron splice sites: theory and graphs.
 
 In the majority of cases **"GT" and "AG"** are the ***start and end of introns, respectively***. 
 
@@ -48,6 +48,7 @@ Specifically, adapted agorithms look for **motifs**, such as: ==***CAG|GT(or GC)
 Lines in the produced graphs within NetGene2 **designate** the presence of a *critical motif*.
 
 From the example analysed in class, using an *A. Thaliana* genetic sequence capped to 10k bp, below are the graphical representations on the **direct strand (+strand)**:
+
 ![alt text](<Screenshot 2024-10-15 at 15.30.26.png>)
 * From 0 to 2k bp, we have no exons.
 
@@ -62,5 +63,19 @@ From the example analysed in class, using an *A. Thaliana* genetic sequence capp
 
 ![alt text](<Screenshot 2024-10-15 at 15.28.01.png>)
 * From 8k to 10k bp, we have three exons, one clearly associated with a gene and 2 which can together be assigned to a gene.
+
+## Understanding the numerical results:
+
+### Phases within open reading frames:
+
+![alt text](image-2.png)
+
+This diagram concerns the ORFs and their phases in the direct strand;
+
+
+
+Let's analyse an example graph:
+
+![alt text](<Screenshot 2024-10-15 at 15.37.11.png>)
 
 
