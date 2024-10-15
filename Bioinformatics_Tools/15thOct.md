@@ -1,8 +1,3 @@
-## Preparation for the midterm
-
-In TD2 we have to learn how to use BLAST on the command line
-
-pass
 ### Make a database with BLAST+
 Example from class:
 `makeblastdb -in /Users/chrismitsacopoulos/Desktop/Paris-Saclay_Notes/Bioinformatics_Tools/musgene.fasta -dbtype prot -out /Users/chrismitsacopoulos/Desktop/Paris-Saclay_Notes/Bioinformatics_Tools/musdb`
