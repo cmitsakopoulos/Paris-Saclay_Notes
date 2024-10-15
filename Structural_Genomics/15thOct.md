@@ -9,8 +9,8 @@ In fucntional genomics two questions have to be answered:
 
 ## Identifying genetic signals within sequences
 
-1. Look for **start and stop** codons.
-2. In **non-plant** sequences, the **TATA box**, the **motif**, the **GC box**.
-3. Find **Transcription Start Site** (TSS).
-4. Find the **introns** and the **exons**.
+1. Find the **introns** and the **exons**; for *introns*, you would ***analyse for low GC content*** and for *exons* look for areas with a ***high GC content***.
+2. Find **Transcription Start Site** (TSS).
+3. In **non-plant** sequences, the **TATA box**, the **motif**, the **GC box**.
+4. Look for **start and stop** codons.
 
