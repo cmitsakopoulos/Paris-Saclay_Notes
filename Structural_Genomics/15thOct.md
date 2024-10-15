@@ -30,8 +30,6 @@ Overlap this information with the **GC content** graph and you can see a pattern
 
 The **drops** in the above graph correspond to **introns**, while the **exons** are the **peaks**.
 
-### Analysing the donor and acceptor graphs
-
 #### Donor graph:
 
 ![](image-1.png)
@@ -41,9 +39,11 @@ Per documentation of NetGene2
 
 The ***horizontal line corresponds to the statistical significance***, or otherwise the confidence in the sites identified.
 
-## Detecting intron splice sites
+## Detecting intron splice sites: theory
 
 In the majority of cases **"GT" and "AG"** are the ***start and end of introns, respectively***. 
 
-Specifically, adapted agorithms look for ==***CAG|GT and AG|G for start and end respectively***==.
+Specifically, adapted agorithms look for ==***CAG|GT(or GC) and AG|G for start and end respectively***==.
+
+
 
