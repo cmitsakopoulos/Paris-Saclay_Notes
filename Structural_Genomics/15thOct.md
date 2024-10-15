@@ -47,5 +47,20 @@ Specifically, adapted agorithms look for **motifs**, such as: ==***CAG|GT(or GC)
 
 Lines in the produced graphs within NetGene2 **designate** the presence of a *critical motif*.
 
+From the example analysed in class, using an *A. Thaliana* genetic sequence capped to 10k bp, below are the graphical representations on the **direct strand (+strand)**:
+![alt text](<Screenshot 2024-10-15 at 15.30.26.png>)
+* From 0 to 2k bp, we have no exons.
+
+![](<Screenshot 2024-10-15 at 15.27.35.png>)
+* We can observe **8** peaks and **7** lows; possibly, ***8 exons and 7 introns***.
+
+![alt text](<Screenshot 2024-10-15 at 15.27.42.png>)
+* In this genomic region we ***do not deduce the presence of exons***; low confidence for exon presence.
+
+![alt text](<Screenshot 2024-10-15 at 15.27.49.png>)
+* Complete
+
+![alt text](<Screenshot 2024-10-15 at 15.28.01.png>)
+* From 8k to 10k bp, we have three exons, one clearly associated with a gene and 2 which can together be assigned to a gene.
 
 
