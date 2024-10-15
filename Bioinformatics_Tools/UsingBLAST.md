@@ -36,7 +36,7 @@ To run outmft 6 with blast, you would input the following:
 
 Where blast**x**, should be replaced by the required blast version to analyse your file and paths should be replaced accordingly. 
 
-### Removing low complexity filter to BLAST+ searches:
+### Low complexity filter for BLAST+ searches:
 
 The specific command to remove the low complexity filter is as follows:
 `-seg yes`
@@ -65,5 +65,34 @@ Using the above as a guide, you can enter the substitution matrix parameter to y
 Important note
 : You can however input any number you want next to the method of substitution matrix you have designated, for example:
 `-matrix BLOSUM30`, different to the standard ones depicted in the table.
+
+### Q5: From the blast results that seem most appropriate to you, calculate the alignment coverages for each protein (query and subject) in each hit; compare against sequences_hum_mus_Danio_lg.
+
+The code proposed to perform the concatenation of the files that is required to make an analysis between the different blast results, is the following:
+```
+sort -d best_blast_results > best_blast_results_sorted
+
+join -1 1 -2 1 best_blast_results_sorted sequences_hum_mus_Danio_lg > joined_1
+
+sort -d -k 2,2 joined_1 > joined_1_sorted
+
+join -1 2 -2 1 joined_1_sorted sequences_hum_mus_Danio_lg > joined_2_sorted
+
+awk ' {print $2,$1,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16}' joined_2_sorted > sortie_blast_lgProt
+```
+
+What does each part of this code mean?
+
+: `sort -d`: A method within Unix systems which can sort the items(lines) of a file, based on **dictionary order**; numbers first, then letters arranged in **alphabetical order**.
+`join -1 1 -2 1`: Concatenate files 1 (-1) and 2 (-2), from line 1 (1) of their file content.
+
+After joining the files together in the **TD2**, one will observe that there are **additional IDs** at the end of each line:
+
+* *The first one is length of the query, then geneID of the query, then length of the sequence(db) followed by geneID of the sequence(db)*.
+
+### Identifying alignment percentage coverage 
+
+This pertains to Q6 of TD2;
+
 
 
