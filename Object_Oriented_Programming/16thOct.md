@@ -1,6 +1,16 @@
 ## Understanding dunder methods
 
-### Representation dunder method
+### Representation dunder method and string:
+
+Using the `repr`on its own, **not as a function** (no def) would yield a response along the lines of:
+
+```Python
+<__main__.Ocean object at 0x102892860>
+<__main__.Ocean object at 0x102892860>
+```
+Where ***Ocean (a class) is the object*** in question (inserted in the `__repr__` brackets) and the following barcode represents the ***memory address*** of the object in your computer.
+
+In order to use it as a dunder method:
 
 ```Python
 __repr__(variable_x)
@@ -9,19 +19,24 @@ __repr__(variable_x)
 You can use it as such:
 
 ```Python
+#Class is Miauler, with one parameter; a boolean assigned to meow.
 def __repr__(self):
-    return f"{self.barcode} and {self.meow}"
-```
+    return f"Meow = {self.meow}"
 
-Python can now print the attributes of the class to which the self.attributes are assigned to, as well as giving us their location in memory.
+call = Miauler(True)
+print(repr(call))
+
+Output:
+Meow = True
+```
+Now the `__str__` method is very similar to repr, but behaves closer to print than `__repr__`
 
 ### Set attribute
 
-```Python
-__setattr__()
-```
-Can help redefine the values of an attribute we already have and want to express differently. 
+**Python `__setattr__()`**:
 
+The `__setattr__()` method can redefine the values of an existing attribute within an object. This can be particularly useful for ensuring that the values assigned to attributes meet certain criteria or for modifying their values before they are set.
+ 
 ### Pytorch initialisation
 
 A neural network is a set of layers which depend on each other, like PIPE in the command line. 
@@ -134,3 +149,19 @@ building1[2] = 'DEF Inc'
 print( building1[2] )
 ```
 Whether you use `__setitem__` like this really depends on how you plan to abstract your data - in this case we have decided to treat a building as a container of floors (and you could also implement an iterator for the Building, and maybe even the ability to slice - i.e. get more than one floor's data at a time - it depends on what you need.
+
+## Manipulating class attributes
+
+You can reassign a class attribute (an attribute initiated under the `def __init__`) by doing the following:
+```Python
+class Example:
+    an_attribute = "coq" #Yes you can actually do this in a class
+
+example = Example()
+example.attr = "not coq" #Can update an attribute's value using this method
+print(example)
+
+Output:
+"not coq"
+```
+
