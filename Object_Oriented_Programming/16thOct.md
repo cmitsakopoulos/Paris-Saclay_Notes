@@ -48,9 +48,20 @@ Instead of initialising the attributes as mentioned before, you can call them us
 ```Python
 self.__attr__("layer1", torch.nn.Linear(data, data)) #Where you start by adding the name of the attribute, the function in the neural network, then its data
 ```
-Within this class, "behind the scenes" a dictionary of "**parameters**" ( `parameters = {}` ) is kept which contains the values with which the layers are interacting with or producing at any moment.
+Within this class, "behind the scenes" a dictionary of "**parameters**" ( `parameters = {}` ) is kept which contains the values with which the *layers are interacting with or producing at any moment*.
 
-This is required for a neural network to work properly, by using `__setattr__`, you are automatically updating the **parameters** dictionary, by adding the name of each layer and the (mathematical) function it represents.
+This is ***required for a neural network to work properly***, by using `__setattr__`, you are automatically updating (***registering***) the **parameters** dictionary, by adding the name of each layer and the (mathematical) function it represents.
 
+Now remember that a method (def) of `__setattr__` and the method of `register_parameter()` (def), can perform the same function. If both of them coexist within a class and you are manually updating the parameters dictionary, you will get double the amounts of layers.
 
+### "Super" dunder method
+
+To avoid problems in updating your parameters dictionary, you can use the 
+```Python
+class Foo():
+    parameters: list
+    def __init__(self):
+        `super().__setattr__("parameters", [])
+```
+Here you have defined that parameters should be a list, and that the newly called attribute "parameters" should be accessed by all methods of the class and can therefore be properly appended.
 
