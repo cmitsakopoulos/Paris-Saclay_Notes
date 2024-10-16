@@ -63,5 +63,33 @@ class Foo():
     def __init__(self):
         `super().__setattr__("parameters", [])
 ```
-Here you have defined that parameters should be a list, and that the newly called attribute "parameters" should be accessed by all methods of the class and can therefore be properly appended.
+Here you have defined that parameters should be a list, and that the newly called attribute "parameters" should be accessed by all methods of the class, is **empty** when accessed by the class (for each time the class is called) and that can therefore be appended properly.
+
+### Call dunder method
+
+You use this dunder method in instances where you have an instance of a class which cannot be called directly like a function would; 
+
+```Python
+class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+    def __call__(self):
+        return f"My name is {self.name}"
+
+obj = MyClass("Chris")
+print(obj())  # Now the object is callable and returns "My name is Chris"
+```
+### Iteration dunder method
+
+Otherwise known as `__iter__()`, it is the equivalent of iterating within an object that can be a list or dictionary, by manual methods:
+
+```Python
+for item in object:
+    pass
+```
+Whereas with this method:
+
+```Python
+
 
