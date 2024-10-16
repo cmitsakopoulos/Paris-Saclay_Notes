@@ -80,16 +80,21 @@ class MyClass:
 obj = MyClass("Chris")
 print(obj())  # Now the object is callable and returns "My name is Chris"
 ```
-### Iteration dunder method
+### Iteration dunder methods
 
-Otherwise known as `__iter__()`, it is the equivalent of iterating within an object that can be a list or dictionary, by manual methods:
-
+Otherwise known as `__iter__()`, it is the equivalent of iterating within an object that can be a list or dictionary, by manual methods; a **replacement for a "for" loop**:
 ```Python
 for item in object:
     pass
 ```
-Whereas with this method:
+Whereas using this method, you could for example apply the following:
 
 ```Python
-
+    def __iter__(self):
+        node = self.head
+        while node is not None: #Check that the object you are iterating is not empty, or it will fail.
+            yield node #return the value it has iterated through
+            node = node.next #continue iterating
+        return self
+``` 
 
