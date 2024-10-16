@@ -70,7 +70,7 @@ From the example analysed in class, using an *A. Thaliana* genetic sequence capp
 
 ![alt text](image-2.png)
 
-This diagram concerns the ORFs and their phases in the direct strand;
+This diagram concerns the ORFs and their phases in the direct strand, to better conceptualise it;
 
 
 
