@@ -164,4 +164,4 @@ print(example)
 Output:
 "not coq"
 ```
-
+## Add info on decorators during general revision
