@@ -185,7 +185,7 @@ print("The no. of transactions are: "+str(sam.numTransactions()))
 print("The transaction history is: "+ str(sam.getTransactions())) 
 ```
 
-If the attributes of a class are to remain private (only accesible by that class), then the getitem method allows you to access the information of that attribute (which should be stored in for ex. a list or dictionary), without **allowing you to accidentally modify the details and can provide automatic handling of data manipulation of the attribute (when paired with setitem)**.
+If the attributes of a class are to remain private (only accesible by that class), then the getitem method allows you to access the information of that attribute (which should be stored in for ex. a list or dictionary), without **needing to store them in new variables, can check for states and can handle data manipulation of the attribute when paired with setitem**.
 
 ## Manipulating class attributes
 
