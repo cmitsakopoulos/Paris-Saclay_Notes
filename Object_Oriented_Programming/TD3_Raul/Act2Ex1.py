@@ -27,7 +27,7 @@ class BankAccount:
     def balance(self):
         del self.__balance
         
-    def convert(self, rate):
+    def currency(self, rate):
         return self.balance * rate
     
     def new_account(self, name, balance):
