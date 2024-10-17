@@ -30,7 +30,8 @@ class BankAccount:
     def currency(self, rate):
         return self.balance * rate
     
-    def new_account(self, name, balance):
+    @classmethod
+    def new_account(cls, name, balance):
         return BankAccount(name, balance)
 
     def __str__(self):

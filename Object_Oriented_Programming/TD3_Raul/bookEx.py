@@ -21,7 +21,14 @@ class Book:
         else:
             raise ValueError("Author must be a string")
     
+    @classmethod
+    def get_new_empty(cls, prefix_author):
+        print(cls.counter)
+        return cls("Random Book")
+        return cls(prefix_author + " Random Book")
+        
 if __name__ == "__main__":
+    book = Book.get_new_empty("EMPTY")
     b = Book("Jules Verne")
     print(b.author)
     b.set_author = "H.G. Wells"
