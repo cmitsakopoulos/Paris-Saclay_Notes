@@ -2,6 +2,10 @@ class Book:
     def __init__(self, author):
         self.__author = author
     
+    def __new__(cls, *args, **kwargs):
+        print("NEW")
+        return super().__new__(cls)
+    
     def get_author(self):
         return self.author
     
