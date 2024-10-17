@@ -133,41 +133,59 @@ Whereas using this method, you could for example apply the following:
 ``` 
 ### Get item method
 
-Imagine a class which models a building. Within the data for the building it includes a number of attributes, including descriptions of the companies that occupy each floor:
+Let’s take the example of a bank record of a person. It contains balance, transaction history, and other confidential records as part of it. Now, this bank record needs to be handled as a built-in data type to facilitate many operations. There are several methods which need access for balance and transaction history. If they directly modify the balance, they might end up inserting null values, or negative values that are very vulnerable. So, the __getitem__() and __setitem__() helps in presenting the details securely.
 
-Without using `__getitem__` we would have a class like this:
 ```Python
-class Building(object):
-     def __init__(self, floors):
-         self._floors = [None]*floors
-     def occupy(self, floor_number, data):
-          self._floors[floor_number] = data
-     def get_floor_data(self, floor_number):
-          return self._floors[floor_number]
+class bank_record: 
+	
+	def __init__(self, name): 
+		
+		self.record = { 
+						"name": name, 
+						"balance": 100, 
+						"transaction":[100] 
+						} 
 
-building1 = Building(4) # Construct a building with 4 floors
-building1.occupy(0, 'Reception')
-building1.occupy(1, 'ABC Corp')
-building1.occupy(2, 'DEF Inc')
-print( building1.get_floor_data(2) )
-```
-We could however use `__getitem__` (and its counterpart `__setitem__`) to make the usage of the Building class 'nicer':
-```Python
-class Building(object):
-     def __init__(self, floors):
-         self._floors = [None]*floors
-     def __setitem__(self, floor_number, data):
-          self._floors[floor_number] = data
-     def __getitem__(self, floor_number):
-          return self._floors[floor_number]
+	def __getitem__(self, key): 
+		
+		return self.record[key] 
 
-building1 = Building(4) # Construct a building with 4 floors
-building1[0] = 'Reception'
-building1[1] = 'ABC Corp'
-building1[2] = 'DEF Inc'
-print( building1[2] )
+	def __setitem__(self, key, newvalue): 
+		
+		if key =="balance" and newvalue != None and newvalue>= 100: 
+			self.record[key] += newvalue 
+			
+		elif key =="transaction" and newvalue != None: 
+			self.record[key].append(newvalue) 
+	
+	def getBalance(self): 
+		return self.__getitem__("balance") 
+
+	def updateBalance(self, new_balance): 
+		
+		self.__setitem__("balance", new_balance) 
+		self.__setitem__("transaction", new_balance)	 
+	
+	def getTransactions(self): 
+		return self.__getitem__("transaction") 
+
+	def numTransactions(self): 
+		return len(self.record["transaction"]) 
+
+sam = bank_record("Sam") 
+print("The balance is : "+str(sam.getBalance())) 
+
+sam.updateBalance(200) 
+print("The new balance is : "+str(sam.getBalance())) 
+print("The no. of transactions are: "+str(sam.numTransactions())) 
+
+sam.updateBalance(300) 
+print("The new balance is : "+str(sam.getBalance())) 
+print("The no. of transactions are: "+str(sam.numTransactions())) 
+print("The transaction history is: "+ str(sam.getTransactions())) 
 ```
-Whether you use `__setitem__` like this really depends on how you plan to abstract your data - in this case we have decided to treat a building as a container of floors (and you could also implement an iterator for the Building, and maybe even the ability to slice - i.e. get more than one floor's data at a time - it depends on what you need.
+
+If the attributes of a class are to remain private (only accesible by that class), then the getitem method allows you to access the information of that attribute (which should be stored in for ex. a list or dictionary), without **allowing you to accidentally modify the details and can provide automatic handling of data manipulation of the attribute (when paired with setitem)**.
 
 ## Manipulating class attributes
 
