@@ -84,7 +84,7 @@ Within this class, "behind the scenes" a dictionary of "**parameters**" ( `param
 
 This is ***required for a neural network to work properly***, by using `__setattr__`, you are automatically updating (***registering***) the **parameters** dictionary, by adding the name of each layer and the (mathematical) function it represents.
 
-Now remember that a method (def) of `__setattr__` and the method of `register_parameter()` (def), can perform the same function. If both of them coexist within a class and you are manually updating the parameters dictionary, you will get double the amounts of layers.
+Now remember that a method (def) of `__setattr__` and the method of `register_parameter()` (def), can perform the same function. If both of them coexist within a class and you are manually updating the parameters dictionary, you will get double the amount of layers.
 
 ### "Super" dunder method
 
@@ -112,6 +112,8 @@ class MyClass:
 obj = MyClass("Chris")
 print(obj())  # Now the object is callable and returns "My name is Chris"
 ```
+Additionally, you can use `__call__` to call the decorator without getting the results provided by the decorated function.
+
 ### Iteration dunder method
 
 Otherwise known as `__iter__()`, it is the equivalent of iterating within an object that can be a list or dictionary, by manual methods; a **replacement for a "for" loop**:
