@@ -36,7 +36,24 @@ Now the `__str__` method is very similar to repr, but behaves closer to print th
 **Python `__setattr__()`**:
 
 The `__setattr__()` method can redefine the values of an existing attribute within an object. This can be particularly useful for ensuring that the values assigned to attributes meet certain criteria or for modifying their values before they are set.
- 
+
+For example:
+```Python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Create an instance of Person
+p = Person("Alice", 30)
+
+# Using setattr to change the age attribute, without permanently modifying the initial instance of the object.
+setattr(p, 'age', 31)
+
+# Using getattr to verify the change
+print(getattr(p, 'age'))  # Output: 31
+```
+
 ### Pytorch initialisation
 
 A neural network is a set of layers which depend on each other, like PIPE in the command line. 
