@@ -13,5 +13,11 @@ Having gathered a large dataset of 8183 primary cancer (*no metastases/reoccurin
 
 **CLONETv2** is a pipeline which can use tumour and normal paired samples to uncover allele specific copy numbers in each sample type: They use this to avoid noise or "biased" signals from non cancer cells within a tumour, thereby ensuring that the VAF estimated in cancer types won't be heavily influenced by unpure tumour samples.
 
+### asP definition:
+
+***Allele-specific ploidy (asP)*** is the weighted average of allele specific copy numbers on homologous chromosomes (ideal for analysis in human cancer). 
+
+Obviously in ideal cases asP should exclusively be 2; as human cells are diploid. However, in the case of cancer, allele specific ploidy can differ due to deletion or gain/amplification events which drive cancer progression.
+
 ### Results:
 
