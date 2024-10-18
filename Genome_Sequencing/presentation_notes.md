@@ -2,6 +2,9 @@
 
 ### Terms
 
+**Ploidy**: Artificially enhances proportion of specific alleles, unfairly increasing VAF. (copy-gain)
+**Purity**: Skews tumour wide estimations by “watering” down VAF.
+
 **Gain**: An increase of DNA copies in tumour cells where the resulting number is around 3-4 DNA copies. Moderate CNV.
 **Amplification**: An increase of DNA copies where 5 or more copies can be found in tumour cells. Severe CNV.
 
