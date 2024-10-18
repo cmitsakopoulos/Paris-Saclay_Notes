@@ -49,4 +49,8 @@ If carrier frequency is high even in non cancer related samples, then once cance
 
 ### Question 7 : Analyse figure 4A. (3 points)
 
+The significance points to enrichment of specific alleles in accordance to the cancer type. We can observe that variants(alleles/points) are distributed normally in both oncogenes and tumour supressor genes (small variance off of 0.5VAF). 
+
+From 4B, we can observe that the distribution of copy number for each each allele (point) which presence is significant or suggestive, is below 0, therefore indicative of **hemizygous deletion** within genes.
+
 ### Question 8 : What is the additional information provided by the panel B of figure 4? (1,5 points)
