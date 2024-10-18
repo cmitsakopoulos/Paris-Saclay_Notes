@@ -48,7 +48,18 @@ Taking all asCN statuses (CN-LOH, Gain-LOH and Amplification-LOH) into account t
 
 Their discovery supported the notion that LOH and SNVs are **driver mutations** (initial trend setters) and in **subsequent tumour growth steps**, TP53 is thereafter **amplified**.
 
+While TP53 mutations can vary between patients, the **relationship** between the aforementioned driver mutations and subsequent amplification are **singificant**.
 
+Why does TP53 mutate this way?
+: In multiple instances where TP53 has mutated, tumours will **retain a wild-type (normal) copy** in their pangenome. A **dominant positive mechanism** therefore develops for TP53 function following mutation, consequently affecting p53 function (what repairs DNA).
+
+* TP53 related SNVs are enriched in high asP conditions.
+
+Considering that ***TP53 is also involved in cell-cycle functions*** and by extension is implicated in the ***orderly function of the cell transcriptome***:
+
+"The results corroborate the hypothesis that tumor genomic make-up contributes to shaping the proliferative response to aneuploidy by regulating both transcription and pro- tein degradation."
+
+In other words, these SNV events influence **tuomour proliferation** and the **proteomic make-up** of tumour cells.
 
 ### Results: Section 3;
 
