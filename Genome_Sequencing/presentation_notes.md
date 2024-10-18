@@ -19,7 +19,7 @@ Having gathered a large dataset of 8183 primary cancer (*no metastases/reoccurin
 
 Obviously in ideal cases asP should exclusively be 2; as human cells are diploid. However, in the case of cancer, allele specific ploidy can differ due to deletion or gain/amplification events which drive cancer progression.
 
-### Results: Section 1.
+### Results: Section 1; asCN.
 
 Donwstream analyses on the QCed tumour data displayed that **56.8%** of allelic imbalance cases were aparent **wild-type** events.
 
@@ -36,5 +36,20 @@ They observe that tumours **share genomic commonalities** and are **not strictly
 Key takeaway of theirs
 : Loss of heterozygosity is a common genomic occurence in primary tumours, information that could be applied to cancer analysis.
 
-### Results: Section 2.
+### Results: Section 2; asCN in relation to SNVs.
+
+In their analysis multiple TSGs presented a series of 20 SNV events; they proved that TSGs in particular observe the higest enrichment in conjuction with SNV events. 
+
+Key amongst the enriched TSGs is TP53, a vital anti cancer gene in the human body.
+
+Taking all asCN statuses (CN-LOH, Gain-LOH and Amplification-LOH) into account they observed that TP53 is **enriched for deleterious SNV** events; 
+
+"(37.2%, 51.4%, and 55.7% in Hemi-dels, CN-LOH, and Gain-LOH, respectively)."
+
+Their discovery supported the notion that LOH and SNVs are **driver mutations** (initial trend setters) and in **subsequent tumour growth steps**, TP53 is thereafter **amplified**.
+
+
+
+### Results: Section 3;
+
 
