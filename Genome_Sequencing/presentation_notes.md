@@ -19,5 +19,22 @@ Having gathered a large dataset of 8183 primary cancer (*no metastases/reoccurin
 
 Obviously in ideal cases asP should exclusively be 2; as human cells are diploid. However, in the case of cancer, allele specific ploidy can differ due to deletion or gain/amplification events which drive cancer progression.
 
-### Results:
+### Results: Section 1.
+
+Donwstream analyses on the QCed tumour data displayed that **56.8%** of allelic imbalance cases were aparent **wild-type** events.
+
+Where they could later identify that **26.4%** of the cancer samples in the study cohort had an **asP higher than 2.5**, thereby *indicating copy gain/amplification*. 
+
+Specifically, they observe that with **adrenocortical carcinoma (ACC)**, even though the majority of samples demonstrate a low asP, **when asP is high**, is correlated with a **low-disease-survival rate**.
+
+When analysing autosomal chromosomes for allele-specific tumour driver behaviour, they **removed ploidy influence** on VAFs and observed that the ***tumour samples clustered into 20 distinct clusters***. 
+
+Specifically, they targeted their analysis on **oncogenes (OG) and tumour supressors (TSG)**.
+
+They observe that tumours **share genomic commonalities** and are **not strictly bound to their own cluster**, *based on their* *type*.
+
+Key takeaway of theirs
+: Loss of heterozygosity is a common genomic occurence in primary tumours, information that could be applied to cancer analysis.
+
+### Results: Section 2.
 
