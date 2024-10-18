@@ -1,3 +1,0 @@
-# Generalised Linear Model
-
-
