@@ -72,7 +72,5 @@ The *inverse is true for low asP samples within the analysis*. Additionally, the
 ### Results: Section 4;
 
 Context
-: It has been observed that deletions of TSGs are early events
-(Deng et al., 1996) and, therefore, the most plausible scenario
-for the origin of CN-LOH involving TSGs is likely the loss of one
-allele followed by the duplication of the remaining allele.
+: "It has been observed that deletions of TSGs are early events and, therefore, the most plausible scenario for the origin of CN-LOH involving TSGs is likely the loss of one allele followed by the duplication of the remaining allele." (directfrompaper)
+
