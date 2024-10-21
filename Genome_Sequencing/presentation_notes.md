@@ -36,6 +36,19 @@ They observe that tumours **share genomic commonalities** and are **not strictly
 Key takeaway of theirs
 : Loss of heterozygosity is a common genomic occurence in primary tumours, information that could be applied to cancer analysis.
 
+### Results: Section 1; Methods & Data selection.
+
+SPICE pipeline: 
+
+1. Initially ensures BAM file metadata is correct in order to later account for ethnicity and sex (if available), in genomic comparisons.
+2. If some data isnt available already, performs sequencing statistics calculations (picard HSmetrics) also passing the genomic data to ethSEQ to infer ethnicity.
+3. 
+
+
+CLONETv2: Used the pipeline with annotated umor ploidy and admixture have on the copy number of the tumor
+
+, , 
+
 ### Results: Section 2; asCN in relation to SNVs.
 
 In their analysis multiple TSGs presented a series of 20 SNV events; they proved that TSGs in particular observe the higest enrichment in conjuction with SNV events. 
@@ -105,4 +118,9 @@ Further analysis on these findings would prove that there are 18 TSGs undergoing
 
 In general CN, GAIN and AMPLIFICATION LOH are correlated with expression reduction compared with the wildtype, and are TSG specific reductions and by extension, tumour specific expression reductions.
 
+### Results: Section 4; Method.
+
+They paired Recount2 (transcriptomic data) matching it to the tumour genomes; they created gene specific linear models based on expression rates (dependent) and LOH events (independent) that were identified for said gene.
+
+If in those linear models beta was above 0 and the FDR was below 0.05, the genes for which those linear models were made for would be considered enriched.
 
