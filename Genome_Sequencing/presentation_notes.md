@@ -91,3 +91,18 @@ expression level with respect to the WT level and further if
 Gain-LOH and Amp-LOH also show a reduction in expression,
 independently of the total number of copies.
 ```
+Obviously their model is better because it doesnt assume that "number of copies" = "rate of expression", but how does LOH and CN together uncover expression rate???
+
+As can be seen on Figure 4, copy numbers are correlated to increased levels of expression against the wildtype base rate. Particularly, in BRCA the correlation between increased copy number and expression is most pronounced in the data for TSGs when compared to OGs.
+
+However, CN-LOH events were observed to reduce expression (Figure 4C), again enrichment analysis proved that TSGs were more affected than OGs. 
+
+These findings *confirm the hypothesis* that TSG mutations undergo selection pressure in CN-LOH events;
+
+Interestingly, a number of essential genes?? (Suplemmentary figures/tables S13-S14) demonstrated higher stability (no considerable change in expression) which therefore reduce the overall consequences/burden of LOH. 
+
+Further analysis on these findings would prove that there are 18 TSGs undergoing selective pressure (S13C), and when compared to WT data, Hemi-dels and CNLOH are very similar in their impact (median ratio: 0.54 and 0.66 respectively, check STAR METHODS for working).
+
+In general CN, GAIN and AMPLIFICATION LOH are correlated with expression reduction compared with the wildtype, and are TSG specific reductions and by extension, tumour specific expression reductions.
+
+
