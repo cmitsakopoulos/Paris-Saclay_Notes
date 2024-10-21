@@ -74,3 +74,20 @@ The *inverse is true for low asP samples within the analysis*. Additionally, the
 Context
 : "It has been observed that deletions of TSGs are early events and, therefore, the most plausible scenario for the origin of CN-LOH involving TSGs is likely the loss of one allele followed by the duplication of the remaining allele." (directfrompaper)
 
+Their observartion in Allelic Frequency with regard to SNVs in Figure 2C, re affirm the above stated notion. 
+
+In the final part of the results they intend to inspect if the CN-LOH retains the same gene expression as wild type variants (healthy); the basal rate.
+
+They hypothesize that if regaining (CN-LOH origin) basal gene expression compromises the survival of the cancer cell, expression should not have returned to normal after CN-LOH. 
+
+How tf are they getting gene expression from this data??
+```
+To test this hypothesis, we built a linear model to predict the
+expression level of a gene based on two variables derived by
+asCN information: the total number of copies (CN tot) and the
+presence of LOH (Figure 4A). In the specific scenario of a TSG,
+we can test whether CN-LOH events associate with reduced
+expression level with respect to the WT level and further if
+Gain-LOH and Amp-LOH also show a reduction in expression,
+independently of the total number of copies.
+```
