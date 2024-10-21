@@ -64,7 +64,7 @@ Their discovery supported the notion that LOH and SNVs are **driver mutations** 
 While TP53 mutations can vary between patients, the **relationship** between the aforementioned driver mutations and subsequent amplification are **singificant**.
 
 Why does TP53 mutate this way?
-: In multiple instances where TP53 has mutated, tumours will **retain a wild-type (normal) copy** in their pangenome. A **dominant positive mechanism** therefore develops for TP53 function following mutation, consequently affecting p53 function (what repairs DNA).
+: In multiple instances where TP53 has mutated, tumours will **retain a wild-type (normal) copy** in their pangenome. A **dominant positive mechanism/(mutation)** therefore develops which affects TP53 function throughout the tumour, consequently disarming p53 within tumour cells (what repairs DNA).
 
 * TP53 related SNVs are enriched in high asP conditions.
 
