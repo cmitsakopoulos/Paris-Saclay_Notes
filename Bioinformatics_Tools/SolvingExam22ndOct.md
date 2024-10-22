@@ -22,7 +22,7 @@ If you read the introductory sections: ***The prot_6_proteomes.fa file contains 
 
 - This means that the database is quite large and by extension, the e-values for hits will be higher; or in other words, there is more room for correct alignments to the query sequence.
 
-- Additionally, Swissprot and NR are databases which require annotation etc to be updated. Therefore, the answer is correct partially, as you run your unknown sequence to our homegrown database as you can find ***uncharacterised protein isoforms***. ==This is the correct phrasing==.
+- Additionally, Swissprot and NR are databases which require annotation etc to be updated. Therefore, the answer is correct partially, as you specifically run your unknown sequence to the homegrown database to find ***uncharacterised protein isoforms***. ==This is the correct phrasing==.
 
 - 
 
