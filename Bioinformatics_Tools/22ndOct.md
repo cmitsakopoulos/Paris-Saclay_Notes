@@ -10,4 +10,38 @@ What appears as **protein truncation** at the last aligned sequence, *concerning
 
 Different tools will be more powerful for homologous sequences, or different parameters can help account for the condition of your sequences (poor sequencing, low homozygosity etc.).
 
+### Applications for alignment
+
+- **Detection** of evolutive ==**conserved regions**== (often= key function of the molecule); sequence regions retained through evolution.
+- ***Identification of amino acids that are implied in the function of the protein***; shared regions between genes that, paired with experimental data, can show there are functional similarities between them.
+- Validation a posteriori of the alignments by pairs (BLAST and FASTA) - ***Determination of consensus sequences***
+- Reconstruction of families of sequences.
+- Reconstruction of **phylogenetic trees** (species).
+- ***Reconstruction of the history of gene families*** (with paralogy) (**parsimonious** inference).
+
+### Representing methods of alignment
+
+![alt text](<Screenshot 2024-10-22 at 09.13.18.png>)
+
+Remember that you are looking for possibilities of aligning sequences to each other and the formula of possibilities should be:
+
+$ 2^n - 1 $
+
+Scoring matrices similar to those in BLAST are what can solve the "requirements" of this formula result (poetic).
+
+### Heuristics for multiple alignment
+
+***Computational burden*** increases significantly if **heuristics** are not used to *calculate the number of possibilities* and of course, identify which **possibilities are the most just**.
+
+* ***Local alignment***s: DIALIGN2, MACAW
+
+- Useful when there are a lot of gaps and internal repetitions
+
+* ***Iterative methods***: HMMs, HMMER, SAM
+
+- Are slow but can produce good alignments
+
+* ***Progressive alignment***: MUSCLE, **MAFFT**, ClustalW, PileUp, MultAlin.
+
 ### 
+
