@@ -26,4 +26,9 @@ Pipelines :
 
 ![alt text](image-5.png)
 
+*To teach a model to predict gene presence within a set of genetic code, the system must be trained on previously annotated genetic sequences; in order for there to be a "mean" or "median" to compare against to.*
+
+- In fact, around 1000 annotated (known) genes might be needed to train a model with the method mentioned before.
+- Prefer high quality genes as of course the training data will reflect onto the quality of the model.
+
 
