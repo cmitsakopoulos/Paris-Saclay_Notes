@@ -31,4 +31,7 @@ Pipelines :
 - In fact, around 1000 annotated (known) genes might be needed to train a model with the method mentioned before.
 - Prefer high quality genes as of course the training data will reflect onto the quality of the model.
 
+* The following image depicts the so called "quality" that's needed in the known genes, to train the model we want.
+
+![alt text](<Screenshot 2024-10-22 at 13.53.54.png>)
 
