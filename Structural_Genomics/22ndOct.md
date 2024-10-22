@@ -39,3 +39,8 @@ Pipelines :
 
 ![](image-6.png)
 
+## Fgenesh to keep note of:
+
+![alt text](<Screenshot 2024-10-22 at 15.12.50.png>)
+
+# ENHANCE LATER
