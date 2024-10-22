@@ -24,7 +24,14 @@ If you read the introductory sections: ***The prot_6_proteomes.fa file contains 
 
 - Additionally, Swissprot and NR are databases which require annotation etc to be updated. Therefore, the answer is correct partially, as you specifically run your unknown sequence to the homegrown database to find ***uncharacterised protein isoforms***. ==This is the correct phrasing==.
 
-- 
+- With whole proteome analysis you can identify orphan genes, at the top of your analysis. Advantage
+
+- Analysis is focused. 
+
+- Local alignments lead to better parsing. 
+
+Orphan genes
+: ORFans, or taxonomically restricted genes (TRGs) are genes that lack a detectable homologue outside of a given species or lineage.
 
 ## Question 3: What can you conclude on the unknown sequence?
 
@@ -35,3 +42,4 @@ We can infer that the sequence is an isoform of a CHST1 designated carbohydrate 
 The second hit appears to be an isoform of our unknown sequence, where the alignment length is exact to the unknown sequence, but is however not highly similar sequence wise (84%).
 
 ## Question 4: Using the descriptions of the sequences (document 1), can you say that all the shown subject sequences belong to the same family of proteins than the studied sequence? (justify).
+
