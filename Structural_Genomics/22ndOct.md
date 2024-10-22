@@ -4,3 +4,26 @@
 
 ![alt text](image-4.png)
 
+Remember
+: ***Majority of exons*** in eukaryotic genes are small; at ***~150bp***. Major takeway, it is difficult to annotate a eukaryotic genome due to the nature of the exons and the number of introns.
+
+## Approaches in eukaryotic gene identification
+
+Ab initio prediction : 
+    These methods detect the signals on the sequences
+Similarity-based methods :	
+    These use similarity to annotated sequences like proteins, cDNAs, or RNAseq
+Hybrid approaches : 
+    Ab initio tools with the ability to integrate external evidence/hints 
+Comparative (homology) based gene finders : 
+    These align genomic sequences from different species and use the alignments to 	guide the gene predictions
+Chooser, combiner approaches : 
+    These combine gene predictions of other gene finders 
+Pipelines : 
+    These combine multiple approaches
+
+## Ab initio prediction methods: As in, *de novo*
+
+![alt text](image-5.png)
+
+
