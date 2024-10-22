@@ -35,3 +35,7 @@ Pipelines :
 
 ![alt text](<Screenshot 2024-10-22 at 13.53.54.png>)
 
+* The following slide gives some contxt on the methods of calculating the quality of a gene annotation:
+
+![](image-6.png)
+
