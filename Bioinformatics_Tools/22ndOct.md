@@ -43,5 +43,13 @@ Scoring matrices similar to those in BLAST are what can solve the "requirements"
 
 * ***Progressive alignment***: MUSCLE, **MAFFT**, ClustalW, PileUp, MultAlin.
 
-### 
+### CLUSTALW
+
+An algorithm used for ***Global Alignments***.
+
+![alt text](<Screenshot 2024-10-22 at 09.26.40.png>)
+
+The tool will calculate the distance matrix between sequences, which distance expresses the **relative-time distance** of **speciation** which led to these sequences ***differing through substitutions*** etc.
+
+Using ***Neighbour-Joining*** it will create a ==**guide tree**==, to later obtain the multiple alignment; this tree does not represent phylogenetic relationship directly.
 
