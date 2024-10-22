@@ -43,3 +43,22 @@ The second hit appears to be an isoform of our unknown sequence, where the align
 
 ## Question 4: Using the descriptions of the sequences (document 1), can you say that all the shown subject sequences belong to the same family of proteins than the studied sequence? (justify).
 
+Looking at the final BLAST result depicted, oen can see that the alignment length is quite large and the e-value is considerably good considering the size of the database.
+
+Look at the functions of proteins in the description lines, and try and match with the answer of Question 3.
+
+All of these appear to be within the same superfamily of proteins, with ***one exception however***;
+
+`>ENSGALP00010012016.1 pep primary_assembly:bGalGal1.mat.broiler.GRCg7b:11:19503772:19513568:1 gene:ENSGALG00010008780.1 transcript:ENSGALT00010020885.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:KARS description:lysyl-tRNA synthetase [Source:NCBI gene (formerly Entrezgene);Acc:415885]`
+
+***Observe the gene symbol and description***.
+
+The BLAST results for this hit are (outfmt6):
+
+35.83 360 209 6 56 409 29 372 1e-57 224
+
+We can discern that the alignment length is relatively large, with a strong e-value and high bitscore.
+
+Could be an example of divergent evolution, neo-functionalisation specifically, leading to a new family of proteins which retains a conserved region to its ancestor. 
+
+# END OF LECTURE
