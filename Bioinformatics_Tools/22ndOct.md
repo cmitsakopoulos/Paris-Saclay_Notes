@@ -54,5 +54,14 @@ The tool will calculate the distance matrix between sequences, which distance ex
 Using ***Neighbour-Joining*** it will create a ==**guide tree**==, to later obtain the multiple alignment; this tree does not represent phylogenetic relationship directly.
 
 Neighbour-Joining:
-: Can be performed by the ***UPGMA method (==Unweighted== Pair Groups with Arithmetic Mean)*** to calculate distance, if we are to **assume that branches were created at the same time**; ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>) Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.37.04.png>)
+: Can be performed by the ***UPGMA method (==Unweighted== Pair Groups with Arithmetic Mean)*** to calculate distance, if we are to **assume that branches were created at the same time**; ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>) Where: n is the "number of sequences" (to account for groups) 
+Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.37.04.png>)
+
+### Calculating UPGMA
+
+![alt text](<Screenshot 2024-10-22 at 09.42.24.png>)
+
+![alt text](<Screenshot 2024-10-22 at 09.50.26.png>)
+
+![alt text](<Screenshot 2024-10-22 at 09.48.56.png>)
 
