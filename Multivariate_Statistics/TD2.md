@@ -1,1 +1,182 @@
-## 
+## Workings and explanations of TD2
+
+### Initialisation
+```R
+library(lbreg)
+library(Epi)
+library(MASS)
+library(ROCR)
+
+data("Evans")
+```
+With the above code you can load your datasets and analysis libraries, onto the R project you have initiated. 
+
+Importantly, from the libraries you have loaded, you can assign your desired dataset to a variable using:
+
+`data(XYZ)`
+
+No need to do:
+
+` data <- (XYZ)`
+
+### summary(dataset)
+In our case:
+```R
+summary(Evans)
+```
+Without setting any particular parameters after the dataset name (dataset, xyz), R will return all possible measurements the function can perform, for each variable within our dataset.
+```R
+ CDH              CAT              AGE             CHL             SMK        
+ Min.   :0.0000   Min.   :0.0000   Min.   :40.00   Min.   : 94.0   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:46.00   1st Qu.:184.0   1st Qu.:0.0000  
+ Median :0.0000   Median :0.0000   Median :52.00   Median :209.0   Median :1.0000  
+ Mean   :0.1166   Mean   :0.2003   Mean   :53.71   Mean   :211.7   Mean   :0.6355  
+ 3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:60.00   3rd Qu.:234.0   3rd Qu.:1.0000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :76.00   Max.   :357.0   Max.   :1.0000  
+      ECG              DBP              SBP             HPT        
+ Min.   :0.0000   Min.   : 60.00   Min.   : 92.0   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.: 80.00   1st Qu.:125.0   1st Qu.:0.0000  
+ Median :0.0000   Median : 90.00   Median :140.0   Median :0.0000  
+ Mean   :0.2726   Mean   : 91.18   Mean   :145.5   Mean   :0.4187  
+ 3rd Qu.:1.0000   3rd Qu.:100.00   3rd Qu.:160.0   3rd Qu.:1.0000  
+ Max.   :1.0000   Max.   :170.00   Max.   :300.0   Max.   :1.0000
+```
+#### Understanding the summary() function:
+```R
+      CDH 
+ Min.   :0.0000
+ 1st Qu.:0.0000 
+ Median :0.0000  
+ Mean   :0.1166    
+ 3rd Qu.:0.0000 
+ Max.   :1.0000 
+```
+Above we have the first column of measurements on the CDH variable, which is a **binary variable** (==Boolean==):
+
+That is, a **categorical variable** which can take either a *True* (1) or *False* (0) value; in the case of CDH (Coronary Heart Disease), one can either have it '*1*', or not have it "*0*".
+
+As such, the "**Min**"= 0, "**Max**" = 1 and the 1st and 3rd Quartiles are 0?
+
+1st Quartile
+: The 1st Quartile is the average of the first/**lowest** 25% of values in the distribution. So, imagine it as the area within the curve which is adjacent to coordinates 0,0 and ends before the median.
+
+2nd Quartile
+: This represents the **middle** 50% of values; if you take the ***average of those, you get the median***. 
+
+3rd Quartile
+: The 3rd Quartile is the **average of the 75% of the values** (vectors), from *lowest to highest*, within a distribution. As such, imagine it as the area covering both the 1st Quartile and the median, thereby the average of both, altogether. 
+
+How can the 3rd Quartile be 0?
+: In a **Boolean** variable, the 4th Quartile (100th Percentile) is where the money is at, the area at which maximum values are represented. When account for 75% of the data from lowest to highest, maximum values are diluted and underrepresented. 
+
+Can also use head(Evans, num=x) to see the x amount of first rows in the data, if num is null, 6 is the default
+```R
+str(Evans)
+sumary(Evans)
+names(Evans)
+for (i in c("CDH", "CAT", "SMK", "ECG", "HPT")) {
+  Evans[, i] <- as.factor(Evans[, i])
+}
+
+pairs(Evans[, c("AGE", "CHL", "SBP", "DBP")])
+
+for(i in c("AGE", "CHL", "SBP", "DBP")) {
+  hist(Evans[, i])
+}
+
+for(i in c("AGE", "CHL", "SBP", "DBP")) {
+  boxplot(Evans[, i],Evans$CDH, data = Evans)
+}
+
+#Use a contingency table for the binary variables 
+
+for(i in c("CAT", "SMK", "ECG", "HPT")) {
+  print(table(Evans[,"CDH"],Evans[, i]))
+}
+
+for(i in c("CAT", "SMK", "ECG", "HPT")) {
+  barplot(table(Evans[, i], Evans[,"CDH"]))
+}
+
+#Fit the model Evans to to test the association between the data in the columns CDH and SMK
+
+chisq <- chisq.test(Evans$CDH, Evans$SMK, correct = FALSE)
+
+glm <- glm(CDH ~ SMK, data = Evans, family = binomial)
+
+summary(glm)
+
+#Deviance the likelihood ratio between the model and the model without any predictors
+
+oddsratio <- exp(coef(glm)[2])
+print(oddsratio)
+#Smokers have a relative risk of coronary disease thats twice more important than from people who don't smoke.
+
+twoby <- twoby2(Evans$CDH, Evans$SMK)
+
+# CDH and HPT
+
+chisq2 <- chisq.test(Evans$CDH, Evans$HPT, correct = FALSE)
+
+glm2 <- glm(CDH ~ HPT, data = Evans, family = binomial)
+
+oddsratio2 <- exp(coef(glm2))
+
+twoby02 <- twoby2(Evans$CDH, Evans$HPT)
+
+#CDH and HPT, taking into account SMK
+
+glm9 <- glm(CDH ~ HPT + SMK, data = Evans, family = binomial)
+
+summary(glm9)
+anova(glm9, glm)
+
+# CDH and AGE as a continuous variable
+
+chisq3 <- chisq.test(Evans$CDH, Evans$AGE, correct = FALSE)
+
+glm3 <- glm(CDH ~ AGE, data = Evans, family = binomial)
+summary(glm3)
+
+oddsratio3 <- exp(coef(glm3))
+
+twoby03 <- twoby2(Evans$CDH, Evans$AGE)
+
+# CDH and AGE as a categorical variable
+
+#Can use break or cut function to create the categories
+
+#Let use binary variables to understand if we are in the category (except for the reference)
+# x {1 if  (49,59]
+#    0 otherwise}
+# x {1 if  (59,69]
+#    0 otherwise}
+# x {1 if  (69,79]
+#    0 otherwise}
+AGE2 <- cut(Evans$AGE, seq(39,79,10))
+
+
+chisq4 <- chisq.test(Evans$CDH, AGE2, correct = FALSE)
+
+glm4 <- glm(CDH ~ AGE2, data = Evans, family = binomial)
+summary(glm4)
+
+oddsratio4 <- exp(coef(glm4))
+
+
+twoby04 <- twoby2(Evans$CDH, AGE2)
+
+# CDH, SMK, HPT and AGE
+
+chisq5 <- chisq.test(Evans$CDH, Evans$SMK, Evans$HPT, cut(Evans$AGE, breaks = c(0, 40, 60, 80, 100)), correct = FALSE)
+
+glm5 <- glm(CDH ~ SMK + HPT + AGE2, data = Evans, family = binomial)
+anova(glm4, glm9, glm5)
+
+oddsratio5 <- exp(coef(glm5))
+#twoby05 <- twoby2(Evans$CDH, Evans$SMK, Evans$HPT, cut(Evans$AGE, breaks = c(0, 40, 60, 80, 100)))
+
+# Perform a variable selection using the step function stepAIC from the MASS package
+
+stepAIC(glm5, direction = "both")
+```R
