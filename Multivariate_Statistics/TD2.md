@@ -58,7 +58,7 @@ That is, a **categorical variable** which can take either a *True* (1) or *False
 As such, the "**Min**"= 0, "**Max**" = 1 and the 1st and 3rd Quartiles are 0?
 
 1st Quartile
-: The 1st Quartile is the average of the first/**lowest** 25% of values in the distribution. So, imagine it as the area within the curve which is adjacent to coordinates 0,0 and ends before the median.
+: The 1st Quartile is the average of the first/**lowest** **25% of values in the distribution**. So, imagine it as the area within the curve which is adjacent to coordinates 0,0 and ends before the median.
 
 2nd Quartile
 : This represents the **middle** 50% of values; if you take the ***average of those, you get the median***. 
@@ -70,26 +70,62 @@ How can the 3rd Quartile be 0?
 : In a **Boolean** variable, the 4th Quartile (100th Percentile) is where the money is at, the area at which maximum values are represented. When account for 75% of the data from lowest to highest, maximum values are diluted and underrepresented. 
 
 Can also use head(Evans, num=x) to see the x amount of first rows in the data, if num is null, 6 is the default
+
+### Gaining access to variable names and structure
+
+With the following you gain access to the attribute names and their types, as explained within the dataset metdata.
 ```R
 str(Evans)
-sumary(Evans)
 names(Evans)
+```
+
+### Parse categorical data into R
+
+Having seen the variables within our dataset, in order for R to manually parse our categorical variables correctly, it will need to be updated using the following:
+```R
 for (i in c("CDH", "CAT", "SMK", "ECG", "HPT")) {
   Evans[, i] <- as.factor(Evans[, i])
 }
+```
+Here you have a loop which stores each categorical value (identifiable by its nametag in the dataset) in the form of **factors**; which help R handle them correctly.
 
+### Creating a scatter plot: getting an idea of the data.
+
+To create pairwise scatter plots use the following method and replace variable names as needed:
+
+```R
 pairs(Evans[, c("AGE", "CHL", "SBP", "DBP")])
+```
 
+Why is this useful?
+: Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: you can ***observe possible correlations between variables***, if not, you can just observe the d*istribution of the data points of each variable* on their own.
+
+### Generating histograms
+
+Imagine a histogram as a bar chart, of which bars are canonically termed as "**bins**". The purpose of a histogram is to represent the distribution of a dataset, this is useful as you can:
+* Observe whether the distribution of a dataset is **normal** (**Gaussian**) or not.
+* You can observe **bin outliers**, or peaks, in the distribution, which could be intriguing in the analysis.
+
+To create a histogram, use the following:
+```R
 for(i in c("AGE", "CHL", "SBP", "DBP")) {
   hist(Evans[, i])
 }
+```
+From the resulting graphs, use this rubric to characterise the distribution of each variable correctly:
 
+![alt text](<Screenshot 2024-10-31 at 18.24.44.png>)
+
+### Generating boxplots
+
+```R
 for(i in c("AGE", "CHL", "SBP", "DBP")) {
   boxplot(Evans[, i],Evans$CDH, data = Evans)
 }
-
+```
 #Use a contingency table for the binary variables 
 
+```R
 for(i in c("CAT", "SMK", "ECG", "HPT")) {
   print(table(Evans[,"CDH"],Evans[, i]))
 }
