@@ -22,7 +22,7 @@ To more easily read the table and work on the calculations, the sequences can be
 | Distance Matrix | A | B | C | D | E |
 | :------ | :------ | :------ | :------ | :------ | :------ |
 | A | \- | 8 | 15 | 38 | 30 |
-| B |  | \- | **7** | 45 | 40 |
+| B |  | \- | ==**7**== | 45 | 40 |
 | C |  |  | \- | 50 | 47 |
 | D |  |  |  | \- | 20 |
 | E |  |  |  |  | \- |
@@ -37,19 +37,42 @@ Following the grouping/**rooting** of these two sequences, let's look at the res
 
 | Distance Matrix | A | B, C | D | E |
 | :---: | :---: | :---: | :---: | :---: |
-| A | \- | **11.5** | 38 | 30 |
-| B |  | \- | 47.5 | 43.5 |
+| A | \- | ==**11.5**== | 38 | 30 |
+| B, C |  | \- | 47.5 | 43.5 |
 | D |  |  | \- | 20 |
 | E |  |  |  | \- |
 
-From these calculations we can see that A and BuC share a common ancestor, they should therefore be anchored together.
+From these calculations we can see that **A and BuC share a common ancestor**, they should therefore be *anchored together*, similar to this:
 
 ![alt text](<Screenshot 2024-11-02 at 18.41.20.png>)
 
+Having done so, we have to continue the calculations to root all leaves together; the calculations don't change much from before.
 
+Consider that since A is an outgroup, and B and C belong to the same clade, we have to approach it differently;
 
-![alt text](<Screenshot 2024-10-22 at 09.42.24.png>)
+* BuC were the **first pair of sequences** to be calculated, they will therefore be ***amplified*** in the subsequent calculations.
+* Of course, now you have to ***divide by three***, as you amplified $d(BC, D)$ and you also have $d(D, A)$. 
 
-![alt text](<Screenshot 2024-10-22 at 09.50.26.png>)
+$ d(ABC, D) = (2*d(BC, D) + d(A, D)) / 3 <=> $
+$ (2 * 47.5 + 38) / 3 $ = ==***44.33***==
 
-![alt text](<Screenshot 2024-10-22 at 09.48.56.png>)
+| Distance Matrix | A, B, C | D | E |
+| :---: | :---: | :---: | :---: |
+| A, B, C | \- | 44.33 | 39 |
+| D |  | \- | ==**20**== |
+| E |  |  | \- |
+
+Now we have **another clade**, involving both sequences ***D and E***.
+
+Repeat the process again, but remember, ***no amplification***:
+
+$ d(ABC, DE) = (ABC, E) + (ABC, D) / 2 <=>$
+$ (39 + 44.33) / 2 $ = ==***41.67***==
+
+| Distance Matrix | B, C, A | D, E |
+| :---: | :---: | :---: | 
+| B, C, A | \- | 41.67 |
+| D, E |  | \- | 
+
+These calculations should lead you to something like this:
+
