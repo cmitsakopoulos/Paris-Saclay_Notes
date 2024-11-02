@@ -76,3 +76,5 @@ $ (39 + 44.33) / 2 $ = ==***41.67***==
 
 These calculations should lead you to something like this:
 
+![alt text](<Screenshot 2024-11-02 at 19.33.14.png>)
+
