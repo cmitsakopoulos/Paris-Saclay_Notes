@@ -118,24 +118,27 @@ From the resulting graphs, use this rubric to characterise the distribution of e
 
 ### Generating boxplots
 
+Boxplots are useful to determine distribution of data between different variables, therefore you would use boxplots to determine variable spread, statistical calculation of the spread for each box and possible relationships in the spread of data.
 ```R
 for(i in c("AGE", "CHL", "SBP", "DBP")) {
   boxplot(Evans[, i],Evans$CDH, data = Evans)
 }
 ```
-#Use a contingency table for the binary variables 
+### Generating contigency tables
 
+contingency table for the binary variables
 ```R
 for(i in c("CAT", "SMK", "ECG", "HPT")) {
   print(table(Evans[,"CDH"],Evans[, i]))
 }
-
+ 
 for(i in c("CAT", "SMK", "ECG", "HPT")) {
   barplot(table(Evans[, i], Evans[,"CDH"]))
 }
+```
 
+```R
 #Fit the model Evans to to test the association between the data in the columns CDH and SMK
-
 chisq <- chisq.test(Evans$CDH, Evans$SMK, correct = FALSE)
 
 glm <- glm(CDH ~ SMK, data = Evans, family = binomial)
