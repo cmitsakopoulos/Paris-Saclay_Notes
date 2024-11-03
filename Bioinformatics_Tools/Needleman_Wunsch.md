@@ -1,4 +1,4 @@
-## Global Alignment
+# Global Alignment and Local Alignment
 
 In order to achieve highly scoring alignments, often its required by algorithms to ***add gaps*** to sequences which share similar genetic code.
 
@@ -9,18 +9,20 @@ Take for example the following two sequences:
 __Sequence 1__: TGCATTAT
 __Sequence 2__: TGCAGGCGAT
 
-If:
+If scoring method:
 
-* **|** is a match
-* **!** is a mismatch
-* **-** is a gap
+* **|** is a match; "+1"
+* **!** is a mismatch "-1"
+* **-** is a gap "0"
 
-Then we would denote the alignment between them as: 
+Then: 
 
 ```
 TGCATTAT
 ||||!!!!--
 TGCAGGCGAT
+
+++++----00 <=> σ = 0 
 ```
 
 If we introduce gaps:
@@ -29,6 +31,8 @@ If we introduce gaps:
 TGCATT--AT
 ||||!!  ||
 TGCAGGCGAT
+
++++--00++ <=> σ = +2
 ```
 Now we have a **higher** alignment score as we observe **more matches** between the sequences. 
 
@@ -36,7 +40,7 @@ Now we have a **higher** alignment score as we observe **more matches** between 
 
 **No**, gaps can be explained by evolutionary changes owed to **SNV, Transposons, Recombination**, which affect the overall homozygosity of two similar sequences.
 
-### Global Alignment: Needleman and Wunsch algorithm
+## Global Alignment: Needleman and Wunsch algorithm
 
 This algorithm performs ***pairwise sequence alignment during global alignment*** and is very simple to use.
 
@@ -160,4 +164,6 @@ Using $ T(x,y)max $ calculations until the end, we get:
 | **j=3** | *C* | \-6 | \-3 | ==***\-2***== | \-3 | \-5 | \-5 |
 | **j=4** | *G* | \-8 | \-5 | \-2 |==***\-1***== | \-3 | \-4 |
 | **j=5** | *T* | \-10 | \-7 | \-4 | \-3 | ==***0***== | ==***\-2***== |
+
+## Local Alignment: Waterman Algorithm
 
