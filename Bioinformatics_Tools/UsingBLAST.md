@@ -47,6 +47,12 @@ In your code, for example, it would translate to the following:
 To observe the difference after filtering:
 `wc -l path_to_result`
 
+#### What is the complexity filter:
+
+Low complexity regions commonly give **spuriously high scores** that reflect compositional bias rather than significant position-by-position alignment. 
+
+Filtering can eliminate these **potentially confounding matches** (e.g., hits against proline-rich regions or poly-A tails) from the blast reports, leaving regions whose blast statistics reflect the *specificity of their pairwise alignment*.
+
 ### Changing substitution matrix in BLAST+:
 
 | Query Length | Substitution Matrix | Gap Costs  |
