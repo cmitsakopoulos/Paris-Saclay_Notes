@@ -224,5 +224,5 @@ In regard to the ***traceback step*** its practically ==identical== to Needleman
 
 Obviously, since we are working with **local alignments**, the traceback has to be repeated for "x" times, where "x" is the amount of possible local alignments.
 
-
+Here we end up with **2** possible local alignments.
 
