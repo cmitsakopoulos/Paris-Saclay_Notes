@@ -149,7 +149,7 @@ Therefore, $T(1,1)max = -1$
 
 #### Example T-table: Result
 
-Using $ T(x,y)max $ calculations, in the end we get:
+Using $ T(x,y)max $ calculations until the end, we get:
 
 |  |  | i=0 | i=1 | i=2 | i=3 | i=4 | i=5 |
 | :---- | :---- | ----- | ----- | ----- | ----- | ----- | ----- |
