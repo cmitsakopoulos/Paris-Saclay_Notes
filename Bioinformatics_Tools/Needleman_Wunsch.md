@@ -195,7 +195,34 @@ While the method is ***nearly identical*** to the Needlaman & Wunsch algorithm, 
 In this algorithm, the matrix is built with ==initialising the $x=0$ and $y=0$ with **null values**==;
 : And use $ T(x,y)max $ for the rest of the boxes.
 
-The ***traceback step*** is ==identical== to Needleman and Wunsch.
+Important
+: ==**No box can hold a negative value**==, remember that when filling in the boxes.
+
+### Example table: No negative values
+
+|  |  | i=0 | i=1 | i=2 | i=3 | i=4 | i=5 |
+| :---- | :---- | ----- | ----- | ----- | ----- | ----- | ----- |
+|  | T-table | **m** | *A* | *T* | *C* | *T* | *G* |
+| **j=0** | **n** | 0 | 0 | 0 | 0 | 0 | 0 |
+| **j=1** | *A* | 0 | 1 | 0 | 0 | 0 | 0 |
+| **j=2** | *T* | 0 | 0 | 2 | 0 | 1 | 0 |
+| **j=3** | *G* | 0 | 0 | 0 | 1 | 0 | 2 |
+| **j=4** | *T* | 0 | 0 | 1 | 0 | 2 | 0 |
+| **j=5** | *G* | 0 | 0 | 0 | 0 | 0 | 3 |
+
+In regard to the ***traceback step*** its practically ==identical== to Needleman and Wunsch:
+
+|  |  | i=0 | i=1 | i=2 | i=3 | i=4 | i=5 |
+| :---- | :---- | ----- | ----- | ----- | ----- | ----- | ----- |
+|  | T-table | **m** | *A* | *T* | *C* | *T* | *G* |
+| **j=0** | **n** | 0 | 0 | 0 | 0 | 0 | 0 |
+| **j=1** | *A* | 0 | ==**1**== | 0 | 0 | 0 | 0 |
+| **j=2** | *T* | 0 | 0 | ==**2**== | 0 | ==**1**== | 0 |
+| **j=3** | *G* | 0 | 0 | 0 | ==**1**== | 0 | ==**2**== |
+| **j=4** | *T* | 0 | 0 | 1 | 0 | ==**2**== | 0 |
+| **j=5** | *G* | 0 | 0 | 0 | 0 | 0 | ==**3**== |
+
+Obviously, since we are working with **local alignments**, the traceback has to be repeated for "x" times, where "x" is the amount of possible local alignments.
 
 
 
