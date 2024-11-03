@@ -1,4 +1,4 @@
-# Global Alignment and Local Alignment
+# Global Alignment and Local Alignment: Dynamic Programming
 
 In order to achieve highly scoring alignments, often its required by algorithms to ***add gaps*** to sequences which share similar genetic code.
 
@@ -93,6 +93,9 @@ So far, so simple.
 
 How would we start filling up the example T-table?
 
+Remember
+: $ T(x,y)max $ is preferred for this algorithm.
+
 #### Example: Calculating T(1,0)
 
 **Step 1:**
@@ -165,5 +168,34 @@ Using $ T(x,y)max $ calculations until the end, we get:
 | **j=4** | *G* | \-8 | \-5 | \-2 |==***\-1***== | \-3 | \-4 |
 | **j=5** | *T* | \-10 | \-7 | \-4 | \-3 | ==***0***== | ==***\-2***== |
 
-## Local Alignment: Waterman Algorithm
+To identify the best alignment
+: **Trace-back** from the last diagonal box (ex. $T(5,5)$), joining boxes together based on **where** the **max** was derived from;
+
+**Example**:
+
+$T(5,5)$'s maximum value was dervied from $T(4,5)$, aka **to its left**; therefore, **trace towards the left**!
+
+Continue until you have reached $T(0,0)$
+: .
+
+## Local Alignment: Smith and Waterman Algorithm
+
+While the method is ***nearly identical*** to the Needlaman & Wunsch algorithm, the **initialisation step** involving the creation of a ***T-table differs***;
+
+|  |  | i=0 | i=1 | i=2 | i=3 | i=4 | i=5 |
+| :---- | :---- | ----- | ----- | ----- | ----- | ----- | ----- |
+|  | T-table | **m** | *A* | *T* | *C* | *T* | *G* |
+| **j=0** | **n** | 0 | 0 | 0 | 0 | 0 | 0 |
+| **j=1** | *A* | 0 |  |  |  |  |  |
+| **j=2** | *T* | 0 |  |  |  |  |  |
+| **j=3** | *G* | 0 |  |  |  |  |  |
+| **j=4** | *T* | 0 |  |  |  |  |  |
+| **j=5** | *G* | 0 |  |  |  |  |  |
+
+In this algorithm, the matrix is built with ==initialising the $x=0$ and $y=0$ with **null values**==;
+: And use $ T(x,y)max $ for the rest of the boxes.
+
+The ***traceback step*** is ==identical== to Needleman and Wunsch.
+
+
 
