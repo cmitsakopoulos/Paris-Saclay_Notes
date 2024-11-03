@@ -198,7 +198,7 @@ In this algorithm, the matrix is built with ==initialising the $x=0$ and $y=0$ w
 Important
 : ==**No box can hold a negative value**==, remember that when filling in the boxes.
 
-### Example table: No negative values
+### Example table: No negative values in Smith&Waterman
 
 |  |  | i=0 | i=1 | i=2 | i=3 | i=4 | i=5 |
 | :---- | :---- | ----- | ----- | ----- | ----- | ----- | ----- |
