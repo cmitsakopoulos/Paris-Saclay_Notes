@@ -84,6 +84,4 @@ Isoform
 1. When looking at the set of results returned by BLAST, remember that **a-normally-high e-value** (*less* significant) **can be** a **significant** hit within a ***large enough database***. 
     - For reference, Swissprot and the Non-Redundant protein databases have a collection of protein sequences at a scale of around 300k. Keep in mind the size of your own database.
 
-2. 
-
-
+2. Beware of *protein family annotation*: if you see a **protein** annotated as "x" and its **sandwiched** between hits of protein family "y", there could be the possibility that protein of "family x" has an incorrect family annotation in the family. Otherwise, consider the **possibility of high e-value**, an **isoform** of obviously homogeneous nature **but** altered function.
