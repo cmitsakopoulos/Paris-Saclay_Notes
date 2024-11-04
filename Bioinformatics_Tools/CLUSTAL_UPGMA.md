@@ -115,17 +115,18 @@ Then we identify that **sequence A is a distant relative** to B and C, an ***out
       y |------ B
     |---|
     |   |------ C
-X---|     3.5
+   X|     3.5
     |
     |---------- A
        5.75
 ```
-If the *distance between clade BC to A*, is **11.5**, then the length of A is:
+If the *distance between clade BC to A*, is **11.5**, then length of A is:
 
-Length of A: $d(BuC, A) / 2$ => ==**5.75**==
-The same branching clade logic is used here; observe **point X**, the origin of the **ABC** clade.
+$d(BuC, A) / 2$ => ==**5.75**==
 
-To calculate y, remember that this is **unweighted**, therefore all leaves were generated at the same point in time;
+**X** is the distance between the two points, which we *calculated in the distance matrix*; **11.5**
+
+To calculate y, remember that this is **unweighted**, therefore all leaves are assumed to be generated at the same point in time;
 
 $d(A, X) <=> d(B, X)$;
 
@@ -134,3 +135,34 @@ $d(A, X) - d(B, Y) => d(X, Y)$;
 $5.75 - 3.5 = 2.25$;
 
 ==***y=2.25***==
+
+Moving on, we see that the D and E sequences form their own clade;
+
+```
+              3.5
+        2.25|------ B
+        |---|
+        |   |------ C
+    |---|     3.5
+    | Y |
+    |   |---------- A
+    |     5.75
+    |
+    |
+    |      5
+    |   |---------- D
+    |---|
+      X |---------- E
+           5
+
+```
+Branch lengths of D and E are calculated by:
+
+$d(D, X) <=> d(D, E) / 4 => 5$
+
+Keep in mind at each stage we ***calculate distance according to how many branches our leaf is adjacent to***.
+
+In this case, *leaf D is adjacent to E as well as BC and A*.
+
+BC += 1, A += 1, D += 1, E += 1 => ==4== 
+
