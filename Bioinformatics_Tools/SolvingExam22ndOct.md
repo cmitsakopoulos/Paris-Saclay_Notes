@@ -61,4 +61,10 @@ We can discern that the alignment length is relatively large, with a strong e-va
 
 Could be an example of divergent evolution, neo-functionalisation specifically, leading to a new family of proteins which retains a conserved region to its ancestor. 
 
-# END OF LECTURE
+#### END OF LECTURE
+
+# Additional remarks
+
+## Gene dynamics important in determining BLAST results:
+
+
