@@ -65,6 +65,25 @@ Could be an example of divergent evolution, neo-functionalisation specifically, 
 
 # Additional remarks
 
-## Gene dynamics important in determining BLAST results:
+## Gene dynamics important in determining BLAST results: Terminology
+
+Homology
+: Defined by genes sharing genetic code due to ==***common ancestry***==; genes or proteins characterised by homology are named ***homologues**.
+
+Paralogy
+: ==*Duplicate genes which exist within the same organism*== are called ***paralogues*** (or in-paralogues); ***duplication events in a common ancestor*** giving rise to identical genes between speciated organisms, are called ***out-paralogues***.
+
+Orthology
+: ==**Duplicate/Identical genes/proteins across two different organisms**==; could be closely related organisms, just not the same.
+
+Isoform
+: Otherwise termed as a **protein variant**, this term refers to highly identical proteins which **retain sequence similarity to high degree**, but can also demonstrate *deviations* in *mode of action*.
+
+## Interpreting BLAST results: Things to keep in mind
+
+1. When looking at the set of results returned by BLAST, remember that **a-normally-high e-value** (*less* significant) **can be** a **significant** hit within a ***large enough database***. 
+    - For reference, Swissprot and the Non-Redundant protein databases have a collection of protein sequences at a scale of around 300k. Keep in mind the size of your own database.
+
+2. 
 
 

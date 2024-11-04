@@ -1,10 +1,16 @@
 ## Understanding BLOSUM62; why its used in BLAST
 
-A BLOSUM62 statistic is based on a **subsitution matrix** generated on ==**log-odds**== of one ***amino acid to be substituted for another***, in a set of protein multiple sequence alignments.
+A BLOSUM62 statistic is based on a **subsitution matrix** generated on ==**log-odds**== of one ***amino acid to be substituted for another***, pairwise protein sequence comparison/alignment.
 
 - Therefore imagine a distance matrix arranged against the amino acids in a pairwise comparison of protein sequences.
 
-**PAM**: Matrix to analyse sequence similarity, is however more limited compared to BLOSUM. The **PAM250 matrix** was the most **commonly used** one. Using **PAM1**, aka **0.01 mutations** for every nucleotide, is not realistic over a large amount of time, even when **accounting for it** (t). **Negative** scores in the matrix are representative of **unnatural mutations**. Multiplication above 250 reaches the “twilight zone”, where the **data is considered** too diverse to be considered sequences similar to each other.
+**PAM**: Matrix to analyse sequence similarity, is however more limited compared to BLOSUM. 
+
+The **PAM250 matrix** was the most **commonly used** one. 
+
+Using **PAM1**, aka **0.01 mutations** for every nucleotide, is not realistic over a large amount of time, even when **accounting for it** (t). 
+
+(**Negative** scores in the matrix are representative of **unnatural mutations**. Multiplication above 250 reaches the “twilight zone”, where the **data is considered** too diverse to be considered sequences similar to each other.)
 
 * Generating a scoring for an alignment, a gap is 4, x \-/- y is 3, match is 0\. A positive grading system.**
 
