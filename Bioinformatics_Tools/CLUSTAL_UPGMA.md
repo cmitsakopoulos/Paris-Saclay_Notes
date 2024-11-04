@@ -149,20 +149,23 @@ Moving on, we see that the D and E sequences form their own clade;
     |     5.75
     |
     |
-    |      5
+    |      5?
     |   |---------- D
     |---|
       X |---------- E
-           5
+           5?
 
 ```
-Branch lengths of D and E are calculated by:
 
-$d(D, X) <=> d(D, E) / 4 => 5$
+Could be a mistake in her answers, as this contradicts everything online and even her own slides
+: Branch lengths of D and E are calculated by: 
 
-Keep in mind at each stage we ***calculate distance according to how many branches our leaf is adjacent to***.
+    $d(D, X) <=> d(D, E) / 4 => 5$
 
-In this case, *leaf D is adjacent to E as well as BC and A*.
+    Keep in mind at each stage we ***calculate distance according to how many branches our leaf is adjacent to***.
 
-BC += 1, A += 1, D += 1, E += 1 => ==4== 
+    In this case, *leaf D is adjacent to E as well as BC and A*.
 
+    BC += 1, A += 1, D += 1, E += 1 => ==4== 
+
+Otherwise, you would use the same logic that is seen in the previous clades.
