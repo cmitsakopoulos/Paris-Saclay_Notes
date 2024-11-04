@@ -19,5 +19,4 @@ Using **PAM1**, aka **0.01 mutations** for every nucleotide, is not realistic ov
 * **Gap extension penalty: Gep**.  
 * **Equation** to calculate alignment score: **Scoring gap(Sg) \= Gop \+ N occurences x Gep**.   
   *  If Sg is low per region, gaps should be groups (favourable), if Sg is high, gaps are ungrouped (unfavourable).  
-* **Needleman and Wunsch** algorithm, dynamic calculation of alignment scores for global alignment, a large matrix will 
 
