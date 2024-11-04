@@ -10,8 +10,9 @@ The tool will calculate the distance matrix between sequences, which distance ex
 Using ***Neighbour-Joining*** it will create a ==**guide tree**==, to later obtain the multiple alignment; this tree does not represent phylogenetic relationship directly.
 
 Neighbour-Joining:
-: Can be performed by the ***UPGMA method (==Unweighted== Pair Groups with Arithmetic Mean)*** to calculate distance, if we are to **assume that branches were created at the same time**; ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>) Where: n is the "number of sequences" (to account for groups) 
-Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.37.04.png>)
+: Can be performed by the ***UPGMA method (==Unweighted== Pair Groups with Arithmetic Mean)*** to calculate distance, if we are to **assume that branches were created at the same time**; ![alt text](<Screenshot 2024-10-22 at 09.37.04.png>) 
+Where: n is the "number of sequences" (to account for groups) 
+Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>)
 
 ### Calculating UPGMA: Worked Example.
 
@@ -62,9 +63,9 @@ Consider that since A is an outgroup, and B and C belong to the same clade, we h
 $ d(ABC, D) = (2*d(BC, D) + d(A, D)) / 3 <=> $
 $ (2 * 47.5 + 38) / 3 $ = ==***44.33***==
 
-| Distance Matrix | A, B, C | D | E |
+| Distance Matrix | A, BuC | D | E |
 | :---: | :---: | :---: | :---: |
-| A, B, C | \- | 44.33 | 39 |
+| A, BuC | \- | 44.33 | 34.5 |
 | D |  | \- | ==**20**== |
 | E |  |  | \- |
 
@@ -75,9 +76,9 @@ Repeat the process again, but remember, ***no amplification***:
 $ d(ABC, DE) = (ABC, E) + (ABC, D) / 2 <=>$
 $ (39 + 44.33) / 2 $ = ==***41.665***==
 
-| Distance Matrix | B, C, A | D, E |
+| Distance Matrix | ABC | D, E |
 | :---: | :---: | :---: | 
-| B, C, A | \- | 41.67 |
+| ABC | \- | 41.67 |
 | D, E |  | \- | 
 
 These calculations should lead you to something like this:
@@ -86,3 +87,50 @@ These calculations should lead you to something like this:
 
 The final value obtained is the ***origin of the tree***, the original root to which ***all clades should be rooted to***.
 
+### Calculating branch lengths:
+
+To find branch lengths, several parameters have to be taken into account:
+
+- Split the hypothesised tree into clades, as such to find the length of each branch within a clade, ***divide by two***. 
+- To find the distance between two distant clades, divide the total distance and remember to subtract the shorter branch distances;
+
+How does this make sense?
+
+#### Calculating branch lengths in the worked example above:
+
+First clade we ordered is constitued by sequences **B and C**, of which distance is 7; as such branch length for ***each leaf is 3.5***.
+
+```
+  3.5
+ |------ B
+-|
+ |------ C
+  3.5
+```
+
+Then we identify that **sequence A is a distant relative** to B and C, an ***outgroup***; 
+
+```
+        3.5
+      y |------ B
+    |---|
+    |   |------ C
+X---|     3.5
+    |
+    |---------- A
+       5.75
+```
+If the *distance between clade BC to A*, is **11.5**, then the length of A is:
+
+Length of A: $d(BuC, A) / 2$ => ==**5.75**==
+The same branching clade logic is used here; observe **point X**, the origin of the **ABC** clade.
+
+To calculate y, remember that this is **unweighted**, therefore all leaves were generated at the same point in time;
+
+$d(A, X) <=> d(B, X)$;
+
+$d(A, X) - d(B, Y) => d(X, Y)$;
+
+$5.75 - 3.5 = 2.25$;
+
+==***y=2.25***==
