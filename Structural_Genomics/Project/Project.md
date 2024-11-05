@@ -52,6 +52,4 @@ The pdf results are attached in the folder.
 
 - DNA Subway, another tool to annotate a genomic sequence among others
 
-
-
-
+- Useful link: https://wheat-urgi.versailles.inra.fr/Seq-Repository/Annotations 
