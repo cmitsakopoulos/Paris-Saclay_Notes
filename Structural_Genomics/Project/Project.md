@@ -54,3 +54,5 @@ The pdf results are attached in the folder.
 
 - Useful link to work on genomic region: https://wheat-urgi.versailles.inra.fr/Seq-Repository/Annotations 
     - Has BLAST too.
+
+- Find reads to which our hypothetical mRNA hit to, assemble and reconstruct; or, look for a transcriptome of triticum aestivum on NCBI, which can work for local blast+ analysis.
