@@ -32,3 +32,13 @@ Start and End - Position of the Feature;
 Weight - Log likelihood*10 score for the feature;
 ORF - start/end positions where the first complete codon starts and the last codon ends. 
 
+# WORKING
+
+## FEGENESH:
+
+- We observe that using the one and only available Wheat species as **parameter** for our genomic region, was the highest scoring; *Triticum aestivum*
+
+The pdf results are attached in the folder.
+
+
+
