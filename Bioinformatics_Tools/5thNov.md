@@ -17,3 +17,15 @@ When it comes to proteins, the term “motif” has a slightly different definit
 
 The determination of **specific motifs** generally comes from the **analysis of a multiple alignment**.
 
+## Motifs in DNA or RNA sequences:
+
+- Promoter regions (e.g. TATA box), transcription factor binding sites, enzymatic restriction sites, splicing signals
+
+Before characterising motifs, a multiple sequence alignment is needed.
+
+Take the following figure for analysis:
+
+![alt text](<Screenshot 2024-11-05 at 10.44.34.png>)
+
+
+
