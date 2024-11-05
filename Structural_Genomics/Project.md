@@ -17,5 +17,6 @@ The link contains multiple tools that can supplement analysis by:
 2. Validate Data: 
     - Compare our data with mRNA, RNAseq, EST data on **SRA** or **abEST**.
     - Then compare with homologous proteins; BLAST?
-    - Whole genome comparison between samples of Tritium | monococcum durum
+    - Whole genome comparison between samples of Tritium monococcum or durum (A and B genomes respectively)
+    - Comparing with the D genome look for samples of Aepilops Tosschii.
 
