@@ -40,5 +40,14 @@ ORF - start/end positions where the first complete codon starts and the last cod
 
 The pdf results are attached in the folder.
 
+- Look out for transposable elements in the exons observed
+
+- Watch out for UTRs which can convolute the data in SRA; query sequence will often misalign.
+
+- A problem to look out for is a 100% sequence similarity, it could be the case that our query sequence aligns to a small part of the database sequence; therefore, our query is an incomplete gene.
+
+- SRA mostly contains reads of 100bp, therefore we get the results we see in GENE2.txt; so we would have to find an organism in SRA, to which we find hits normally with BLAST, then reconstruct the sequence of that organism, then run BLAST again.
+
+
 
 
