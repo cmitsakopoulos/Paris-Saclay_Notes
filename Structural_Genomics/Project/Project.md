@@ -48,6 +48,8 @@ The pdf results are attached in the folder.
 
 - SRA mostly contains reads of 100bp, therefore we get the results we see in GENE2.txt; so we would have to find an organism in SRA, to which we find hits normally with BLAST, then reconstruct the sequence of that organism, then run BLAST again.
 
+- Consult Grain Genes for information on wheat genes
 
+- DNA Subway, another tool to annotate a genomic sequence
 
 
