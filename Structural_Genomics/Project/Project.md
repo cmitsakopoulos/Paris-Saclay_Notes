@@ -50,6 +50,8 @@ The pdf results are attached in the folder.
 
 - Consult Grain Genes for information on wheat genes
 
-- DNA Subway, another tool to annotate a genomic sequence
+- DNA Subway, another tool to annotate a genomic sequence among others
+
+
 
 
