@@ -27,5 +27,9 @@ Take the following figure for analysis:
 
 ![alt text](<Screenshot 2024-11-05 at 10.44.34.png>)
 
+## Patterns to find in proteinic sequences:
+
+# RAUL SUUPLEMENT LITTLE BITCH
+
 
 
