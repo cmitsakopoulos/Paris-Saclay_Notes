@@ -31,5 +31,7 @@ Take the following figure for analysis:
 
 # RAUL SUUPLEMENT LITTLE BITCH
 
+# ADD SHIT RAUL
 
+# SLAVE
 
