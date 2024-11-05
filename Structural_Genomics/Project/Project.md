@@ -23,3 +23,12 @@ The link contains multiple tools that can supplement analysis by:
 ![alt text](<WhatsApp Image 2024-11-05 at 14.43.15.jpeg>)
 
 
+## Fgenesh output:
+G - predicted gene number, starting from start of sequence;
+Str - DNA strand (+ for direct or - for complementary);
+Feature - type of coding sequence: CDSf - First (Starting with Start codon), CDSi - internal (internal exon), CDSl - last coding segment, ending with stop codon);
+TSS - Position of transcription start (TATA-box position and score);
+Start and End - Position of the Feature;
+Weight - Log likelihood*10 score for the feature;
+ORF - start/end positions where the first complete codon starts and the last codon ends. 
+
