@@ -20,3 +20,6 @@ The link contains multiple tools that can supplement analysis by:
     - Whole genome comparison between samples of Tritium monococcum or durum (A and B genomes respectively)
     - Comparing with the D genome look for samples of Aepilops Tosschii.
 
+![alt text](<WhatsApp Image 2024-11-05 at 14.43.15.jpeg>)
+
+
