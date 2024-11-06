@@ -1,11 +1,37 @@
 # Learning statistics under pressure
 
-## Statistical calculations everyone must know
+## Statistics to supplement the R learned further down
 
 ### ANOVA
 
 Short for Analysis Of VAriance, this method of data analysis attempts to first elucidate ***variability*** *within groups of data* (within a *single* quantitative variable) to then observe observe the **variability** ***between*** groups of data.
 
+Group: a dataset where our dependent variable could correlate to the independent variable and of which variance, is also ==**normally distributed**==
+
+A study can (will certainly) have multiple independent variables and therefore **different groups** are made to measure the effect of these independent variables to our dependent variable of interest.
+
+Take the following dataset, where we have three groups, each defined by a different value for the independent variable:
+
+![alt text](<Screenshot 2024-11-06 at 19.29.42.png>)
+
+To make this data meaningful, lets create a dotplot:
+
+![alt text](<Screenshot 2024-11-06 at 19.29.56.png>)
+
+Here Yx refers to the ***mean of the dependent variable measurements*** within each independent variable group, x relates to the **alphabetical equivalent** and is assigned to the aforementioned groups.
+
+In the boxplot we observe:
+
+- Significant variance **within** each groups' dependent variable.
+- The mean for each groups' dataset is rather similar **between** them.
+
+Performing an ANOVA test using R, we get the following:
+
+![alt text](<Screenshot 2024-11-06 at 19.30.06.png>)
+
+
+
+We would imagine that the groups display **limited** variance between them
 
 ## Workings and explanations of TD2
 
