@@ -1,3 +1,12 @@
+# Learning statistics under pressure
+
+## Statistical calculations everyone must know
+
+### ANOVA
+
+Short for Analysis Of VAriance, this method of data analysis attempts to first elucidate ***variability*** *within groups of data* (within a *single* quantitative variable) to then observe observe the **variability** ***between*** groups of data.
+
+
 ## Workings and explanations of TD2
 
 ### Initialisation
@@ -137,10 +146,27 @@ for(i in c("CAT", "SMK", "ECG", "HPT")) {
 }
 ```
 
+### Chi squared test
+
+Upon suspicion of c*orrelation between dependent and independent variables*, even to test that the proportions seen between dependent variables are **not random**, one would use a chi squared test.
+
+Given the example of the Evans dataset, we have already observed a possible correlation between CDH and smoking (SMK); what we want to do is now disprove the null hypothesis (no correlation; random chance) and accept the possibility of correlation between CDH and SMK.
+
+Particularly, this test relates to goodness of fit-testing, where fit can be the **model** we have created between two variables.
+
 ```R
-#Fit the model Evans to to test the association between the data in the columns CDH and SMK
+#Fit the model Evans to test the association between the data in the columns CDH and SMK
 chisq <- chisq.test(Evans$CDH, Evans$SMK, correct = FALSE)
 
+print(chisq)
+```
+
+In the output terminal we would obtain the X-squared result, but above all, the **p-value for false positive discovery**.
+
+Note: The null hypothesis can differ depending on the analysis we are conducting.
+### 
+
+```R
 glm <- glm(CDH ~ SMK, data = Evans, family = binomial)
 
 summary(glm)
@@ -192,6 +218,7 @@ twoby03 <- twoby2(Evans$CDH, Evans$AGE)
 #    0 otherwise}
 # x {1 if  (69,79]
 #    0 otherwise}
+
 AGE2 <- cut(Evans$AGE, seq(39,79,10))
 
 
