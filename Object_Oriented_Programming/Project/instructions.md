@@ -23,3 +23,19 @@ Error is a function of the weights which exist within the NN; considering that e
 With backpard pass, or back propagation, the purpose is to find the direction of improvement; to compute the gradient in which error will be minimal, which as a function of weight, will help elucidate the best fitting NN model.
 
 Response to "purpose of this forwards backwards process"?:
+
+Say we have an input dimension of 1000, a hidden size of 100 and an output dimension of 10, the error of this NN model could be shown as:
+
+l for linear model
+
+$l1: R^1000 => R^100$ 
+
+Where:
+
+$x => xA^T + b$
+
+And:
+
+Where xA, $x = R100*R1000$
+
+Where $b = R100$
