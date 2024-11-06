@@ -20,3 +20,6 @@ To improve, you have to implement a backward pass to retrain the NN, to re adjus
 
 Error is a function of the weights which exist within the NN; considering that error will deviate depending on the quality of the output, which quality is dependent on the weights, this is self-evident.
 
+With backpard pass, or back propagation, the purpose is to find the direction of improvement; to compute the gradient in which error will be minimal, which as a function of weight, will help elucidate the best fitting NN model.
+
+Response to "purpose of this forwards backwards process"?:
