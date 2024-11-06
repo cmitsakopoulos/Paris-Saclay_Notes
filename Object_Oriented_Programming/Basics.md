@@ -1,3 +1,5 @@
+# Notes Basics
+
 Tuples are immutable, they are the shit I was using to return multiple variables from functions. Ex: genstart, genend, etc. Just use lists or dictionaries.  
 
 Methodologies for modelling can vary depending on the need; obviously, if you are creating **planes** etc, you need accurate and robust systems.  
