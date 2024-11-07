@@ -33,7 +33,7 @@ Drawing attention to the **p-value**, we can determine that there is a significa
 
 **Just use the p-value to reject the null hypothesis**.
 
-### Generalised Linear Model
+### Generalised Linear Model: No Gaussian Distribution.
 
 Probability density functions are used to compute the probability by which a pre-existing distribution of our dataset could occur in a larger population etc. In other words, the ***probability density functions give us our p-values***.
 
@@ -51,16 +51,24 @@ Or, other examples include variables which can only assume **specific values**;
 
 Ex. How much do I want to shit myself:
 
+```
 - 25%
 - 50%
 - 75%
 - 100%
-
-Categorical variables which can assume different states in a ***non-binary fashion***.
-
+```
 The "Shit priority graph" will **not** be normally distributed as there is very **constrained variability** in the data.
 
+Poisson distribution
+: Categorical variables which can assume different states in a ***non-binary fashion***; variables with **discrete** values to convey different states of the categorical value.
 
+#### GLMs: Some theory.
+
+GLMs use multiple components, note these (for theory):
+
+1. Systematic component: Function which links our predictors (independent variables) with our outcome. (The functions explained for linear models)
+
+2. LINK: Function to predict the coefficient (beta), through non-linearisation.
 
 ## Workings and explanations of TD2
 
