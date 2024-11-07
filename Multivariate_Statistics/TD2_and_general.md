@@ -32,9 +32,34 @@ Performing an ANOVA test using R, we get the following:
 Drawing attention to the **p-value**, we can determine that there is a significant correlation between our independent variable and in fact all independent variables display a "coordinated" effect on our dependent variable.
 
 **Just use the p-value to reject the null hypothesis**.
+
 ### Generalised Linear Model
 
 Probability density functions are used to compute the probability by which a pre-existing distribution of our dataset could occur in a larger population etc. In other words, the ***probability density functions give us our p-values***.
+
+In a **poisson** distribution, where the distribution is not normal, or **not Guassian**, even if the means between a normal distribtion and poissson distribution are the **same**, a **specific** method of analysis is required to **avoid error**.
+
+==**Generalised linear models**== are particularly important when trying to calculate correlation probability (*"depndent distribution probability"*) for datasets which involve **binary variables**: 
+
+Take for example the Evans dataset, which plots Coronary Heart Disease (CHD) amongst a range of contributing factors, **including smoking status**, which is ***another binary variable***. 
+
+In these instances, you **will not**, **OBVIOUSLY**, have a normal distribution; you will instead encounter a **Poissson** distribution:
+
+![alt text](image.png)
+
+Or, other examples include variables which can only assume **specific values**; 
+
+Ex. How much do I want to shit myself:
+
+- 25%
+- 50%
+- 75%
+- 100%
+
+Categorical variables which can assume different states in a ***non-binary fashion***.
+
+The "Shit priority graph" will **not** be normally distributed as there is very **constrained variability** in the data.
+
 
 
 ## Workings and explanations of TD2
