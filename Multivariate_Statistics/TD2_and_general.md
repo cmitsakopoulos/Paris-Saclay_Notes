@@ -91,7 +91,7 @@ No need to do:
 
 ` data <- (XYZ)`
 
-### summary(dataset)
+### summary(dataset): Get an idea
 In our case:
 ```R
 summary(Evans)
@@ -145,36 +145,49 @@ Can also use head(Evans, num=x) to see the x amount of first rows in the data, i
 
 ### Gaining access to variable names and structure
 
-With the following you gain access to the attribute names and their types, as explained within the dataset metdata.
+Using the **"str"** function, you gain an idea of the values associated to each variable in the dataset:
+
 ```R
 str(Evans)
+```
+Output:
+```R
+'data.frame':	609 obs. of  9 variables:
+ $ CDH: int  0 0 1 0 0 0 1 0 0 0 ...
+ $ CAT: int  0 0 1 1 0 0 0 0 0 0 ...
+ $ AGE: int  56 43 56 64 49 46 52 63 42 55 ...
+ $ CHL: int  270 159 201 179 243 252 179 217 176 250 ...
+ $ SMK: int  0 1 1 1 1 1 1 0 1 0 ...
+ $ ECG: int  0 0 1 0 0 0 1 0 0 1 ...
+ $ DBP: int  80 74 112 100 82 88 80 92 76 114 ...
+ $ SBP: int  138 128 164 200 145 142 128 135 114 182 ...
+ $ HPT: int  0 0 1 1 0 0 0 0 0 1 ...
+```
+Using the **"names"** function, you get all variables printed in the output; you can use these names as **arguments** in downstream analysis.
+
+```R
 names(Evans)
 ```
-
-### Parse categorical data into R
-
-Having seen the variables within our dataset, in order for R to manually parse our categorical variables correctly, it will need to be updated using the following:
+Output:
 ```R
-for (i in c("CDH", "CAT", "SMK", "ECG", "HPT")) {
-  Evans[, i] <- as.factor(Evans[, i])
-}
+[1]"CDH" "CAT" "AGE" "CHL" "SMK" "ECG" "DBP" "SBP" "HPT"
 ```
-Here you have a loop which stores each categorical value (identifiable by its nametag in the dataset) in the form of **factors**; which help R handle them correctly.
 
 ### Creating a scatter plot: getting an idea of the data.
 
-To create pairwise scatter plots use the following method and replace variable names as needed:
+To create pairwise scatter plots use the following method and place variable names as needed. Remember that you OBVIOUSLY **shouldnt** be using **scatter plots** for **categorical variables**:
 
 ```R
 pairs(Evans[, c("AGE", "CHL", "SBP", "DBP")])
 ```
 
 Why is this useful?
-: Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: you can ***observe possible correlations between variables***, if not, you can just observe the d*istribution of the data points of each variable* on their own.
+: Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: you can ***observe possible correlations between variables***, if not, you can just observe the *distribution of the data points of each variable* on their own.
 
 ### Generating histograms
 
 Imagine a histogram as a bar chart, of which bars are canonically termed as "**bins**". The purpose of a histogram is to represent the distribution of a dataset, this is useful as you can:
+
 * Observe whether the distribution of a dataset is **normal** (**Gaussian**) or not.
 * You can observe **bin outliers**, or peaks, in the distribution, which could be intriguing in the analysis.
 
