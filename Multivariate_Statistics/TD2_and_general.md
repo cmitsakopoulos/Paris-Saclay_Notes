@@ -29,9 +29,13 @@ Performing an ANOVA test using R, we get the following:
 
 ![alt text](<Screenshot 2024-11-06 at 19.30.06.png>)
 
+Drawing attention to the **p-value**, we can determine that there is a significant correlation between our independent variable and in fact all independent variables display a "coordinated" effect on our dependent variable.
 
+**Just use the p-value to reject the null hypothesis**.
+### Generalised Linear Model
 
-We would imagine that the groups display **limited** variance between them
+Probability density functions are used to compute the probability by which a pre-existing distribution of our dataset could occur in a larger population etc. In other words, the ***probability density functions give us our p-values***.
+
 
 ## Workings and explanations of TD2
 
