@@ -180,6 +180,10 @@ To create pairwise scatter plots use the following method and place variable nam
 ```R
 pairs(Evans[, c("AGE", "CHL", "SBP", "DBP")])
 ```
+Output:
+![alt text](image-1.png)
+
+Here we see that there is a linear relationship between DBP (Diastolic) and SBP (Systolic). Nothing here is groundbreaking though, we therefore need to keep looking.
 
 Why is this useful?
 : Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: you can ***observe possible correlations between variables***, if not, you can just observe the *distribution of the data points of each variable* on their own.
@@ -197,6 +201,16 @@ for(i in c("AGE", "CHL", "SBP", "DBP")) {
   hist(Evans[, i])
 }
 ```
+Output:
+*AGE*
+![alt text](image-2.png)
+*CHL*
+![alt text](image-3.png)
+*SBP*
+![alt text](image-4.png)
+*DBP*
+![alt text](image-5.png)
+
 From the resulting graphs, use this rubric to characterise the distribution of each variable correctly:
 
 ![alt text](<Screenshot 2024-10-31 at 18.24.44.png>)
