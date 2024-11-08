@@ -276,10 +276,15 @@ for(i in c("CAT", "SMK", "ECG", "HPT")) {
 }
 ```
 #### Output:
+In the following "easy to make barplots" at **position 0 of the x-axis** we observe the **proportion of i** (index in list) which **has CD (==1~Gray==)**, or **doesnt have (==0~Dark gray==)** CDH. 
+
+Whereas at **1 on the x-axis**, we get a stacked bar representing the number of 1s and 0s for CDH as a whole.
+
 *CAT*:
 ![alt text](image-10.png)
 *SMK*:
 ![alt text](image-11.png)
+Here we observe the highest ***proportional correlation*** between **smoking** and **coronary heart disease**.
 *ECG*:
 ![alt text](image-12.png)
 *HPT*:
@@ -299,17 +304,50 @@ chisq <- chisq.test(Evans$CDH, Evans$SMK, correct = FALSE)
 
 print(chisq)
 ```
+#### Output:
+```R
+Pearson's Chi-squared test
 
-In the output terminal we would obtain the X-squared result, but above all, the **p-value for false positive discovery**.
+data:  Evans$CDH and Evans$SMK
+X-squared = 5.4293, df = 1, p-value = 0.0198
+```
+We obtain the X-squared, but above all, the **p-value for false positive discovery**. In our case, the **p-value is significantly low**, therefore a ***possibly causal relationship***.
 
 Note: The null hypothesis can differ depending on the analysis we are conducting.
-### 
 
+### Generalised Linear Model: In practice.
+
+We have already seen that there is a possible **causal relationship** between smoking and CDH.
+
+To further explore this, we create a ***generalised linear model*** to observe the possibility for this **relationship existing in larger populations**; 
+
+Since the distribution is **not Guassian**, as our variables **respond to "yes" or "no"** (==**binomial distribution**==), we have to ***adjust the "family" parameter accordingly***:
 ```R
 glm <- glm(CDH ~ SMK, data = Evans, family = binomial)
 
 summary(glm)
+```
+#### Output:
+```R
+Call:
+glm(formula = CDH ~ SMK, family = binomial, data = Evans)
 
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.4898     0.2524  -9.865   <2e-16 ***
+SMK           0.6706     0.2919   2.297   0.0216 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 438.56  on 608  degrees of freedom
+Residual deviance: 432.81  on 607  degrees of freedom
+AIC: 436.81
+
+Number of Fisher Scoring iterations: 5
+```
+```R
 #Deviance the likelihood ratio between the model and the model without any predictors
 
 oddsratio <- exp(coef(glm)[2])
