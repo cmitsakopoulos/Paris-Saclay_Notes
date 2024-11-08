@@ -150,7 +150,7 @@ Using the **"str"** function, you gain an idea of the values associated to each 
 ```R
 str(Evans)
 ```
-Output:
+#### Output:
 ```R
 'data.frame':	609 obs. of  9 variables:
  $ CDH: int  0 0 1 0 0 0 1 0 0 0 ...
@@ -168,7 +168,7 @@ Using the **"names"** function, you get all variables printed in the output; you
 ```R
 names(Evans)
 ```
-Output:
+#### Output:
 ```R
 [1]"CDH" "CAT" "AGE" "CHL" "SMK" "ECG" "DBP" "SBP" "HPT"
 ```
@@ -180,7 +180,7 @@ To create pairwise scatter plots use the following method and place variable nam
 ```R
 pairs(Evans[, c("AGE", "CHL", "SBP", "DBP")])
 ```
-Output:
+#### Output:
 ![alt text](image-1.png)
 
 Here we see that there is a linear relationship between DBP (Diastolic) and SBP (Systolic). Nothing here is groundbreaking though, we therefore need to keep looking.
@@ -206,7 +206,7 @@ for(i in c("AGE", "CHL", "SBP", "DBP")) {
   hist(Evans[, i])
 }
 ```
-Output:
+#### Output:
 *AGE*: Skew right
 ![alt text](image-2.png)
 *CHL*: Nearly Unimodal
@@ -220,7 +220,7 @@ From the resulting graphs, use this rubric to characterise the distribution of e
 
 ![alt text](<Screenshot 2024-10-31 at 18.24.44.png>)
 
-### Generating boxplots (Scuffed)
+### Generating boxplots
 
 Boxplots are useful to determine distribution of data between different variables, therefore you would use boxplots to determine variable spread, statistical calculation of the spread for each box and possible relationships in the spread of data.
 
@@ -230,6 +230,7 @@ for(i in c("AGE", "CHL", "SBP", "DBP")) {
   boxplot(Evans[, i],Evans$CDH, data = Evans)
 }
 ```
+#### Output:
 *AGE*:
 ![alt text](image-6.png)
 *CHL*:
@@ -241,16 +242,48 @@ for(i in c("AGE", "CHL", "SBP", "DBP")) {
 
 ### Generating contigency tables
 
-contingency table for the binary variables
+Contigency table
+: A type of table in matrix format, which displays multivariate frequency distribution in the provided variables. 
+
+With regard to TD2, we can **directly compare the data** available for each of our binary variables against CDH (Coronary Heart Disease); looking at the **effect of these contributing factors, to CDH**:
 ```R
 for(i in c("CAT", "SMK", "ECG", "HPT")) {
   print(table(Evans[,"CDH"],Evans[, i]))
 }
- 
+```
+#### Output:
+```R
+      0   1
+  0 443  95
+  1  44  27
+   
+      0   1
+  0 205 333
+  1  17  54
+   
+      0   1
+  0 401 137
+  1  42  29
+   
+      0   1
+  0 326 212
+  1  28  43
+```
+We can also place the above information into **stacked** **barplots**, looking at the distribution of CDH compared to our list of variables:
+```R
 for(i in c("CAT", "SMK", "ECG", "HPT")) {
-  barplot(table(Evans[, i], Evans[,"CDH"]))
+  barplot(table(Evans[, i], Evans$CDH))
 }
 ```
+#### Output:
+*CAT*:
+![alt text](image-10.png)
+*SMK*:
+![alt text](image-11.png)
+*ECG*:
+![alt text](image-12.png)
+*HPT*:
+![alt text](image-13.png)
 
 ### Chi squared test
 
