@@ -195,34 +195,50 @@ Imagine a histogram as a bar chart, of which bars are canonically termed as "**b
 * Observe whether the distribution of a dataset is **normal** (**Gaussian**) or not.
 * You can observe **bin outliers**, or peaks, in the distribution, which could be intriguing in the analysis.
 
-To create a histogram, use the following:
+To create a histogram:
+```R
+hist(plot_title[x_axis_values, y_axis_values])
+``` 
+
+Or more specifically for TD2:
 ```R
 for(i in c("AGE", "CHL", "SBP", "DBP")) {
   hist(Evans[, i])
 }
 ```
 Output:
-*AGE*
+*AGE*: Skew right
 ![alt text](image-2.png)
-*CHL*
+*CHL*: Nearly Unimodal
 ![alt text](image-3.png)
-*SBP*
+*SBP*: Skew right
 ![alt text](image-4.png)
-*DBP*
+*DBP*: Skew right
 ![alt text](image-5.png)
 
 From the resulting graphs, use this rubric to characterise the distribution of each variable correctly:
 
 ![alt text](<Screenshot 2024-10-31 at 18.24.44.png>)
 
-### Generating boxplots
+### Generating boxplots (Scuffed)
 
 Boxplots are useful to determine distribution of data between different variables, therefore you would use boxplots to determine variable spread, statistical calculation of the spread for each box and possible relationships in the spread of data.
+
+Here we are creating boxplots to visualise the spread of each variable in the list, compared to CDH data:
 ```R
 for(i in c("AGE", "CHL", "SBP", "DBP")) {
   boxplot(Evans[, i],Evans$CDH, data = Evans)
 }
 ```
+*AGE*:
+![alt text](image-6.png)
+*CHL*:
+![alt text](image-7.png)
+*SBP*:
+![alt text](image-8.png)
+*DBP*:
+![alt text](image-9.png)
+
 ### Generating contigency tables
 
 contingency table for the binary variables
