@@ -347,6 +347,8 @@ AIC: 436.81
 
 Number of Fisher Scoring iterations: 5
 ```
+#### Dissecting the output message:
+
 ```R
 #Deviance the likelihood ratio between the model and the model without any predictors
 
