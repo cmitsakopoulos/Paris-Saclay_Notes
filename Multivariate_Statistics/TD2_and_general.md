@@ -338,18 +338,29 @@ AIC: 436.81
 
 Number of Fisher Scoring iterations: 5
 ```
-#### Dissecting the output message:
+#### Dissecting the output message
+
+##### Terms:
 - ==**Intercept**==: simple maths, its the **predicted outcome** of our **dependent variable**, ***==IF== the independent variable is 0***. 
   - In other words, it demonstrates *what the dependent variable will look like* if the independent has **no effect** on it.
-  - If the estimate is **negative**, 
-- ==**z-value**==: the ==Wald statistic==, where **z demonstrates the deviation of a values from the dataset's mean**. 
+    - While a **negative intercept** does exceeds the **minimum for our data range**, it ***does not negate*** the existence of a positive correlation between dependent and independent.
+- ==**Z-value**==: the ==Wald statistic==, where **z demonstrates the deviation of a values from the dataset's mean**. 
   - If the **z-value is 0**, there is **no deviation** of the value **from the mean** and as such no variance.
   - **Positive or negative values** are if the value is **deviating higher or lower than the mean**, ***respectively***.
-```R
-#Deviance the likelihood ratio between the model and the model without any predictors
+- ==**Null and Residual Deviance**==: how well the dependent variable can be predicted by a model which only has an intercept term and how well the dependent variable can be predicted by the independent variables. **??!!!!???!!???!**
+  - Once the null and residual deviance are relatively **similar**, one can use this information to **confirm the validity of our model**. 
 
+##### Main take-aways:
+
+WAIT FOR SOLUTION
+
+### Calculating the Odds Ratio
+```R
 oddsratio <- exp(coef(glm)[2])
 print(oddsratio)
+```
+
+```R
 #Smokers have a relative risk of coronary disease thats twice more important than from people who don't smoke.
 
 twoby <- twoby2(Evans$CDH, Evans$SMK)
