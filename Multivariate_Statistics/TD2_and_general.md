@@ -33,43 +33,6 @@ Drawing attention to the **p-value**, we can determine that there is a significa
 
 **Just use the p-value to reject the null hypothesis**.
 
-### Generalised Linear Model: No Gaussian Distribution.
-
-Probability density functions are used to compute the probability by which a pre-existing distribution of our dataset could occur in a larger population etc. In other words, the ***probability density functions give us our p-values***.
-
-In a **poisson** distribution, where the distribution is not normal, or **not Guassian**, even if the means between a normal distribtion and poissson distribution are the **same**, a **specific** method of analysis is required to **avoid error**.
-
-==**Generalised linear models**== are particularly important when trying to calculate correlation probability (*"depndent distribution probability"*) for datasets which involve **binary variables**: 
-
-Take for example the Evans dataset, which plots Coronary Heart Disease (CHD) amongst a range of contributing factors, **including smoking status**, which is ***another binary variable***. 
-
-In these instances, you **will not**, **OBVIOUSLY**, have a normal distribution; you will instead encounter a **Poissson** distribution:
-
-![alt text](image.png)
-
-Or, other examples include variables which can only assume **specific values**; 
-
-Ex. How much do I want to shit myself:
-
-```
-- 25%
-- 50%
-- 75%
-- 100%
-```
-The "Shit priority graph" will **not** be normally distributed as there is very **constrained variability** in the data.
-
-Poisson distribution
-: Categorical variables which can assume different states in a ***non-binary fashion***; variables with **discrete** values to convey different states of the categorical value.
-
-#### GLMs: Some theory.
-
-GLMs use multiple components, note these (for theory):
-
-1. Systematic component: Function which links our predictors (independent variables) with our outcome. (The functions explained for linear models)
-
-2. LINK: Function to predict the coefficient (beta), through non-linearisation.
-
 ## Workings and explanations of TD2
 
 ### Initialisation
@@ -315,8 +278,36 @@ We obtain the X-squared, but above all, the **p-value for false positive discove
 
 Note: The null hypothesis can differ depending on the analysis we are conducting.
 
-### Generalised Linear Model: In practice.
+### Generalised Linear Model: No Gaussian Distribution.
 
+Probability density functions are used to compute the probability by which a pre-existing distribution of our dataset could occur in a larger population etc. In other words, the ***probability density functions give us our p-values***.
+
+In a **poisson** distribution, where the distribution is not normal, or **not Guassian**, even if the means between a normal distribtion and poissson distribution are the **same**, a **specific** method of analysis is required to **avoid error**.
+
+==**Generalised linear models**== are particularly important when trying to calculate correlation probability (*"depndent distribution probability"*) for datasets which involve **binary variables**: 
+
+Take for example the Evans dataset, which plots Coronary Heart Disease (CHD) amongst a range of contributing factors, **including smoking status**, which is ***another binary variable***. 
+
+In these instances, you **will not**, **OBVIOUSLY**, have a normal distribution; you will instead encounter a **Poissson** distribution:
+
+![alt text](image.png)
+
+Or, other examples include variables which can only assume **specific values**; 
+
+Ex. How much do I want to shit myself:
+
+```
+- 25%
+- 50%
+- 75%
+- 100%
+```
+The "Shit priority graph" will **not** be normally distributed as there is very **constrained variability** in the data.
+
+Poisson distribution
+: Categorical variables which can assume different states in a ***non-binary fashion***; variables with **discrete** values to convey different states of the categorical value.
+
+#### Using GLM in TD2:
 We have already seen that there is a possible **causal relationship** between smoking and CDH.
 
 To further explore this, we create a ***generalised linear model*** to observe the possibility for this **relationship existing in larger populations**; 
@@ -348,7 +339,12 @@ AIC: 436.81
 Number of Fisher Scoring iterations: 5
 ```
 #### Dissecting the output message:
-
+- ==**Intercept**==: simple maths, its the **predicted outcome** of our **dependent variable**, ***==IF== the independent variable is 0***. 
+  - In other words, it demonstrates *what the dependent variable will look like* if the independent has **no effect** on it.
+  - If the estimate is **negative**, 
+- ==**z-value**==: the ==Wald statistic==, where **z demonstrates the deviation of a values from the dataset's mean**. 
+  - If the **z-value is 0**, there is **no deviation** of the value **from the mean** and as such no variance.
+  - **Positive or negative values** are if the value is **deviating higher or lower than the mean**, ***respectively***.
 ```R
 #Deviance the likelihood ratio between the model and the model without any predictors
 
