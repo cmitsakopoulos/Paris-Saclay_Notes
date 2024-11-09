@@ -350,15 +350,33 @@ Number of Fisher Scoring iterations: 5
 - ==**Null and Residual Deviance**==: how well the dependent variable can be predicted by a model which only has an intercept term and how well the dependent variable can be predicted by the independent variables. **??!!!!???!!???!**
   - Once the null and residual deviance are relatively **similar**, one can use this information to **confirm the validity of our model**. 
 
+- ==Most important==: the **p-value**, if the p-value for our **independent variable** is **below 0.05**, we have a significant effect and **correlation** between our dependent and independent.
+
 ##### Main take-aways:
 
 WAIT FOR SOLUTION
 
-### Calculating the Odds Ratio
+### Odds Ratio
+
+If we have A and B factors which influence each other, the **odds ratio** is a metric of the ***chances*** that for example, ***A will occur, in the presence of B***. 
+
+- If the ==odds ratio is **above 1**==, then A and B are ==**correlated**==; as A will **not occur** in the absence of B, the same applies for the inverse.
+- If the ==odds ratio is **below 1**==, then A and B are ==**not correlated**==; as A is believed to **occur** in the absence of B, the same applies for the inverse.
+
+#### Calculating the Odds Ratio:
+
+In this example, we attempt to determine the odds ratio between the CDH and SMK variables. We assign the function to oddsratio:
+
 ```R
 oddsratio <- exp(coef(glm)[2])
 print(oddsratio)
 ```
+#### Output:
+```R
+    SMK 
+1.955485 
+```
+Here we observe a significantly high odds ratio for the effect of SMK on CDH; indicative of a **strong correlation** between CDH and SMK. 
 
 ```R
 #Smokers have a relative risk of coronary disease thats twice more important than from people who don't smoke.
