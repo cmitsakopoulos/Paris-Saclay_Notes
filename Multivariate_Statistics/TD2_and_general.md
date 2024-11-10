@@ -444,11 +444,10 @@ Degrees of Freedom: 608 Total (i.e. Null);  607 Residual
 Null Deviance:	    438.6 
 Residual Deviance: 427.2 	AIC: 431.2
 ```
+- The intercept is ***negative*** = *good fit*, HPT is ***positive*** = *good fit*
+- The AIC is lower than our other models; keep this in mind.
 
-
-- In other words, the intercept is ***negative*** = *good fit*, HPT is ***positive*** = *good fit*
-
-Corroborating this information with the output of the chi-squared test, we can accept this model, but can also enhance it;
+Corroborating this information with the output of the chi-squared test, we can accept this model, but should continue downstream analysis;
 #### ORs:
 ```R
 oddsratio2 <- exp(coef(glm2))
@@ -456,11 +455,35 @@ print(oddsratio2)
 ```
 #### Output:
 ```R
-
+HPT 
+2.361523
 ```
-```R
-twoby02 <- twoby2(Evans$CDH, Evans$HPT)
+A significantly larger OR between CDH and HPT, maybe SMK is a confounding factor? Considering SMK and CDH are correlated, are SMK and HPT equally correlated to CDH or is there a difference?
 
+#### Twoby2 comparison:
+```R
+twoby_2 <- twoby2(Evans$CDH, Evans$HPT)
+print(twoby_2)
+```
+#### Output:
+```R 
+$table
+    0   1      P(0) 95% conf.  interval
+0 326 212 0.6059480 0.5639932 0.6463968
+1  28  43 0.3943662 0.2880346 0.5117372
+
+$measures
+                                      95% conf.  interval
+             Relative Risk: 1.5365109  1.142611 2.0662021
+         Sample Odds Ratio: 2.3615229  1.423207 3.9184679
+Conditional MLE Odds Ratio: 2.3581041  1.383977 4.0726310
+    Probability difference: 0.2115818  0.087986 0.3244892
+
+$p.value
+[1] 0.0008813710 0.0008304074
+```
+
+```R
 #CDH and HPT, taking into account SMK
 
 glm9 <- glm(CDH ~ HPT + SMK, data = Evans, family = binomial)
