@@ -350,11 +350,14 @@ Number of Fisher Scoring iterations: 5
 - ==**Null and Residual Deviance**==: how well the dependent variable can be predicted by a model which only has an intercept term and how well the dependent variable can be predicted by the independent variables. **??!!!!???!!???!**
   - Once the null and residual deviance are relatively **similar**, one can use this information to **confirm the validity of our model**. 
 
-- ==Most important==: the **p-value**, if the p-value for our **independent variable** is **below 0.05**, we have a significant effect and **correlation** between our dependent and independent.
 
 ##### Main take-aways:
 
-WAIT FOR SOLUTION
+As we can see from the coefficient estimates, the **independent decreases, as the independent decreases** (see intercept value), ***opposite applies*** for the outcome (CDH), when the **independent increases**.
+
+- ==Most important==: the **p-value**, if the p-value for our **independent variable** is **below 0.05**, we have a significant effect and **correlation** between our dependent and independent.
+
+Additionally, keep note of the **AIC** value, which will determine the relative **fitness** of our model, compared to others; the model with the ***smallest AIC*** for our dataset, is the ***most fit model***.
 
 ### Odds Ratio
 
@@ -407,16 +410,55 @@ Conditional MLE Odds Ratio: 1.9534909 1.07981267 3.6970967
 $p.value
 [1] 0.02160410 0.02512261
 ```
+- As evidenced by the **p-values** which refer to the ***null hypothesis that Odds Ratios (OR)=1***, the values are below the 0.05 threshold, evidencing that the ==**ORs are NOT RANDOM**==.
 
 
-# CDH and HPT
+## Using the analytical methods explained before, to obtain trends for the other variables in the dataset:
+
+### Investigating the effect of HPT on CDH:
+#### Chi-squared:
 ```R
 chisq2 <- chisq.test(Evans$CDH, Evans$HPT, correct = FALSE)
+```
+#### Output:
+```R
+Pearson's Chi-squared test
 
+data:  Evans$CDH and Evans$HPT
+X-squared = 11.536, df = 1, p-value = 0.0006825
+```
+#### GLM:
+```R
 glm2 <- glm(CDH ~ HPT, data = Evans, family = binomial)
+print(glm2)
+```
+#### Output:
+```R
+Call:  glm(formula = CDH ~ HPT, family = binomial, data = Evans)
 
+Coefficients:
+(Intercept)          HPT  
+    -2.4547       0.8593  
+
+Degrees of Freedom: 608 Total (i.e. Null);  607 Residual
+Null Deviance:	    438.6 
+Residual Deviance: 427.2 	AIC: 431.2
+```
+
+
+- In other words, the intercept is ***negative*** = *good fit*, HPT is ***positive*** = *good fit*
+
+Corroborating this information with the output of the chi-squared test, we can accept this model, but can also enhance it;
+#### ORs:
+```R
 oddsratio2 <- exp(coef(glm2))
+print(oddsratio2)
+```
+#### Output:
+```R
 
+```
+```R
 twoby02 <- twoby2(Evans$CDH, Evans$HPT)
 
 #CDH and HPT, taking into account SMK
