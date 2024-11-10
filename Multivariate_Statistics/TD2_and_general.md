@@ -378,13 +378,39 @@ print(oddsratio)
 ```
 Here we observe a significantly high odds ratio for the effect of SMK on CDH; indicative of a **strong correlation** between CDH and SMK. 
 
-```R
-#Smokers have a relative risk of coronary disease thats twice more important than from people who don't smoke.
+### Twoby2 analysis
 
+Having seen that SMK and CDH are highly correlated, with a very significant odds ratio, the `twoby2()` function identifies the **inverse** of what was discussed for odds ratio;
+
+- What are the odds that A will occur if B exists? Will A occur if B doesnt exist?
+
+This function produces a **two by two** matrix of **odds ratios** to create this comparison:
+```R
 twoby <- twoby2(Evans$CDH, Evans$SMK)
+print(twoby)
+```
+#### Output:
+
+```R
+$table
+    0   1      P(0) 95% conf.  interval
+0 205 333 0.3810409 0.3409353 0.4228374
+1  17  54 0.2394366 0.1543549 0.3519004
+
+$measures #A table of odds ratios
+                                       95% conf.  interval
+             Relative Risk: 1.5914061 1.03696034 2.4423049
+         Sample Odds Ratio: 1.9554849 1.10347687 3.4653388
+Conditional MLE Odds Ratio: 1.9534909 1.07981267 3.6970967
+    Probability difference: 0.1416043 0.02362081 0.2356081
+
+$p.value
+[1] 0.02160410 0.02512261
+```
+
 
 # CDH and HPT
-
+```R
 chisq2 <- chisq.test(Evans$CDH, Evans$HPT, correct = FALSE)
 
 glm2 <- glm(CDH ~ HPT, data = Evans, family = binomial)
