@@ -887,7 +887,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 ```
 With the ANOVA test we can **==disprove== the null hypothesis** and **approve our model**, with a *striking p-value of 2.2e-16*.
 
-### Plot our model
+### Plot corrected model
 ```R
 plot(cases_city_pop)
 ```
