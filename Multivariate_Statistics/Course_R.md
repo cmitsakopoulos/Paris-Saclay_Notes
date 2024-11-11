@@ -865,7 +865,15 @@ Residual deviance:  23.447  on 15  degrees of freedom
 AIC: 137.84
 
 Number of Fisher Scoring iterations: 5
+```
+Demonstrates a ==***negative***== **intercept estimate** and a ==***positive***== **outcome estimate**.
 
+Each age group also demonstrates a high p-value to imply correlation between age and cases per city. 
+
+Most **striking**, is the (correlation/false positive chance) p-value for **age group 70-74**.
+
+With a "satisfctory" AIC, the ==model appears to be **fit**== for demonstrating a **correlation between ages and cases, ==when accounting for population==**.
+```R
 > anova(null_model_new, cases_city_pop, test = "Chisq")
 Analysis of Deviance Table
 
@@ -877,16 +885,19 @@ Model 2: cases ~ age + city
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
+With the ANOVA test we can **==disprove== the null hypothesis** and **approve our model**, with a *striking p-value of 2.2e-16*.
 
-
-
-
-
-
+### Plot our model
+```R
+plot(cases_city_pop)
+```
+#### Output:
+![alt text](image-16.png)
+![alt text](image-17.png)
+![alt text](image-18.png)
+![alt text](image-19.png)
 
 ```R
-plot(modellc3)
-
 #The P value of the summary corresponds to the Wald test 
 #The P value of the anova corresponds to the Likelihood ratio test
 
