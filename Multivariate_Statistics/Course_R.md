@@ -735,26 +735,156 @@ boxplot(eba1977$cases ~ eba1977$city)
 #### Output:
 #### Pairs plot
 ![alt text](image-14.png)
-
+In the pairwise comparison between cases and population, we observe two peaks in the scatter plot; skewed distribution....
 #### Boxplot
 ![alt text](image-15.png)
+Here we observe a comparison between cases per, each city on the x-axis. We can observe that some cities have a higher variance of cases but particularly:
+
+- Fredericia and Horsens observe the **same mean**, but have different variance; Horsens has a poisson distribution while Fredericia has a normal distribution??
+
+Let's observe this further.
+
+### GLM and Null-Model, then ANOVA:
+
+Here we want to investigate the correlation between city, cases and a **confounding "age"**. 
+
+We also want to investigate the **null-hypothesis**, to see if cases maintain a **poisson distribution** on themselves;
+
+Specifically, we will then use ANOVA to investigate if variables have a **non-random** distribution and if these variables have an **equally non-random** influence on the **outcome**: the ***cases***.
+
+In ANOVA, we also pair it with a **chi squared test**, to characterise inter-variable correlation (as done in the past).
+```R
+cases_city <- glm(cases ~ age + city, data = eba1977, family = "poisson")
+summary(cases_city)
+
+null_model <- glm(cases ~ 1, data = eba1977, family = "poisson")
+
+anova(null_model, modellc, test = "Chisq")
+```
+#### Output:
+```R
+Call:
+glm(formula = cases ~ age + city, family = "poisson", data = eba1977)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  2.24374    0.20363  11.019   <2e-16 ***
+age55-59    -0.03077    0.24810  -0.124    0.901    
+age60-64     0.26469    0.23143   1.144    0.253    
+age65-69     0.31015    0.22918   1.353    0.176    
+age70-74     0.19237    0.23517   0.818    0.413    
+age75+      -0.06252    0.25012  -0.250    0.803    
+cityHorsens -0.09844    0.18129  -0.543    0.587    
+cityKolding -0.22706    0.18770  -1.210    0.226    
+cityVejle   -0.22706    0.18770  -1.210    0.226    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 27.704  on 23  degrees of freedom
+Residual deviance: 20.673  on 15  degrees of freedom
+AIC: 135.06
+
+Number of Fisher Scoring iterations: 5
+```
+Here we observe that the intercept, in ***respect to specific age groups*** demonstrates a ==***positive***== **intercept estimate** and a ==***positive***== **outcome estimate**.
+
+==Not to mention the horrific p-value estimates==.
+
+Despite the "satisfctory" AIC, the ==model appears to be **unfit**== for demonstrating a **correlation between ages and cases**.
+```R
+Call:
+glm(formula = cases ~ 1, family = "poisson", data = eba1977)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  2.23359    0.06682   33.43   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 27.704  on 23  degrees of freedom
+Residual deviance: 27.704  on 23  degrees of freedom
+AIC: 126.09
+
+Number of Fisher Scoring iterations: 4
+```
+The null hypothesis is **proven** as the intercept is **positive**, with a **hugely significant p-value**.
+```R
+> anova(null_model, cases_city, test = "Chisq")
+Analysis of Deviance Table
+
+Model 1: cases ~ 1
+Model 2: cases ~ age + city
+  Resid. Df Resid. Dev Df Deviance Pr(>Chi)
+1        23     27.704                     
+2        15     20.673  8   7.0311   0.5333
+```
+Very **insignificant** chi squared estimate; ==need to redo the model==:
+
+### Correcting the model: changing parameters.
+
+As we have observed that the previous model is misrepresentative of correlation between the variables of interest, we now **add population into the mix**.
+
+Importantly, we **==naturalise== the population values** (==**natural log**==), to account for the **magnitudal difference** between *cases, age and population values*.
+
+The ==**offset**== parametre is important for the LINK function of the GLM; in practice it ensures that the **linear predictor** (*independent-predictor variable*) is **adjusted** for population, when calculating possible outcome.
+```R
+cases_city_pop <- glm(cases ~ age + city, offset = log(pop), data = eba1977, family = "poisson")
+summary(cases_city_pop)
+
+null_model_new <- glm(cases ~ 1, offset = log(pop), data = eba1977, family = "poisson")
+anova(null_model_new, cases_city_pop, test = "Chisq")
+```
+#### Output: 
+```R
+Call:
+glm(formula = cases ~ age + city, family = "poisson", data = eba1977, 
+    offset = log(pop))
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -5.6321     0.2003 -28.125  < 2e-16 ***
+age55-59      1.1010     0.2483   4.434 9.23e-06 ***
+age60-64      1.5186     0.2316   6.556 5.53e-11 ***
+age65-69      1.7677     0.2294   7.704 1.31e-14 ***
+age70-74      1.8569     0.2353   7.891 3.00e-15 ***
+age75+        1.4197     0.2503   5.672 1.41e-08 ***
+cityHorsens  -0.3301     0.1815  -1.818   0.0690 .  
+cityKolding  -0.3715     0.1878  -1.978   0.0479 *  
+cityVejle    -0.2723     0.1879  -1.450   0.1472    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 129.908  on 23  degrees of freedom
+Residual deviance:  23.447  on 15  degrees of freedom
+AIC: 137.84
+
+Number of Fisher Scoring iterations: 5
+
+> anova(null_model_new, cases_city_pop, test = "Chisq")
+Analysis of Deviance Table
+
+Model 1: cases ~ 1
+Model 2: cases ~ age + city
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1        23    129.908                          
+2        15     23.447  8   106.46 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
+
+
+
+
+
+
 
 ```R
-#1.3 - 1.5
-
-modellc <- glm(cases ~ age + city, data = eba1977, family = "poisson")
-summary(modellc)
-null_model <- glm(cases ~ 1, data = eba1977, family = "poisson")
-anova(null_model, modellc, test = "Chisq")
-
-modellc2 <- glm(cases ~ age + city + pop, data = eba1977, family = "poisson")
-#This model is better because it automatically applies the exponential coefficient and adjust it to log(population)
-modellc3 <- glm(cases ~ age + city, offset = log(pop), data = eba1977, family = "poisson")
-summary(modellc3)
-
-null_model3 <- glm(cases ~ 1, offset = log(pop), data = eba1977, family = "poisson")
-anova(null_model3, modellc3, test = "Chisq")
-
 plot(modellc3)
 
 #The P value of the summary corresponds to the Wald test 
