@@ -697,3 +697,93 @@ stepAIC(glm5, direction = "both")
 
 ## Workings and explanations of TD3
 
+### Initialising the analysis:
+
+Simple R code to load the database from which data is going to be analysed, then perform the first stages of exploratory analysis of the data;
+```R
+library(ISwR)
+
+#1.1
+data(eba1977)
+head(eba1977)
+summary(eba1977)
+```
+#### Output:
+```R
+> head(eba1977)
+        city   age  pop cases
+1 Fredericia 40-54 3059    11
+2    Horsens 40-54 2879    13
+3    Kolding 40-54 3142     4
+4      Vejle 40-54 2520     5
+5 Fredericia 55-59  800    11
+6    Horsens 55-59 1083     6
+> summary(eba1977)
+         city      age         pop             cases       
+ Fredericia:6   40-54:4   Min.   : 509.0   Min.   : 2.000  
+ Horsens   :6   55-59:4   1st Qu.: 628.0   1st Qu.: 7.000  
+ Kolding   :6   60-64:4   Median : 791.0   Median :10.000  
+ Vejle     :6   65-69:4   Mean   :1100.3   Mean   : 9.333  
+                70-74:4   3rd Qu.: 954.8   3rd Qu.:11.000  
+                75+  :4   Max.   :3142.0   Max.   :15.000
+```
+### Pairwise comparison: Pairs()
+```R
+#1.2
+pairs(eba1977)
+boxplot(eba1977$cases ~ eba1977$city)
+```
+
+```R
+#1.3 - 1.5
+
+modellc <- glm(cases ~ age + city, data = eba1977, family = "poisson")
+summary(modellc)
+null_model <- glm(cases ~ 1, data = eba1977, family = "poisson")
+anova(null_model, modellc, test = "Chisq")
+
+modellc2 <- glm(cases ~ age + city + pop, data = eba1977, family = "poisson")
+#This model is better because it automatically applies the exponential coefficient and adjust it to log(population)
+modellc3 <- glm(cases ~ age + city, offset = log(pop), data = eba1977, family = "poisson")
+summary(modellc3)
+
+null_model3 <- glm(cases ~ 1, offset = log(pop), data = eba1977, family = "poisson")
+anova(null_model3, modellc3, test = "Chisq")
+
+plot(modellc3)
+
+#The P value of the summary corresponds to the Wald test 
+#The P value of the anova corresponds to the Likelihood ratio test
+
+#you could define the categories as indicative functions and test the model again and it would give you the same results
+
+age55 <- (eba1977$age=="55-59")
+age60 <- (eba1977$age=="60-64")
+age65 <- (eba1977$age=="65-69")
+age70 <- (eba1977$age=="70-74")
+age75 <- (eba1977$age=="75+")
+
+modellc4 <- glm(cases ~ age55 + age60 + age65 + age70 + age75 + city, offset = log(pop), data = eba1977, family = "poisson")
+modellc5 <- glm(cases ~ age55 + age65 + age70 + age75 + city, offset = log(pop), data = eba1977, family = "poisson")
+anova(modellc4, modellc5) #This gives also the Wald test on age 60-64 DOESNT WORK YET :((
+
+#1.6
+#Compute a 0.95 confidence interval for the effect of age75+ and interpret this result in terms of number of lung cancer cases.
+
+exp(confint(modellc, "age75+", level = 0.95))
+confint(modellc3, "age75+", level = 0.95)
+
+
+beta_hat <- coef(modellc3)["age75+"]
+se <- summary(modellc3)$coefficients["age75+", "Std. Error"]
+#se1 <- sqrt(vcov(modellc3)["age75+", "age75+"])
+alpha <- 0.05
+xi_hat_alpha_beta <- beta_hat*exp(se^2/2)
+lower_bound <- exp(xi_hat_alpha_beta - qnorm(1 - alpha / 2) * se)
+upper_bound <- exp(xi_hat_alpha_beta + qnorm(1 - alpha / 2) * se)
+
+
+#1.7
+#Predict the expected number of lung cancer cases in Kolding for people aged between 60 and 64 (why pop 896)
+predict(modellc3, newdata = data.frame(age = "60-64", city = "Kolding", pop=896), type = "response")
+```
