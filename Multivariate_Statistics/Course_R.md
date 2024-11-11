@@ -705,7 +705,7 @@ library(ISwR)
 
 #1.1
 data(eba1977)
-head(eba1977)
+head(eba1977) #or could do str(eba1977) to get a better idea
 summary(eba1977)
 ```
 #### Output:
@@ -729,10 +729,15 @@ summary(eba1977)
 ```
 ### Pairwise comparison: Pairs()
 ```R
-#1.2
 pairs(eba1977)
 boxplot(eba1977$cases ~ eba1977$city)
 ```
+#### Output:
+#### Pairs plot
+![alt text](image-14.png)
+
+#### Boxplot
+![alt text](image-15.png)
 
 ```R
 #1.3 - 1.5
