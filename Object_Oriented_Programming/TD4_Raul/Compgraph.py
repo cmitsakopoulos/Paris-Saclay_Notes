@@ -112,7 +112,7 @@ c = rand(2,3)
 multiply(multiply(a,b), multiply(b,c))
 
 # Visualize the graph
-nx_graph = d.graph_node.to_nx_graph()
+nx_graph = d.graph_node.to_nx_graph() #replace d with the final call of the class ex. c = rand...m or desired call.
 pos = nx.spring_layout(nx_graph)
 nx.draw(
     nx_graph, pos, with_labels=True,
