@@ -79,16 +79,17 @@ class MyGraph:
 
 class ComputationGraph:
     my_graph = MyGraph()
-    def __call__(self, func):
+    def __init__(self, fun):
         print("init")
-        self.fun = func
+        self.fun = fun
     
     def __call__(self, *args, **kwargs):
         print("call")
         res = self.fun(*args, **kwargs)
-        self.my_graph.add_node((self.fun, args, None))
-        self.my_graph.add_edge((self.fun, args, None), res)
-        return 
+        res_node = self.my_graph.add_node(res)
+        fun_node = self.my_graph.add_node((self.fun, args, None))
+        self.my_graph.add_edge(fun_node, res_node)
+        return res
     
 @ComputationGraph
 def rand(*args):
