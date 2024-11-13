@@ -1,65 +1,94 @@
 
 import numpy as np
 
-class ComputationGraph:
-    def __init__(self, func):
-        self.graph = {}
-        self.values = {}
-        self.order = []
-        self.grads = {}
+
+class Node:
+    id = 0
+
+    def __init__(self, data):
+        self.id = Node.id
+        Node.id += 1
+
+        self.data = data
+
+        self.successors = []
+        self.predecessors = []
     
-    @staticmethod
-    def __new__(cls, *args, **kwargs):
-        obj = super(ComputationGraph, cls).__new__(cls)
-        obj.__init__(*args, **kwargs)
-        return obj
-    
+    def add_successor(self, successor):
+        self.successors.append(successor)
 
-    
-    
-    def __call__(self, *args, **kwargs):
-        res = self.forward(*args, **kwargs)
-        return res
+    def get_successors(self):
+        return self.successors
 
-    def add(self, node, inputs, value):
-        self.graph[node] = inputs
-        self.values[node] = value
-        self.order.append(node)
+    def add_predecessor(self, predecessor):
+        self.predecessors.append(predecessor)
 
-    @property
-    def forward(self):
-        for node in self.order:
-            inputs = [self.values[n] for n in self.graph[node]]
-            self.values[node] = node.forward(inputs)
-
-    def backward(self):
-        self.grads = {node: np.zeros_like(self.values[node]) for node in self.order}
-        self.grads[self.order[-1]] = np.ones_like(self.values[self.order[-1]])
-        for node in reversed(self.order):
-            inputs = [self.values[n] for n in self.graph[node]]
-            grads = [self.grads[n] for n in self.graph[node]]
-            self.grads[node] = node.backward(inputs, self.grads[node])
-            for i, n in enumerate(self.graph[node]):
-                self.grads[n] += grads[i]
-
-    def zero_grad(self):
-        self.grads = {node: np.zeros_like(self.values[node]) for node in self.order}
-
-    def step(self, lr):
-        for node in self.order:
-            self.values[node] -= lr * self.grads[node]
-
-    def __getitem__(self, node):
-        return self.values[node]
-
-    def __setitem__(self, node, value):
-        self.values[node] = value
+    def get_predecessors(self):
+        return self.predecessors
 
     def __repr__(self):
-        return str({node: self.values[node] for node in self.order})
+        return f'data {self.data}\n'
+    
 
-    def __str__(self):
-        return str({node: self.values[node] for node in self.order})
+class MyGraph:
+    def __init__(self) -> None:
+        self.nodes = {}
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes[node.id] = node
+        return node
+
+    def add_edge(self, source, destination):
+        source.add_successor(destination)
+        destination.add_predecessor(source)
+
+    def topological_order(self, start):
+        """
+        returns the list of nodes in a topological order
+        so that the operations will be executed starting from
+        the inputs until the last node of the graph.
+        """
+        seen = set()
+        path = []
+        q = [start]
+        while q:
+            v = q.pop()
+            if v not in seen:
+                seen.add(v)
+                path.append(v)
+            q.extend(v.get_predecessors())
+
+        return path
+
+    def map(self, a_function):
+        for node in self.nodes.values():
+            a_function(node)
+
+    def copy(self, a_graph):
+        pass
+
+    def __iter__(self):
+        pass
+
+    def __eq__(self, a_graph):
+        pass
+
+    def __repr__(self):
+        pass
+
+class ComputationGraph:
+    my_graph = MyGraph()
+    def __call__(self, func):
+        print("init")
+        self.fun = func
+    
+    def __call__(self, *args, **kwargs):
+        print("call")
+        res = self.fun(*args, **kwargs)
+        self.my_graph.add_node((self.fun, args, None))
+        self.my_graph.add_edge((self.fun, args, None), res)
+        return 
     
 @ComputationGraph
 def rand(*args):
