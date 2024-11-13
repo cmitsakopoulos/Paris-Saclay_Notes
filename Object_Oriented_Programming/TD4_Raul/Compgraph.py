@@ -10,7 +10,6 @@ class Node:
         Node.id += 1
 
         self.data = data
-
         self.successors = []
         self.predecessors = []
     
