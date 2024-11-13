@@ -1,6 +1,6 @@
 
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class Node:
     id = 0
@@ -27,6 +27,12 @@ class Node:
 
     def __repr__(self):
         return f'data {self.data}\n'
+
+    def to_nx_graph(self, nx_graph=None):
+      if nx_graph is None:
+        nx_graph = nx.DiGraph()  # Create a new graph if none is provided
+      nx_graph.add_node(self.id, label=None)
+      return nx_graph
     
 
 class MyGraph:
@@ -103,3 +109,16 @@ b = rand(2,3)
 c = rand(2,3)
 
 multiply(multiply(a,b), multiply(b,c))
+
+# Visualize the graph
+nx_graph = d.graph_node.to_nx_graph()
+pos = nx.spring_layout(nx_graph)
+nx.draw(
+    nx_graph, pos, with_labels=True,
+    labels=nx.get_node_attributes(nx_graph, 'label'),
+    node_size=1500, node_color="skyblue", font_size=10, font_weight='bold')
+plt.show()
+
+# Get the graph after computation
+result = d.compute()
+print(result)
