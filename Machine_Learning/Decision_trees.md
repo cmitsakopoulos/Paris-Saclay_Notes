@@ -86,6 +86,8 @@ Repeat this process until you obtain all required Gini impurity scores for the t
 
 As Feature 3 has multiple stages and is not a binary category, we have to split all observations into their own nodes and start from there.
 
+### Split method
+
 Specifically, we want to calculate the averages between all of our new nodes, as such:
 
 - "x" represents a line
@@ -117,6 +119,8 @@ Example working, recomputing a tree with (the average) **36.5 as a threshold/dec
 
 - Remember to factor in the label value.
 
+### Adjusted Average Tree: Example
+
 |  |  |  | ==Feature 3, obs \< 36.5== |  |  |  |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 |  | x | x | x | x | x |  |
@@ -132,9 +136,11 @@ Example working, recomputing a tree with (the average) **36.5 as a threshold/dec
 
 Instead of creating one billion trees, you could always forgo them and simplify the process;
 
-Do calculations as mentioned previously, you can arrange this process into a table like this:
+Do GINI calculations as mentioned previously. For simplicity you can arrange this process into a table like this:
 
-| Lower than Adj. Avg. (Leaf 1) |  | Higher than Adj. Avg. (Leaf 2) |  | GINI |  |  |
+### Compiled GINI calculations
+
+| ==Lower than Adj. Avg. (Leaf 1)== |  | ==Higher than Adj. Avg. (Leaf 2)== |  | ==GINI== |  |  |
 | :---: | :---: | :---: | :---: | ----- | ----- | ----- |
 | YES | NO | YES | NO | Leaf 1 | FALSE Leaf 2 | **Weighted Gini** (TREE) |
 | 0 | 1 | 3 | 3 | 0 | 0.5 | 0.4286 |
