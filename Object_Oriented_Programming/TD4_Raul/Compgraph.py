@@ -121,8 +121,7 @@ for node in ComputationGraph.my_graph.nodes.values():
         nx_graph.add_edge(node.id, successor.id)
 pos = nx.spring_layout(nx_graph)
 nx.draw(
-    nx_graph, pos, with_labels=True,
-    labels=nx.get_node_attributes(nx_graph, 'label'),
+    nx_graph, pos, with_labels=False, arrows= 1,
     node_size=1500, node_color="skyblue", font_size=10, font_weight='bold')
 plt.show()
 
