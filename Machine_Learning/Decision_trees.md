@@ -1,4 +1,4 @@
-## Activity 1: Decision trees for Feature 1 and 2.
+# Data for the worked examples
 
 | DATA | Feature1 | Feature2 | Feature3 | Label |
 | ----- | :---: | :---: | :---: | :---: |
@@ -9,6 +9,8 @@
 | obs5 | Yes | Yes | 38 | TRUE |
 | obs6 | Yes | No | 50 | FALSE |
 | obs7 | No | No | 83 | FALSE |
+
+## Activity 1: Decision trees for Feature 1 and 2
 
 ### Creating the decision trees
 |  |  |  | Feature 1 (x) |  |  |  |
