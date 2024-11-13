@@ -10,7 +10,6 @@ class Node:
         Node.id += 1
 
         self.data = data
-
         self.successors = []
         self.predecessors = []
     
@@ -79,9 +78,9 @@ class MyGraph:
 
 class ComputationGraph:
     my_graph = MyGraph()
-    def __call__(self, func):
+    def __init__(self, func):
         print("init")
-        self.fun = func
+        self.fun = fun
     
     def __call__(self, *args, **kwargs):
         print("call")
