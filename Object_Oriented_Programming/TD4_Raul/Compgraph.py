@@ -1,7 +1,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-
+import networkx as nx
 class Node:
     id = 0
 
@@ -111,8 +111,14 @@ c = rand(2,3)
 
 multiply(multiply(a,b), multiply(b,c))
 
-# Visualize the graph
-nx_graph = d.graph_node.to_nx_graph()
+# Create a new directed graph
+nx_graph = nx.DiGraph()
+
+# Add all nodes and edges to the nx_graph
+for node in ComputationGraph.my_graph.nodes.values():
+    nx_graph.add_node(node.id, label=str(node.data))
+    for successor in node.get_successors():
+        nx_graph.add_edge(node.id, successor.id)
 pos = nx.spring_layout(nx_graph)
 nx.draw(
     nx_graph, pos, with_labels=True,
@@ -121,5 +127,5 @@ nx.draw(
 plt.show()
 
 # Get the graph after computation
-result = d.compute()
+result = c
 print(result)
