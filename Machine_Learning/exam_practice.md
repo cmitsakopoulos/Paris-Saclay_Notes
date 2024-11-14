@@ -18,7 +18,8 @@ Start with a complete graph (no k-parametre), to then...
 Set strict parameters:
 
 - make an Epsilon graph which has a threshold to which adjacency values are filtered and connections are made.
-- these could involve a strict k-value;
+- these could involve a strict k-value; k-nearest neighbours with the threshold at 3 nearest.
+
 
 
 
