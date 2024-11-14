@@ -1,0 +1,64 @@
+---
+title: "TD1_reloaded_exercise_2"
+author: "Michalis Lazar"
+date: "2024-11-11"
+output: html_document
+---
+
+```{r}
+library("tidyverse")
+
+data(toxicity, package="robustbase")
+
+ls()
+
+summary(toxicity)
+
+dim(toxicity)
+```
+
+```{r}
+sapply(toxicity, class)
+```
+
+```{r}
+plot(toxicity)
+```
+
+```{r}
+cor_matrix <- cor(toxicity, use="everything") 
+
+#Identify the explicative variables significantly associated with the aquatic toxicity and propose a statistical model to describe the variability of the aquatic toxicity: logKow, Emet, RM;
+
+cor_matrix
+```
+```{r}
+linear_model <- lm(toxicity~logKow + pKa + ELUMO + Ecarb + Emet + RM + IR + Ts + P, data=toxicity)
+
+linear_model
+
+summary(linear_model)
+
+another_model <- lm(toxicity ~ logKow + RM, data=toxicity)
+
+another_model
+
+summary(another_model)
+
+```
+
+```{r}
+anova(another_model, linear_model) %>% View()
+```
+
+```{r}
+
+new_data <- data.frame(logKow= 2, pKa= 0.8, ELUMO= 4.2, Ecarb= 17.6, Emet= 5, RM= 35, IR= 4.45, Ts= 38, P=4)
+
+predicted_toxicity <- predict(linear_model, newdata = new_data)
+
+predicted_toxicity
+
+```
+
+
