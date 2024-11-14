@@ -150,3 +150,29 @@ Do GINI calculations as mentioned previously. For simplicity you can arrange thi
 | 3 | 2 | 0 | 2 | 0.48 | 0 | 0.3429 |
 | 3 | 3 | 0 | 1 | 0.5 | 0 | 0.4286 |
 
+### Interpreting the information
+
+Using information from Activity 1 and 2 compiled values tables, we can see that **Feature 2 tree** has the **lowest Gini impurity value**:
+
+- Its therefore the **purest tree** and should be accepted as the most appropriate one, how do we proceed?
+
+Observe that in the Feature 2 tree, leaf number 2 has 0 obs on the "TRUE" parametre and 3 obs on the "FALSE" parametre. 
+
+- The clear separation observed in leaf 2 grants us the ability to **prune it**, removing the observations from leaf 2 in downstream operations.
+    - A pure leaf, has **zero error** and **thereby complete classification**.
+
+## Activity 3 and 4: Pruning and finalising the model.
+
+### Pruning and re-initialising analysis
+
+Having seen the logic behind pruning, we will remove obs 2, 6, 7 from out calculations to see how an "adapted Feature 2" can approach calculating the rest of the observations in our dataset.
+
+| PRUNED | Feature1 | Feature2 | Feature3 | Label |
+| ----- | :---: | :---: | :---: | :---: |
+| obs1 | 1 | 1 | 7 | FALSE |
+| obs3 | 0 | 1 | 18 | TRUE |
+| obs4 | 0 | 1 | 35 | TRUE |
+| obs5 | 1 | 1 | 38 | TRUE |
+
+
+
