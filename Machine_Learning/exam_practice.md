@@ -19,6 +19,12 @@ Set strict parameters:
 
 - make an Epsilon graph which has a threshold to which adjacency values are filtered and connections are made.
 - these could involve a strict k-value; k-nearest neighbours with the threshold at 3 nearest.
+    - Can also remove non-mutual connections to make a KNN (K-value, Nearest Neighbour) **mutual** graph.
+        - So for a mutual KNN where k = 3, we must have **at-least** three connections but max three connections, what differs?
+
+
+### Part 3
+
 
 
 
