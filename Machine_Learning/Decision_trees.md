@@ -158,10 +158,10 @@ Using information from Activity 1 and 2 compiled values tables, we can see that 
 
 Observe that in the Feature 2 tree, leaf number 2 has 0 obs on the "TRUE" parametre and 3 obs on the "FALSE" parametre. 
 
-- The clear separation observed in leaf 2 grants us the ability to **prune it**, removing the observations from leaf 2 in downstream operations.
+- The clear separation observed in leaf 2 grants us the ability to **"condense it"**, removing the observations from leaf 2 in downstream operations.
     - A pure leaf, has **zero error** and **thereby complete classification**.
 
-## Activity 3 and 4: Pruning and finalising the model.
+## Activity 3 and 4: Condensing and finalising the model.
 
 ### Pruning and re-initialising analysis
 
@@ -174,5 +174,58 @@ Having seen the logic behind pruning, we will remove obs 2, 6, 7 from out calcul
 | obs4 | 0 | 1 | 35 | TRUE |
 | obs5 | 1 | 1 | 38 | TRUE |
 
+### First steps: Feature 1 decision tree
 
+As we already know how decision tree:Feature 2 will turn out, lets create a tree for Feature 1 again, using the condensed dataset.
+
+| ==Feature 1 (x)== |  |  |  |
+| :---: | :---: | :---: | :---: |
+| Yes (Leaf 1\) |  | No (Leaf 2\) |  |
+| TRUE | FALSE | TRUE | FALSE |
+| 1 | 1 | 2 | 0 |
+
+Now, we calculate the Gini impurity values for **each leaf** and lastly, the **weighted Gini** for the "entire tree".
+
+| ==Gini Impurity: Feature 1== |  |  |
+| ----- | ----- | ----- |
+| Leaf 1 | Leaf 2 | Weighted Gini |
+| 0.5 | 0 | **0.2500** |
+
+Having done so, we also want to compute the Feature 3:Tree for our dataset as we did before; this involves the split method and calculations of **adjusted averages** with subsequent smaller decision trees.
+
+### Feature 3: Split and Mini trees
+
+Split method below:
+
+| Feature 3 |  |  |  |
+| ----- | :---: | :---: | ----- |
+|  | Feature3 | Label | **Adj. Avg** |
+| obs1 | 7 | FALSE | 12.5 |
+| obs3 | 18 | TRUE | 26.5 |
+| obs4 | 35 | TRUE | 36.5 |
+| obs5 | 38 | TRUE |  |
+
+Let's use the above table in making mini trees in simplified-tabular format:
+
+| Lower than \< Adj. Avg. (Leaf 1\)  |  | Higher than \> Adj. Avg. (Leaf 2\) |  |
+| :---: | :---: | :---: | :---: |
+| **TRUE** | **FALSE** | **TRUE** | **FALSE** |
+| 0 | 1 | 0 | 3 |
+| 1 | 1 | 0 | 2 |
+| 1 | 2 | 0 | 1 |
+
+- Three adjusted averages, therefore **three mini trees to parse**.
+
+With the leaves computed, lets approach the Gini values:
+
+| Gini Impurity |  |  |
+| ----- | ----- | ----- |
+| **Leaf 1** | **Leaf 2** | **Weighted Gini (Total)** |
+| 0 | 0 | ==***0.0000***== |
+| 0.5 | 0 | 0.2500 |
+| 0.4444444444 | 0 | 0.3333 |
+
+Our **lowest Gini impurity** is with the ==**Feature 3:<12.5 adj. avg.**== tree; the first mini tree in the split method trees.
+
+Therefore the best decision tree model is the Feature 3<12.5???????
 
