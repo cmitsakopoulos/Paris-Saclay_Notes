@@ -1,0 +1,187 @@
+##gff-version 3
+# This output was generated with AUGUSTUS (version 3.4.0).
+# AUGUSTUS is a gene prediction tool written by M. Stanke (mario.stanke@uni-greifswald.de),
+# O. Keller, S. König, L. Gerischer, L. Romoth and Katharina Hoff.
+# Please cite: Mario Stanke, Mark Diekhans, Robert Baertsch, David Haussler (2008),
+# Using native and syntenically mapped cDNA alignments to improve de novo gene finding
+# Bioinformatics 24: 637-644, doi 10.1093/bioinformatics/btn013
+# No extrinsic information on sequences given.
+# Sources of extrinsic information: M RM 
+# Initializing the parameters using config directory /shared/ifbstor1/galaxy/mutable-data/dependencies/_conda/envs/__augustus@3.4.0/config/ ...
+# wheat version. Using default transition matrix.
+# Looks like /shared/ifbstor1/galaxy/datasets2/d/c/b/dataset_dcb194a0-cdd0-4a01-9450-ed25bb20fcf4.dat is in fasta format.
+# We have hints for 0 sequences and for 0 of the sequences in the input set.
+#
+# ----- prediction on sequence number 1 (length = 15001, name = region6) -----
+#
+# Predicted genes for sequence number 1 on both strands
+# start gene region6.g1
+region6	AUGUSTUS	gene	705	3314	0.7	+	.	ID=region6.g1
+region6	AUGUSTUS	transcript	705	3314	0.7	+	.	ID=region6.g1.t1;Parent=region6.g1
+region6	AUGUSTUS	start_codon	705	707	.	+	0	Parent=region6.g1.t1
+region6	AUGUSTUS	intron	1271	2197	0.7	+	.	Parent=region6.g1.t1
+region6	AUGUSTUS	CDS	705	1270	0.7	+	0	ID=region6.g1.t1.cds;Parent=region6.g1.t1
+region6	AUGUSTUS	CDS	2198	3314	0.89	+	1	ID=region6.g1.t1.cds;Parent=region6.g1.t1
+region6	AUGUSTUS	stop_codon	3312	3314	.	+	0	Parent=region6.g1.t1
+# coding sequence = [atggccctcaacctgacccaccagaccggcgctgcggccatcgcggccacgccggcgccgggcgcgcgcgcttcggtgt
+# tcgcggcggcctcgcccgccgccgccgccgccgccggctccgccgtggcgccggcgcaggcgaccagcctgaggatgcagacgcagctggtggagccc
+# gcgcagccgcaggcgccggagatgttccaggccatggcgcccgaccagcagcagcagggcgaggccgcgcacccggacgcgggcggcgaggaggcacg
+# caaggtgggcgtgccggtgttcgtgatgatgccgctggacacggtgcgcaaggacggcagcgcgctgaaccggcgcaaggcggtgcaggcgtccctgg
+# cggcgctcaagagcgccggcacggccggcatcatggtggacgtgtggtggggcatcgccgagagcgagggccccggccagtacaacttcgccggctac
+# atcgagctcatggagatggccaagaaggccgggctcaaggtgcaggccgtcatgtctttccaccagtgcggcggcaacgtcggagactcagtcaacat
+# accacttccgaaatgggtaacggaggagatggacaaggaccaggacctggcgtacacggacaggtgcggccgccggaactacgagtacctctcgctgg
+# gcgccgacacgatcccggccctcaagggccgcacccccatccagtgctacgccgacttcatgcgcgccttccgcgaccacctcgcgccctacatgggc
+# aacaccatctgcgagatccaggtcggcatgggccccgccggcgagctccgctacccctcctacccggagagcaacggcacctggtccttccccggcat
+# cggcgagttccagtgctacgaccgctacatgcgcgccagcctcaaggccgccgccgaggcggtgggcaggcccgagtggggcaacgccggccccgagg
+# actcgggcagctacaaccagtggccagaggacaccggcttcttccgccgcgagggcggctggaacaccgactacggccagttcttcatgagttggtac
+# tcgcagatgctgatcgagcacggcgagcggatactctccgcctgctcctccgtcttcacgggtacccctggggtcaaggtctccgtcaaggtggccgg
+# catccactggcactacggcacccgctcccacgcgcccgagctcaccgccggctactacaacaccaggaaccacgacgggtacctgcccatcgcgcgca
+# tgatcggtcgccacggcgccgtgctcaacttcacctgcgtcgagatgcgcaaccacgagcagccgcaggacgcgcagtgcatgcccgaggcgctcgtg
+# agccaggtggccagcgccgccaaggaggccggagtgggcctcgccggggagaacgccctacccaggtacgacgagacggcgcacgaccaggtgctggc
+# caccgcggcggagaaggctgaggaggaccgcatggtcgccttcacctaccttcgcatgggccccgacctcttccagcccgacaactggcgccgcttcg
+# ccgcgttcgtcaagcgcatgacggagaccggcgtcagggacgtgagccgggagcaggtggagcgcgaggctcagggcgtcgcccacgccacccagggc
+# gtcatccaggaggccgccgtcgccctctgcaactaa]
+# protein sequence = [MALNLTHQTGAAAIAATPAPGARASVFAAASPAAAAAAGSAVAPAQATSLRMQTQLVEPAQPQAPEMFQAMAPDQQQQ
+# GEAAHPDAGGEEARKVGVPVFVMMPLDTVRKDGSALNRRKAVQASLAALKSAGTAGIMVDVWWGIAESEGPGQYNFAGYIELMEMAKKAGLKVQAVMS
+# FHQCGGNVGDSVNIPLPKWVTEEMDKDQDLAYTDRCGRRNYEYLSLGADTIPALKGRTPIQCYADFMRAFRDHLAPYMGNTICEIQVGMGPAGELRYP
+# SYPESNGTWSFPGIGEFQCYDRYMRASLKAAAEAVGRPEWGNAGPEDSGSYNQWPEDTGFFRREGGWNTDYGQFFMSWYSQMLIEHGERILSACSSVF
+# TGTPGVKVSVKVAGIHWHYGTRSHAPELTAGYYNTRNHDGYLPIARMIGRHGAVLNFTCVEMRNHEQPQDAQCMPEALVSQVASAAKEAGVGLAGENA
+# LPRYDETAHDQVLATAAEKAEEDRMVAFTYLRMGPDLFQPDNWRRFAAFVKRMTETGVRDVSREQVEREAQGVAHATQGVIQEAAVALCN]
+# Evidence for and against this transcript:
+# % of transcript supported by hints (any source): 0
+# CDS exons: 0/2
+# CDS introns: 0/1
+# 5'UTR exons and introns: 0/0
+# 3'UTR exons and introns: 0/0
+# hint groups fully obeyed: 0
+# incompatible hint groups: 0
+# end gene region6.g1
+###
+# start gene region6.g2
+region6	AUGUSTUS	gene	6646	8172	0.94	-	.	ID=region6.g2
+region6	AUGUSTUS	transcript	6646	8172	0.94	-	.	ID=region6.g2.t1;Parent=region6.g2
+region6	AUGUSTUS	stop_codon	6646	6648	.	-	0	Parent=region6.g2.t1
+region6	AUGUSTUS	CDS	6646	8172	0.94	-	0	ID=region6.g2.t1.cds;Parent=region6.g2.t1
+region6	AUGUSTUS	start_codon	8170	8172	.	-	0	Parent=region6.g2.t1
+# coding sequence = [atggcaattttctgtcaaaaaaatgaaaaaggacaaagttgccatcccctatcaattaaagttgccatccccgtgctcc
+# ccttcagcacggcggggctgttcggtgaactgaagagcaagtgggggctgcgcggacggctcgactacacacctctccgcaacaaccgcttcatgctc
+# gaattcgagcgtgagggcgatcgtcagcacgtcctggaaaacggcccatggacacaccgtaaggatgcattcctcattgttccctttgatggacaggg
+# caaggcgtcggacgtaccggtgaacgtcatgccaatctgggcacgcatctatgatgtgccacctctcatgctgtcagaagagatcgggtggaagctag
+# gtggcctcttgggaaaagttctcagggtagatgcggataagtttgggaatattttctctgaatttctttgtgtaagagttgaacataatgtaaacact
+# cctctcctgcgtgagatcagtcctagagagttaggggagaaagagcatatggacctagaggtcaagtatgagagagccccacgattttgtatgtactg
+# tgggcacataggtcatggggaaagggactgcaggctgccgacggatgatcaagcagagaggttcacgggggcgatgagagcattgccctataaatcaa
+# gcaaaaacaagtgcggcttcgtggtaccagacgcttgtagtgccagacgcttcctgcactttgggtctgagttggacggggaggcatggacagccccg
+# gccaaattggcctgggagaagctaggcagagacaagaaggtgatgcatgctcgatcacaggagatggtaagatgcagggatattccagatgatgtgct
+# gctggacccggctgtacaagcggcaatcgcagcggttagcgcgcttagagtgagcgaagacactggaaatgaaggcaccaggaagacgagcatcggcg
+# agaacacaaagatggctccggcgaaacccgcgctgaccacggcttctactccaaccatagccatggctgacgcggacacctcgccatctacaccaccg
+# ggtacaggggcggggggcgacatcgacaaaaccccgctcgcacacaccatcgaggatgcagcaacccctccctacccgccgggtttcgagcccgactc
+# tgttaaggcctctcctgtcgctgctactgttaactcagtagagacggagacaaagtcagggaagttgcatgcaccaaaaggaacaggtctcaaaacca
+# aggcaaaatatattagccagctcaaggaaagaaaggaaccaggggagacaaattcagttctaggaaaaagaggcacgggtgacatggccacatctact
+# ggggctatggctagtgcgtctgatgtaacaggggacatgtataagaaacagagagctgctgtagaggaagaggatgagagagctgtaggagagatagg
+# tggtaaggaagctagcggtattggggctgccggggaactgacgggcgcgacggagagcgcccgtcaggaggaatga]
+# protein sequence = [MAIFCQKNEKGQSCHPLSIKVAIPVLPFSTAGLFGELKSKWGLRGRLDYTPLRNNRFMLEFEREGDRQHVLENGPWTH
+# RKDAFLIVPFDGQGKASDVPVNVMPIWARIYDVPPLMLSEEIGWKLGGLLGKVLRVDADKFGNIFSEFLCVRVEHNVNTPLLREISPRELGEKEHMDL
+# EVKYERAPRFCMYCGHIGHGERDCRLPTDDQAERFTGAMRALPYKSSKNKCGFVVPDACSARRFLHFGSELDGEAWTAPAKLAWEKLGRDKKVMHARS
+# QEMVRCRDIPDDVLLDPAVQAAIAAVSALRVSEDTGNEGTRKTSIGENTKMAPAKPALTTASTPTIAMADADTSPSTPPGTGAGGDIDKTPLAHTIED
+# AATPPYPPGFEPDSVKASPVAATVNSVETETKSGKLHAPKGTGLKTKAKYISQLKERKEPGETNSVLGKRGTGDMATSTGAMASASDVTGDMYKKQRA
+# AVEEEDERAVGEIGGKEASGIGAAGELTGATESARQEE]
+# Evidence for and against this transcript:
+# % of transcript supported by hints (any source): 0
+# CDS exons: 0/1
+# CDS introns: 0/0
+# 5'UTR exons and introns: 0/0
+# 3'UTR exons and introns: 0/0
+# hint groups fully obeyed: 0
+# incompatible hint groups: 0
+# end gene region6.g2
+###
+# start gene region6.g3
+region6	AUGUSTUS	gene	8698	12348	0.98	+	.	ID=region6.g3
+region6	AUGUSTUS	transcript	8698	12348	0.98	+	.	ID=region6.g3.t1;Parent=region6.g3
+region6	AUGUSTUS	start_codon	8698	8700	.	+	0	Parent=region6.g3.t1
+region6	AUGUSTUS	CDS	8698	12348	0.98	+	0	ID=region6.g3.t1.cds;Parent=region6.g3.t1
+region6	AUGUSTUS	stop_codon	12346	12348	.	+	0	Parent=region6.g3.t1
+# coding sequence = [atgggcgccggcggtggtcaggccaccttcacggcggagtgctcccacacgtttcactccagctgcatctccgccagcg
+# tctgcccgctctgcagcgtgccgcggtacgacctgccgttccggcgacccacaccacctccacctccgccgcccccgccggtgcgacctcagccagag
+# actcgtcccattcccctccgcccgtgcatcattctcccgcggcagtcacctcccgtgcatttcgtgcacggtcagccaccgccaccgccaccacgacc
+# gacatactcgtggccacgcattcccacgcaggcacgacagccgccgccacggcccgtgaatctcgtgcacggtcagccaccaccgccgccgccgccgc
+# caccgcccctgcgtcccgtgccaccgccaccaccgcccgtgcgttccgtgccacggccaccactaacatcgtcgtggccgcgcttgcccacgcagcta
+# cctccgccgcctccaccgccgccaccacgcgtgcgtattagccaggctcagccacaatgcagcttcgacgacgacgagcaggttggtcccgcctctgg
+# gccgccagctggcaaccggtcaccagccgctgcatcaaacgaagcagttgtcatcaagacgcgaagcgagtacccggccatcgccatggatttgtcca
+# gcgacaacttcgccgtgctcgtgcacgtccaggctcccgggatgaccgacatcacggcagccggtggcgacgcgccgcgcgcgccggtggacctcgtg
+# acggttctcgatgtcagtcacagtatgagcgggcaaaagttgacgctgttgaagcaggccatgcggttcgtcatcgccaatctcggccccgacgaccg
+# cctctccgtcgtgtccttcaacacgaaggcgcgccgggtgaccaggctcacgcgcatgtcggaggccgggaaggccctgtccgtgagcgctgtggagt
+# ccctcacggcgggcggctgcaccgacatcgccgaggggctccgtatggcagccatggtactcgaccagcgccggcacaggaacgccgtctcgagcgtc
+# gtgctcctctctgatggccaggacaactacatcatgatgaggcaccaggagtcgtccggtgtccaggccaacgactacgaggacctcgtcccgcccac
+# cttcgcgcgcacgggcgctgacggcgaatggtcagcatcgatccacactttcggcttcggcaatgaccatgacgcgaccgcgatgcacgtcatcgccg
+# aggctacaggcggcacgttctcgttcgtagagaacgaggcgatgatccaggacgcgttcgcacagtgcatcggcgggctgctctctgtcgtggtccag
+# gaggctcgcatcgccgtcgcgtgcgtgcaccccggggtccgtgtcatgtcggtcaagtccggcagttacgagagccgcatcgacgaggacggccgcgc
+# cgccacggtctgggtcggagaactatacgctgatgaggagaggcgtttcttgctgatcctgaccgtgccaagagccgaagcgacagacggtgacacca
+# ccgctctgttgaatgtgtcattcagctgcagagacgcggcgaccggcatggacgtgaacgtgtcggccaaggatacactggtggcgaggccggagcac
+# gccgtggacgcgaagcggtcggtggaggttgagcgggagcgcgttcgggtggatgcggcggaggacatcgcggcggcgagggcggcagcggagcgggg
+# cgagcaccaggaggcggtggcgatactcaagaaccggcagcgtgcagtggcgctgtcagaggcggcgagcgatggcgatcccgtgaccatggcgctgg
+# aggccgagctgcaagagatgcgcgggcgcgtgtcgaaccgacagagctacgcgttgtcgggtcgggcgtacatgctcgccggcatcagcgcgcaccag
+# cagcaacgcgctacctcgaggcagatgaatctggtggaggagatgtcggtggaatttatggccgcactggtggcggcgccgccagtgaagttggcatc
+# gaacgaggcgacattgtcgtacgcgacgccggctatgcgcgccatgctgctacgctcgcgtagggcacgggaggcatcagccgagcaagggcagcaac
+# tacaagctgaagaagaatacacaggaagctctaaacacggtcagccaacgccgccactgacatcgtcgtgtccccgcttgcccacgcagctacgtccg
+# ccaccgccaccacccatgcgtatcgggcatgctcggccgcctacggttgtcttcgacgacgacgagcagggtggtccggcctctgggccgccagctga
+# caaccggtcaccagccgccgcgtcgaacgaagcagttgtcgtcaagacgcggagcgagtacccggccatcgctagggattcgtccagtgaaaacttcg
+# ccatgctcgtgcacgtccaggctcccgggatgaccgacatcatggcggttggtggcgacgcgtcgcgcgcgccggtggacctcgtgacggttctcgac
+# gtcggtggcagcatgagcgggtacaagctggcgctgctgaagcaggccatgcggttcatcatcgccaatcttggccccggcgaccgcctctccgtcgt
+# gtccttctcctccgtggcgcgccgccggaccaggctcacgctcatgtcggagaccgggaaggccctgtccgtgagcgccgtggagtccctcacggcgg
+# gcggcggcaccgacatcgccgaggggctccatatggcagccatggtactcgaccagcgtcggcacagaaacgccgtctctagcgtcgtgctcctctcc
+# gacggcccagggtcatccggcgtccgggccaacaactacgaggagctcgtcccgccctccttcgcacgcacgggagctgacggcgaatggtcagcgcc
+# gatccacacgttcggcttcggcaacgaccacgacacggccgcgatgcacgccatcgccgacgcgacgggcggcacgttctcgttcatcgagaacgagg
+# cggtgatccaggacgcgtttgcccagtgcatcggcaggctgctctccgtcgtggtccagggggctcgcatcgccgtcgcgtgcgtgcacgccggggtc
+# cgtctcatgtcggtgaagtctagcagttatgagagccgcatcgacgaggacggccgcgccgccacggtctgtatcggggaactctacgccgaggagga
+# gaggcgtttcttgctgtctctggccgtgccaagagctgaagcaacagacggcgacaccgctactctggtgaaagtggtgttcagctacagaaacgcga
+# cgaccggcgcggacgtgagcgtgacaacggaggacacagtggtggcgaggccggagcacgcgccgaacgcatcggagcggtcggtagaggtggagcgg
+# gagcgcatccgggtggaggcggcagaggacttcacggcggcgagggcagcggcggaacggggcgaccaccgggaggcggtgaagatactcaacaaccg
+# gcagcgtgcagtggcgctgtcacagttgtcgcgcgacgacgaccccgtgatcatggcgctggaggccgagctgtgggggatgtgcgggcgcgtggcga
+# accggcagagatacgcgcggccgggtccggcgtacatgctttag]
+# protein sequence = [MGAGGGQATFTAECSHTFHSSCISASVCPLCSVPRYDLPFRRPTPPPPPPPPPVRPQPETRPIPLRPCIILPRQSPPV
+# HFVHGQPPPPPPRPTYSWPRIPTQARQPPPRPVNLVHGQPPPPPPPPPPLRPVPPPPPPVRSVPRPPLTSSWPRLPTQLPPPPPPPPPRVRISQAQPQ
+# CSFDDDEQVGPASGPPAGNRSPAAASNEAVVIKTRSEYPAIAMDLSSDNFAVLVHVQAPGMTDITAAGGDAPRAPVDLVTVLDVSHSMSGQKLTLLKQ
+# AMRFVIANLGPDDRLSVVSFNTKARRVTRLTRMSEAGKALSVSAVESLTAGGCTDIAEGLRMAAMVLDQRRHRNAVSSVVLLSDGQDNYIMMRHQESS
+# GVQANDYEDLVPPTFARTGADGEWSASIHTFGFGNDHDATAMHVIAEATGGTFSFVENEAMIQDAFAQCIGGLLSVVVQEARIAVACVHPGVRVMSVK
+# SGSYESRIDEDGRAATVWVGELYADEERRFLLILTVPRAEATDGDTTALLNVSFSCRDAATGMDVNVSAKDTLVARPEHAVDAKRSVEVERERVRVDA
+# AEDIAAARAAAERGEHQEAVAILKNRQRAVALSEAASDGDPVTMALEAELQEMRGRVSNRQSYALSGRAYMLAGISAHQQQRATSRQMNLVEEMSVEF
+# MAALVAAPPVKLASNEATLSYATPAMRAMLLRSRRAREASAEQGQQLQAEEEYTGSSKHGQPTPPLTSSCPRLPTQLRPPPPPPMRIGHARPPTVVFD
+# DDEQGGPASGPPADNRSPAAASNEAVVVKTRSEYPAIARDSSSENFAMLVHVQAPGMTDIMAVGGDASRAPVDLVTVLDVGGSMSGYKLALLKQAMRF
+# IIANLGPGDRLSVVSFSSVARRRTRLTLMSETGKALSVSAVESLTAGGGTDIAEGLHMAAMVLDQRRHRNAVSSVVLLSDGPGSSGVRANNYEELVPP
+# SFARTGADGEWSAPIHTFGFGNDHDTAAMHAIADATGGTFSFIENEAVIQDAFAQCIGRLLSVVVQGARIAVACVHAGVRLMSVKSSSYESRIDEDGR
+# AATVCIGELYAEEERRFLLSLAVPRAEATDGDTATLVKVVFSYRNATTGADVSVTTEDTVVARPEHAPNASERSVEVERERIRVEAAEDFTAARAAAE
+# RGDHREAVKILNNRQRAVALSQLSRDDDPVIMALEAELWGMCGRVANRQRYARPGPAYML]
+# Evidence for and against this transcript:
+# % of transcript supported by hints (any source): 0
+# CDS exons: 0/1
+# CDS introns: 0/0
+# 5'UTR exons and introns: 0/0
+# 3'UTR exons and introns: 0/0
+# hint groups fully obeyed: 0
+# incompatible hint groups: 0
+# end gene region6.g3
+###
+# start gene region6.g4
+region6	AUGUSTUS	gene	13030	13275	0.84	+	.	ID=region6.g4
+region6	AUGUSTUS	transcript	13030	13275	0.84	+	.	ID=region6.g4.t1;Parent=region6.g4
+region6	AUGUSTUS	start_codon	13030	13032	.	+	0	Parent=region6.g4.t1
+region6	AUGUSTUS	CDS	13030	13275	0.84	+	0	ID=region6.g4.t1.cds;Parent=region6.g4.t1
+region6	AUGUSTUS	stop_codon	13273	13275	.	+	0	Parent=region6.g4.t1
+# coding sequence = [atgccggtgaatgggaatatggccatgttcaagcgaggacaccgggctcagctgcttgtgcccgagacgctggtcgaga
+# acatgctattcctcgctgttggcatgcgcgtggaactcaataagatggtgaaggagggtagggagctaagaggatactggtacctgctcccagcgtgg
+# agctgcgcaatgcatgcgctgttggagttaaccacgtcggagagtccatgcccggtgttagggacttag]
+# protein sequence = [MPVNGNMAMFKRGHRAQLLVPETLVENMLFLAVGMRVELNKMVKEGRELRGYWYLLPAWSCAMHALLELTTSESPCPV
+# LGT]
+# Evidence for and against this transcript:
+# % of transcript supported by hints (any source): 0
+# CDS exons: 0/1
+# CDS introns: 0/0
+# 5'UTR exons and introns: 0/0
+# 3'UTR exons and introns: 0/0
+# hint groups fully obeyed: 0
+# incompatible hint groups: 0
+# end gene region6.g4
+###
+# command line:
+# augustus --strand=both --noInFrameStop=false --gff3=on --uniqueGeneId=true --protein=on --codingseq=on --introns=on --start=on --stop=on --cds=on --singlestrand=false /shared/ifbstor1/galaxy/datasets2/d/c/b/dataset_dcb194a0-cdd0-4a01-9450-ed25bb20fcf4.dat --UTR=off --genemodel=complete --softmasking=1 --species=wheat
