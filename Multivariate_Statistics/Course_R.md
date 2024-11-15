@@ -1009,5 +1009,21 @@ ftv   -0.05952341  1.00000000  0.05831777
 bwt   -0.28392741  0.05831777  1.00000000
 ```
 
+We observe high pearson correlation estimator values for quantitative variables:
+
+- age and bwt: 0.09031781
+- lwt and bwt: 0.18573328
+- age and lwt: 0.18007315
+
+Most correlated are age with last menstrual period weight and lwt with birth weight.
+
+Age is not particularly correlated.
+
+#### 4. Propose graphical representations of the data. Comment.
+
+Having already generated histograms to observe the frequency of distribution within our variables, one could use boxplots to examine the spread of the data across variables and observe any possible correlation of spread between them.
+
+#### 5. Perform some simple univariate analyses (t-test, χ2 test of independence, ...) to identify possible relationships.
+
 
 
