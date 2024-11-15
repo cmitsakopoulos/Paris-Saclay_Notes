@@ -1066,3 +1066,39 @@ F-statistic: 299.9 on 1 and 187 DF,  p-value: < 2.2e-16
 ```
 Here we observe a 
 
+#### 7. Propose a multivariate statistical model including all variables as predictors except low.
+
+#### 8. What are the model assumptions ?
+
+For example, if linear model, what are the assumptions usually made for one, what assumptions have we made when generating the model; do we assume 
+
+#### Give an estimation of all model parameters (including the residual variance if applicable).
+
+Interpretation of summary print results in R of the model
+
+#### 10. At level α = 0.05, which predictor is significantly associated with the birth weight ?
+
+Look at p-values for each variable in the return of summary for the multivariate model made previously.
+
+#### 11. Interpret the corresponding coefficients.
+
+Observe the magnitutide by which variables are influenced by each other, this is affected by the coefficients.
+
+#### 13. Give the adjusted coefficient of determination (if applicable). Interpret.
+
+R squared, remember how it is calculated, how it is defined.
+
+#### 14. Propose a stepwise selection based on the AIC. AND 15 probs?!!
+
+ANOVA between different models to observe the best applicable??
+
+#### 17. Give a confidence interval for the predicted value.
+
+Dont worry about it, we have not done this in class
+
+#### 18. Propose a multivariate statistical model including all variables as predictors except bwt.
+
+Logistic regression, which you have to write by hand and not on R
+
+#### 22. How can these parameters be interpreted ?
+
