@@ -933,3 +933,81 @@ upper_bound <- exp(xi_hat_alpha_beta + qnorm(1 - alpha / 2) * se)
 #Predict the expected number of lung cancer cases in Kolding for people aged between 60 and 64 (why pop 896)
 predict(modellc3, newdata = data.frame(age = "60-64", city = "Kolding", pop=896), type = "response")
 ```
+
+## Last year's exam
+
+### Part 1 - Descriptive statistics
+
+#### 1. Which variables are quantitative ? Which variables are qualitative ?
+
+Quantitative variables: age, lwt, bwt 
+Qualitative variables: low, race, smoke, ptl, ht, ui, ftv
+
+#### 2. What can be said about the probabilty distribution of each variable ?
+
+```R
+birthwt <- read.csv("/Users/chrismitsacopoulos/Downloads/birthwt.csv")
+
+data <- birthwt[-1]
+summary(data)
+```
+##### Output:
+```R
+low              age             lwt             race           smoke       
+ Min.   :0.0000   Min.   :14.00   Min.   : 80.0   Min.   :1.000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:19.00   1st Qu.:110.0   1st Qu.:1.000   1st Qu.:0.0000  
+ Median :0.0000   Median :23.00   Median :121.0   Median :1.000   Median :0.0000  
+ Mean   :0.3122   Mean   :23.24   Mean   :129.8   Mean   :1.847   Mean   :0.3915  
+ 3rd Qu.:1.0000   3rd Qu.:26.00   3rd Qu.:140.0   3rd Qu.:3.000   3rd Qu.:1.0000  
+ Max.   :1.0000   Max.   :45.00   Max.   :250.0   Max.   :3.000   Max.   :1.0000  
+      ptl               ht                ui              ftv              bwt      
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.0000   Min.   :0.0000   Min.   : 709  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:2414  
+ Median :0.0000   Median :0.00000   Median :0.0000   Median :0.0000   Median :2977  
+ Mean   :0.1958   Mean   :0.06349   Mean   :0.1481   Mean   :0.7937   Mean   :2945  
+ 3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:3487  
+ Max.   :3.0000   Max.   :1.00000   Max.   :1.0000   Max.   :6.0000   Max.   :4990
+ ```
+We can observe from the non-equal median and average values for the quantitative variables, that the distribution is non-Gaussian. 
+
+Plotting them into histograms:
+![alt text](image-20.png)
+![alt text](image-21.png)
+![alt text](image-22.png)
+
+Distribution tends to skew right for age and low weight, however body weight is more akin to normal distribution.
+
+#### 3. Estimate correlation coefficients. Which variables are the most correlated ?
+
+```R
+correlation_matrix <- cor(data, method = "pearson") 
+print(correlation_matrix)
+```
+##### Output:
+```R
+    low         age         lwt         race       smoke          ptl          ht
+low    1.00000000 -0.11893928 -0.16962694  0.137792751  0.16140431  0.196087267  0.15237025
+age   -0.11893928  1.00000000  0.18007315 -0.172817953 -0.04434618  0.071606386 -0.01583700
+lwt   -0.16962694  0.18007315  1.00000000 -0.165048544 -0.04417908 -0.140029003  0.23636040
+race   0.13779275 -0.17281795 -0.16504854  1.000000000 -0.33903074  0.007951293  0.01992992
+smoke  0.16140431 -0.04434618 -0.04417908 -0.339030745  1.00000000  0.187557063  0.01340704
+ptl    0.19608727  0.07160639 -0.14002900  0.007951293  0.18755706  1.000000000 -0.01539958
+ht     0.15237025 -0.01583700  0.23636040  0.019929917  0.01340704 -0.015399579  1.00000000
+ui     0.16904283 -0.07515558 -0.15276317  0.053602088  0.06215900  0.227585340 -0.10858506
+ftv   -0.06296026  0.21539394  0.14052746 -0.098336254 -0.02801314 -0.044429660 -0.07237255
+bwt   -0.78480516  0.09031781  0.18573328 -0.194713487 -0.19044806 -0.154653390 -0.14598189
+               ui         ftv         bwt
+low    0.16904283 -0.06296026 -0.78480516
+age   -0.07515558  0.21539394  0.09031781
+lwt   -0.15276317  0.14052746  0.18573328
+race   0.05360209 -0.09833625 -0.19471349
+smoke  0.06215900 -0.02801314 -0.19044806
+ptl    0.22758534 -0.04442966 -0.15465339
+ht    -0.10858506 -0.07237255 -0.14598189
+ui     1.00000000 -0.05952341 -0.28392741
+ftv   -0.05952341  1.00000000  0.05831777
+bwt   -0.28392741  0.05831777  1.00000000
+```
+
+
+
