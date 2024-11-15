@@ -936,6 +936,10 @@ predict(modellc3, newdata = data.frame(age = "60-64", city = "Kolding", pop=896)
 
 ## Last year's exam
 
+Learn basic formulas involving linear models and generalised linear models, beta coefficient.
+
+He doesnt want us to explain the R code on paper, he wants us to "translate" our code from R into mathematical formulaic fashion. 
+
 ### Part 1 - Descriptive statistics
 
 #### 1. Which variables are quantitative ? Which variables are qualitative ?
@@ -952,7 +956,7 @@ data <- birthwt[-1]
 summary(data)
 ```
 ##### Output:
-```R
+```
 low              age             lwt             race           smoke       
  Min.   :0.0000   Min.   :14.00   Min.   : 80.0   Min.   :1.000   Min.   :0.0000  
  1st Qu.:0.0000   1st Qu.:19.00   1st Qu.:110.0   1st Qu.:1.000   1st Qu.:0.0000  
@@ -984,7 +988,7 @@ correlation_matrix <- cor(data, method = "pearson")
 print(correlation_matrix)
 ```
 ##### Output:
-```R
+```
     low         age         lwt         race       smoke          ptl          ht
 low    1.00000000 -0.11893928 -0.16962694  0.137792751  0.16140431  0.196087267  0.15237025
 age   -0.11893928  1.00000000  0.18007315 -0.172817953 -0.04434618  0.071606386 -0.01583700
@@ -1025,5 +1029,34 @@ Having already generated histograms to observe the frequency of distribution wit
 
 #### 5. Perform some simple univariate analyses (t-test, χ2 test of independence, ...) to identify possible relationships.
 
+### Part 2: Birth weight
 
+#### 6. Is the variable low a relevant predictor for bwt?
+
+By generating a linear model:
+```R
+model <- lm(bwt ~ low, data = data)
+summary(model)
+```
+##### Output:
+```
+Call:
+lm(formula = bwt ~ low, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1388.34  -324.11   -12.11   313.89  1660.89 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3329.11      39.74   83.77   <2e-16 ***
+low         -1231.77      71.13  -17.32   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 453.1 on 187 degrees of freedom
+Multiple R-squared:  0.6159,	Adjusted R-squared:  0.6139 
+F-statistic: 299.9 on 1 and 187 DF,  p-value: < 2.2e-16
+```
+Here we observe a 
 
