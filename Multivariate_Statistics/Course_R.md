@@ -949,6 +949,7 @@ Qualitative variables: low, race, smoke, ptl, ht, ui, ftv
 
 #### 2. What can be said about the probabilty distribution of each variable ?
 
+Teacher: Histograms or boxplots
 ```R
 birthwt <- read.csv("/Users/chrismitsacopoulos/Downloads/birthwt.csv")
 
@@ -983,6 +984,7 @@ Distribution tends to skew right for age and low weight, however body weight is 
 
 #### 3. Estimate correlation coefficients. Which variables are the most correlated ?
 
+CORRECT ANSWER
 ```R
 correlation_matrix <- cor(data, method = "pearson") 
 print(correlation_matrix)
@@ -1025,9 +1027,13 @@ Age is not particularly correlated.
 
 #### 4. Propose graphical representations of the data. Comment.
 
+Teacher: boxplots are an acceptable answer
+
 Having already generated histograms to observe the frequency of distribution within our variables, one could use boxplots to examine the spread of the data across variables and observe any possible correlation of spread between them.
 
 #### 5. Perform some simple univariate analyses (t-test, χ2 test of independence, ...) to identify possible relationships.
+
+DONT ATTEMPT, low chances of having it.
 
 ### Part 2: Birth weight
 
