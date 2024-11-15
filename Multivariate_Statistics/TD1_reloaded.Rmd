@@ -1,0 +1,223 @@
+---
+title: "TD1_reloaded_exercise_1"
+author: "Michalis Lazar"
+date: "2024-11-10"
+output: html_document
+---
+
+```{r}
+library(tidyverse) #maybe I will use it
+
+#loading the 'vulnerability'dataset in R
+
+load("C:/Users/mihal/Desktop/GENOMICS M1/R data files/vulnerability.RData")
+
+ls() #check the name of the R object ("vul")
+
+glimpse(vul) #with tidyverse packages
+
+summary(vul)
+```
+
+```{r}
+#alternatively, the classical way is...
+
+summary(vul)
+
+dim(vul) #to get the number of rows (obs) and then number of columns (explicative variable)
+
+```
+
+```{r}
+#Which variables are linearly linked to ’ln death risk’? We can use correlation analysis and simple linear regression to test the relationship between ln_death_risk and the other variables in vul
+
+#select only numeric columns from vul
+numeric_vars <- vul[, sapply(vul, is.numeric)]
+
+# Calculate the correlation matrix for numeric variables only
+cor_matrix <- cor(numeric_vars, use="everything") 
+
+
+cor(cor_matrix) %>% View()
+
+# high positive or negative correlation (usually |correlation| > 0.5) might suggest a linear link.
+
+
+```
+
+```{r}
+sapply(vul, class)
+```
+
+```{r}
+#plotting the data
+
+plot(vul) #but it doesn't make sense for the variables that are not numeric 
+
+
+plot(vul[,sapply(vul, is.numeric)]) # I suppose this is the classical way 
+
+```
+
+
+```{r}
+
+#the tidyverse way 
+
+vul %>% 
+  select(is.numeric) %>%
+  plot() 
+
+
+```
+
+
+#Which variables have to be transformed (non-linear link)? God knows...
+
+
+
+#which explicative variables are linearly dependent? ln_pop and ln_events, hdi and ln_urb for instance (multicolinearity)
+
+#Consider a SIMPLE regression model to explain 'ln death risk' by 'ln events' only
+
+#a) write the statistical model
+```{r}
+#ALWAYS PLOT THE DATA FIRST!
+plot(vul$ln_events, vul$ln_death_risk)
+
+#fitting the simple linear regression model 
+simple.regression <- lm(ln_death_risk~ln_events, data=vul)
+
+#display the model summary to see estimation of the parameters
+summary(simple.regression)
+
+abline(simple.regression,, col="red", lwd=2)
+
+```
+
+```{r}
+#model comparison 
+
+#we can compare this simple linear regression model with a model that has no predictors (only an intercept)
+
+#Null model
+
+null_model <- lm(ln_death_risk ~ 1, data=vul)
+
+#compare models with ANOVA in a nested fashion to see if adding ln_events as a predictor significantly improves the model for ln_death_risk
+
+anova(null_model, simple.regression)
+
+```
+Rows in the Table
+Res.Df: Residual degrees of freedom. This represents the number of observations minus the number of parameters in the model. For Model 1, it's 143, and for Model 2, it drops to 142 because adding ln_events as a predictor uses up one degree of freedom.
+RSS (Residual Sum of Squares): This measures the amount of unexplained variance. A lower RSS indicates a better fit. Here:
+Model 1 (without ln_events) has an RSS of 438.20.
+Model 2 (with ln_events) has an RSS of 401.43, indicating that adding ln_events reduces the unexplained variance.
+Df (Difference in degrees of freedom): This shows how many degrees of freedom are used when going from Model 1 to Model 2. In this case, it’s 1 because we added one predictor (ln_events).
+Sum of Sq: This is the amount of variance explained by adding ln_events to the model, calculated as the difference between the RSS of Model 1 and Model 2. Here:
+Sum of Sq
+=
+438.20
+−
+401.43
+=
+36.775
+Sum of Sq=438.20−401.43=36.775
+F Statistic: The F-statistic tests whether the reduction in RSS is significant, given the additional predictor. Here, it’s 13.009, which is relatively high, indicating a substantial reduction in RSS by including ln_events.
+Pr(>F): This is the p-value associated with the F-test. A low p-value (typically < 0.05) suggests that adding ln_events significantly improves the model. Here, the p-value is 0.0004286, which is very low (***), indicating strong evidence that ln_events is a useful predictor for ln_death_risk.
+
+#e) calculate the R^2 and adjusted R^2 (they are available in summary(simple.regression))
+```{r}
+#to extract them directly
+
+r_squared <- summary(simple.regression)$r.squared
+
+adjusted_r_squared <- summary(simple.regression)$adj.r.squared
+
+
+```
+
+#h)predict ln_death_risk for a New Observation, given a new ln_event = 3.4
+
+```{r}
+new_data <- data.frame(ln_events = 3.4)
+
+predicted_ln_death_risk <- predict(simple.regression, newdata = new_data)
+
+predicted_ln_death_risk
+
+#creating a data frame with one observation and one variable allows predict() to work smoothly and gives you the flexibility to add more observations if needed.
+```
+
+#i) apply ci.plot from the HH Package
+
+```{r}
+
+library(HH)
+
+
+#plot the confidence interval for the regresion 
+
+ci.plot(simple.regression)
+#This function will plot the confidence intervals around the regression line, helping you visualize the uncertainty in the predictions.
+
+```
+
+#consider a multivariate regression model to explain 'ln_death_risk' by all available variables
+
+```{r}
+multiple.regression <- lm(ln_death_risk ~ ln_urb + ln_events + ln_fert + hdi + ln_pop, data=vul)
+
+summary(multiple.regression)
+
+```
+
+
+#resulting estimations
+Intercept: -4.7414
+ln_urb: -0.3919
+ln_events: 1.3112
+ln_fert: 2.2485
+hdi: 3.0420
+ln_pop: -0.5196
+
+#checking model validity 
+To check model validity, you can:
+
+Look at the Residual Standard Error (1.346) to assess how well the model fits the data.
+
+Examine the F-statistic (20.74) and its p-value (2.059e-15). The highly significant p-value indicates that the model as a whole is statistically significant.
+
+Perform residual analysis (e.g., checking for normality, homoscedasticity, and independence of residuals) to further assess validity.
+
+#test the parameters significance: write the tested hypothesis, the test statistics
+
+For each predictor, the null hypothesis (H0)is that its coefficient is zero, meaning it has no effect on the response variable (ln_death_risk).
+
+ln_urb has a p-value of 0.19783, meaning it is not statistically significant at the 0.05 level.
+
+Based on these results, you can conclude that all predictors except ln_urb significantly contribute to explaining ln_death_risk.
+
+#model comparison 
+To confirm the significance of each predictor, you can perform a model comparison using an ANOVA (Analysis of Variance) test. For example, you could compare the full model to a model that excludes a particular predictor to see if removing it significantly reduces model fit.
+
+```{r}
+full_model <- multiple.regression
+
+reduced_model <- lm(ln_death_risk ~ ln_events + ln_fert + hdi + ln_pop, data = vul)
+
+
+anova(reduced_model, full_model)
+
+```
+
+#R_squared and adjusted R_squared
+R_squared: 0.429
+R_Adjusted: 0.4083
+
+
+42.9% of the variance in ln_death_risk is explained by the predictors in the model. The adjusted R_squared accounts for the number of predictors, slightly lowering the value to adjust for potential overfitting.
+
+
+
