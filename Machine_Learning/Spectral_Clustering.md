@@ -22,9 +22,26 @@ Or in other words, in a linear transformation, when calculating the distances be
 A **Degree** Matrix is an integral part of graph theory, and is a matrix based representation of an undirectional graph; 
 
 Specifically, a Degree matrix has the **number of connections** of **each point** in ***succesive order***, on the ==**diagonal**== of the matrix. (See Wikipedia screenshot)
-
 ### Adjacency Matrix
-To start with, we are not required to learn how to compute weights to generate an Adjacency matrix; it's either given to us, or we **assume** that a **connection is 1 and non is 0**.
+
+To start with, we are not required to learn how to compute weights to generate an Adjacency matrix; it's either given to us, or we **assume** that the **weight is 1 and non zero**.
+
+If you do however need to calculate the weights of connections between points, you would need to generate a **similarity graph** (an undirected graph).
+
+In order to do this, you will obtain a **euclidean** distance matrix [d(a,b)], or possibly calculate one, which will then be modified by **subtracting the value of each euclidean distance, from 1**:
+
+$Weight <=> Similarity $
+$ => 1 - d(a, b)$
+
+With this formula you would generate a similarity matrix, and then:
+
+The easiest method to generate an Adjacency Matrix is with the assumption that all connections ("boxes") have the same weight, and therefore you:
+
+- **Subtract 1 from each box in the distance matrix**.
+
+==Otherwise==, if you have the weight/similarities calculated, you will then ***subtract those from the distance matrix*** to obtain the Adjacency matrix.
+
+### Laplacian Matrix
 
 If you were to visually imagine how to generate a Laplacian matrix, think of placing an Adjacency matrix, ontop of a Degree Matrix;
 
@@ -43,12 +60,20 @@ Where for **each box** in the Laplacian matrix:
 
 
 
-
-
-
 ![alt text](20241016_144343.jpg)
 
+### Eigenvalues and Eigenvectors
 
+Given a table of these magically calculated values, from the Laplacian Matrix:
 
+Apply **k-means** to **cluster the eigenvectors** and obtain **two groups** through ==bi-partioning==.
+
+That is, with the provided eigevectors, apply k-means to cluster the eigen vectors and ***achieve a two group partition***.
+
+To perform this clustering you would need to calculate a **scaled adjacency matrix**, with the following formula:
+
+$L = D*(-1/2) - A*(-1/2)$
+
+In the same manner
 
 
