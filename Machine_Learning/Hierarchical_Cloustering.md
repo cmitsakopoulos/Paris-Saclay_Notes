@@ -20,7 +20,7 @@
 
 Now **identify** which ones are the closest **distance** wise, per row, **accounting for mirrored data distribution**:
 
-| EXAMPLE GRAPH OF CLOUSTERS |  |  |  | EF= C2 |  |
+| EXAMPLE GRAPH OF CLOUSTERS(Cx) |  |  |  | EF= C2 |  |
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | \- | AC= C1 | \- |  | \- | \- |
 | \- |  | \- |  | \- | \- |
@@ -36,9 +36,9 @@ Now **identify** which ones are the closest **distance** wise, per row, **accoun
 | NEW DISTANCES | AC | B | EF | D |
 | :---- | ----- | ----- | ----- | ----- |
 | AC | 0 | 2 | 7 | 5 |
-| B | 2 | 0 | 5 | 3 |
-| EF | 7 | 5 | 0 | 2 |
-| D | 5 | 3 | 2 | 0 |
+| B | - | 0 | 5 | 3 |
+| EF | - | - | 0 | 2 |
+| D | - | - | - | 0 |
 | USE THE SAME LOGIC AS THE ONE BEFORE |  |  |  |  |
 
  NEW CLOUSTER FORMATION BELOW
@@ -56,27 +56,3 @@ Now **identify** which ones are the closest **distance** wise, per row, **accoun
 * **Group average distance**: The **average** distance between the points within clusters hoping to be joined.  
   * **Average link clustering**: Does not fail to **noise** or **outliers** within clusters, however is biassed in favour of **global clustering**. It is a compromise between **single and complete** links.  
 * **Silhouette approach**: Estimating the **proximity** of objects within a cluster.
-
-## Spectral Clustering
-
-* **Convex cluster**: Basically, in a convex cluster, you can **draw a straight line from any point in the cluster to any other point in the cluster without leaving the cluster**. For example, a U-shaped cluster would not be convex because you could not draw a straight line from one end of the U to the other without leaving the cluster and crossing across empty space.    
-
-## Eigenvalues and(/or) eigenvectors
-
-Eigenvectors are the vectors which following a linear transformation of the points within a matrix, **eigenvalues** shall remain the same;
-
-Given the picture of a vector space which you could equate to the fabric of time in space, a **linear transformation** would would change vector positions in an "**equal distribution**" of sorts. 
-
-If we were to represent vectors within this vector space as points on a graph, which are connected to their x and y intercepts with a line, during a linear transformation **all of these lines** should remain parallel.
-
-Or in other words, in a linear transformation, when calculating the distances between vectors, **distance should remain the same before transformation occured**. 
-
-**Eigenvectors** are those which despite a linear transformation **do not** "change their position" following transformation, like anchor points in the "fabric of time".
-
-## Laplacian Matrix
-
-Apply understanding
-
-## Rayleigh Theorem
-
-Apply understanding

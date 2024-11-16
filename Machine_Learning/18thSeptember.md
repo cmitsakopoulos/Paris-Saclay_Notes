@@ -45,11 +45,4 @@ If d(A, B) \<= d(A, C) \+ d(C, A): **triangular inequality**.
 * Distance **is inversely related** to **similarity**.  
 * Similarity between an object and itself is the maximum, **isolation**.
 
-Look up distance and data matrices. Additionally, brush up calculus basics. 
-
-Look into the k-means algorithm. K represents the number of clusters, using a mean value of k-means, you connect the data points to a **mean** to which they are the most **similar to**. 
-
-Look up the process of the k-mean algorithm, how the updating procedure works and learn to do it by hand.
-
-K-means will **eventually converge** to the **optimum**.
 
