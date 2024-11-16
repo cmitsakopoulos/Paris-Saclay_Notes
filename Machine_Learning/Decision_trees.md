@@ -229,3 +229,18 @@ Our **lowest Gini impurity** is with the ==**Feature 3:<12.5 adj. avg.**== tree;
 
 Therefore the best decision tree model is the Feature 3<12.5???????
 
+# Random Forest
+
+*Building the Forest*:
+
+- ***Bootstrap Sampling***: Random forests use a technique called bootstrap sampling, where multiple subsets of the data are created by randomly sampling with replacement from the original dataset. Each subset is used to train a different decision tree.
+
+- ***Random Feature Selection***: When splitting a node in a decision tree, random forests only consider a random subset of the features rather than all features. This introduces more randomness into the model and helps prevent overfitting.
+
+**Advantages**:
+
+- **Reduced Overfitting**: By averaging multiple decision trees, random forests reduce the risk of overfitting compared to a single decision tree.
+
+- **High Accuracy**: They are known for their high accuracy and are often the go-to choice for many machine learning tasks.
+
+- **Feature Importance**: Random forests can provide estimates of feature importance, helping you understand which features are most influential in making predictions.
