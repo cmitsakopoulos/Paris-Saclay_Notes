@@ -19,12 +19,27 @@ Or in other words, in a linear transformation, when calculating the distances be
 ![alt text](<Screenshot 2024-10-16 at 14.28.34.png>)
 
 ### Degreee Matrix
-A **Degree** Matrix is an integral part of graph theory, and is a matrix representation of an undirectional graph; 
+A **Degree** Matrix is an integral part of graph theory, and is a matrix based representation of an undirectional graph; 
 
 Specifically, a Degree matrix has the **number of connections** of **each point** in ***succesive order***, on the ==**diagonal**== of the matrix. (See Wikipedia screenshot)
 
 ### Adjacency Matrix
 To start with, we are not required to learn how to compute weights to generate an Adjacency matrix; it's either given to us, or we **assume** that a **connection is 1 and non is 0**.
+
+If you were to visually imagine how to generate a Laplacian matrix, think of placing an Adjacency matrix, ontop of a Degree Matrix;
+
+- Such that the **Degree Matrix diagonal is retained**, and the **adjacency values are applied "negatively"**.
+
+See Wikipedia Page.
+
+The **mathematical** explanation of it, is:
+
+$L=D-A$
+
+Where for **each box** in the Laplacian matrix:
+
+- $D$: is the Degree Matrix value at the exact same coordinates.
+- $A$: is the Adjacency Matrix value at those same coordinates.
 
 
 
