@@ -14,17 +14,22 @@ Or in other words, in a linear transformation, when calculating the distances be
 
 **Eigenvectors** are those which despite a linear transformation **do not** "change their position" following transformation, like anchor points in the "fabric of time".
 
-## Initial steps
-
-After generating a distance matrix using **manhattan distances** between points, you will proceed by calculating an **adjacency matrix**;
-
-- Subtract one from each 
-
-## Calculating a Laplacian Matrix
+## Degree, Adjacency and Laplacian Matrices
 
 ![alt text](<Screenshot 2024-10-16 at 14.28.34.png>)
 
-COMPLETE NOTES FROM PAPER
+### Degreee Matrix
+A **Degree** Matrix is an integral part of graph theory, and is a matrix representation of an undirectional graph; 
+
+Specifically, a Degree matrix has the **number of connections** of **each point** in ***succesive order***, on the ==**diagonal**== of the matrix. (See Wikipedia screenshot)
+
+### Adjacency Matrix
+To start with, we are not required to learn how to compute weights to generate an Adjacency matrix; it's either given to us, or we **assume** that a **connection is 1 and non is 0**.
+
+
+
+
+
 
 ![alt text](20241016_144343.jpg)
 
