@@ -1,7 +1,7 @@
-## Sequence Alignment
-### CLUSTALW
+## UGMA, CLUSTAL and WPGMA
+## CLUSTALW
 
-An heuristic and progresive phyloheny inference tool used for ***Global Alignments***, but which is considered less effective than others.
+A heuristic and progresive phyloheny inference tool using ***Global Alignments***; which is however considered less effective than others.
 
 ![alt text](<Screenshot 2024-10-22 at 09.26.40.png>)
 
@@ -14,7 +14,7 @@ Neighbour-Joining:
 Where: n is the "number of sequences" (to account for groups) 
 Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>)
 
-### Calculating UPGMA: Worked Example.
+## Calculating UPGMA: Worked Example.
 
 ![alt text](<Screenshot 2024-11-02 at 17.29.56.png>)
 
@@ -199,3 +199,8 @@ Otherwise, you would use the same logic that is seen in the previous clades.
 | :---- | :---- | ----- |
 | ABC | \- | 29 |
 | DE |  | \- |
+
+## WPGMA
+
+Where UPGMA implicitly assumes a **constant substitution rate**, over ==time== and phylogenetic lineages (known as the molecular clock hypothesis), WPGMA accounts for non-constant substitution rates with the addition of the ***Weight*** parametre. 
+
