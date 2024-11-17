@@ -1,7 +1,7 @@
 ## Sequence Alignment
 ### CLUSTALW
 
-An algorithm used for ***Global Alignments***, but which is considered less effective than others.
+An heuristic and progresive phyloheny inference tool used for ***Global Alignments***, but which is considered less effective than others.
 
 ![alt text](<Screenshot 2024-10-22 at 09.26.40.png>)
 
