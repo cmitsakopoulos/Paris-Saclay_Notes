@@ -77,7 +77,7 @@ $ (2 * 47.5 + 38) / 3 $ = ==***44.33***==
 
 Now we have **another clade**, involving both sequences ***D and E***.
 
-Repeat the process again, but remember, ***no amplification***:
+Repeat the process again, but **because we have unified ABC**, ***no amplification*** is required:
 
 $ d(ABC, DE) = (ABC, E) + (ABC, D) / 2 <=>$
 $ (39 + 44.33) / 2 $ = ==***41.665***==
@@ -132,7 +132,7 @@ $d(BuC, A) / 2$ => ==**5.75**==
 
 **X** is the distance between the two points, which we *calculated in the distance matrix*; **11.5**
 
-To calculate y, remember that this is **unweighted**, therefore all leaves are assumed to be generated at the same point in time;
+To calculate y:
 
 $d(A, X) <=> d(B, X)$;
 
@@ -175,36 +175,6 @@ Could be a mistake in her answers, as this contradicts everything online and eve
     BC += 1, A += 1, D += 1, E += 1 => ==4== 
 
 Otherwise, you would use the same logic that is seen in the previous clades.
-
-## Doing UPGMA again
-
-### Question 1; TD Something
-
-| FIRST | A | B | C | D | E |
-| :---- | :---- | ----- | ----- | ----- | ----- |
-| A | \- | 10 | 16 | 19 | 18 |
-| B |  | \- | 2 | 38 | 40 |
-| C |  |  | \- | 24 | 35 |
-| D |  |  |  | \- | 5 |
-| E |  |  |  |  | \- |
-
-| SECOND | A | BC | D | E |
-| :---- | :---- | ----- | ----- | ----- |
-| A | \- | 13 | 19 | 18 |
-| BC |  | \- | 31 | 37.5 |
-| D |  |  | \- | 5 |
-| E |  |  |  | \- |
-
-| THIRD | A | BC | DE |
-| :---- | :---- | ----- | ----- |
-| A | \- | 13 | 18.5 |
-| BC |  | \- | 34.25 |
-| DE |  |  | \- |
-
-| FORD | ABC | BC |
-| :---- | :---- | ----- |
-| ABC | \- | 29 |
-| DE |  | \- |
 
 ## WPGMA
 
