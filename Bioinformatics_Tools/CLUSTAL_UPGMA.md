@@ -208,22 +208,37 @@ Otherwise, you would use the same logic that is seen in the previous clades.
 
 ## WPGMA
 
-Where UPGMA implicitly assumes a **constant substitution rate**, over ==time== and phylogenetic lineages (known as the molecular clock hypothesis), WPGMA accounts for non-constant substitution rates with the addition of the ***Weight*** parametre. 
+Where UPGMA implicitly assumes a **constant substitution rate**, over ==time== and phylogenetic lineages (known as the molecular clock hypothesis), WPGMA accounts for non-constant substitution rates with the addition of the ***Weight*** parametre.
+
+A distance matrix is calculated for us, using an unknown distance calculation formula; could be manhattan or eucledian, who knows.
+
+Begin by identifying the **closest points**, or in other words, the most **neighbourly** leaves.
 
 | FIRST | a | b | c | d | e |
 | ----- | ----- | ----- | ----- | ----- | :---: |
-| **a** | 0 | 17 | 21 | 31 | 23 |
+| **a** | 0 | ==17== | 21 | 31 | 23 |
 | **b** |  | 0 | 30 | 34 | 21 |
 | **c** |  |  | 0 | 28 | 39 |
 | **d** |  |  |  | 0 | 43 |
 | **e** |  |  |  |  | 0 |
 
+We select ***A and B to be unified into a cluster***, we continue by recalculating distances:
+
+$d(AB, C) <=> (d(A, C)~+~d(B, C))~/~2 <=> 21~+~30~/~2 = 25.5$
+$d(AB, D) <=> (d(A, D)~+~d(B, D))~/~2 <=> 31~+~34~/~2 = 32.5$
+$d(AB, E) <=> (d(A, E)~+~d(B, E))~/~2 <=> 23~+~21~/~2 = 22$
+
 | SECOND | AB | C | D | E |
 | ----- | :---- | ----- | ----- | ----- |
-| AB | \- | 25.5 | 32.5 | 22 |
+| AB | \- | 25.5 | 32.5 | ==22== |
 | C |  | \- | 28 | 39 |
 | D |  |  | \- | 43 |
 | E |  |  |  | \- |
+
+We select **AB and E to be unified** due to their minimum distance in the above matrix. Redo the same process for the next distance matrix:
+
+$d(ABE, C) <=> (d(AB, C)~+~d(E, C))~/~2 <=> 25.5~+~39~/~2 = 32.25$
+$d(ABE, D) <=> (d(AB, D)~+~d(E, D))~/~2 <=> 32.5~+~43~/~2 = 37.75$
 
 | THIRD | ABE | C | D |
 | ----- | :---- | ----- | ----- |
@@ -231,10 +246,18 @@ Where UPGMA implicitly assumes a **constant substitution rate**, over ==time== a
 | **C** |  | \- | 28 |
 | **D** |  |  | \- |
 
+We select **D and C to be unified** due to their minimum distance in the above matrix. Redo for one final time:
+
+$d(ABE, DC) <=> (d(ABE, C)~+~d(ABE, D))~/~2 <=> 32.25+~37.75~/~2 = 35$
+
 | FORD | ABE | CD |
 | ----- | :---- | ----- |
 | **ABE** | \- | 35 |
 | **CD** |  | \- |
+
+Done!
+
+Now draw the tree and calculate the branch lengths to annotate.   
 
 ### Rooted tree with branch lengths
 
