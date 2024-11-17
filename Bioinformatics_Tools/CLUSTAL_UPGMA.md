@@ -1,7 +1,15 @@
 # UGMA, CLUSTAL and WPGMA
 ## CLUSTALW
 
-A heuristic and progresive phyloheny inference tool using ***Global Alignments***; which is however considered less effective than others.
+A ==**heuristic and progresive(dynamic programming)**== phyloheny inference tool using ***Global Alignments***(of both DNA and Protein seqeunces); which is however considered less effective than others.
+
+==**Gap opening or extension penalties**== are also applied in the alignment (*opening and extension are self explanatory*);
+
+(GEP: gap extension penalty) of gaps varies depending on the sequences and positions considered
+*GOP specific to each aa (e.g.: glycines are more likely
+to approach a gap than valines)
+* Reduced GOP in hydrophilic regions (for gaps rather in loops than in structured regions)
+* GEP increased in the vicinity of other gaps (to avoid the formation of small neighboring gaps in favor of long gaps)
 
 ![alt text](<Screenshot 2024-10-22 at 09.26.40.png>)
 
