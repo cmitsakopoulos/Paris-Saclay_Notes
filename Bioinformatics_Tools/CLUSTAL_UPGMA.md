@@ -1,4 +1,4 @@
-## UGMA, CLUSTAL and WPGMA
+# UGMA, CLUSTAL and WPGMA
 ## CLUSTALW
 
 A heuristic and progresive phyloheny inference tool using ***Global Alignments***; which is however considered less effective than others.
@@ -7,12 +7,18 @@ A heuristic and progresive phyloheny inference tool using ***Global Alignments**
 
 The tool will calculate the distance matrix between sequences, which distance expresses the **relative-time distance** of **speciation** which led to these sequences ***differing through substitutions*** etc.
 
-Using ***Neighbour-Joining*** it will create a ==**guide tree**==, to later obtain the multiple alignment; this tree does not represent phylogenetic relationship directly.
-
-Neighbour-Joining:
-: Can be performed by the ***UPGMA method (==Unweighted== Pair Groups with Arithmetic Mean)*** to calculate distance, if we are to **assume that branches were created at the same time**; ![alt text](<Screenshot 2024-10-22 at 09.37.04.png>) 
+CLUSTAL algorithms:
+: Can be performed by the ***UPGMA method (==Unweighted== Pair Groups with Arithmetic Mean)*** to calculate distance, if we are to **assume that branches were created at the same time**; ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>)
 Where: n is the "number of sequences" (to account for groups) 
-Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.34.30.png>)
+Else, ***WPGMA method (==Weighted== Pair Groups with Arithmetic Mean)***: ![alt text](<Screenshot 2024-10-22 at 09.37.04.png>)
+
+Difference between UPGMA and WGMA
+: Where UPGMA will **factor** in the number of leaves per cluster and **cancel** out the weight of nodes by dividing with $n_A~+~n_B$, **WPGMA** ==dgafs==, thereby **no weight adjustments** are required; vibe and divide (by two).
+
+Neighbour Joining
+: The UPGMA algorithm (left) **assumes equal rates** of evolution, so that branch tips come out equal. The Neighbor-Joining (NJ) (right) algorithm allows for unequal rates of evolution, so that branch lengths are proportional to amount of change.
+  - **NJ steps** in short: Start by defining nodes which contain leaves (ex. taxa) and then define the number of nodes accumuluated. 
+    - Moving on, distance calculations will determine the fitness of the initial leaf nodes; through an **iterative** and **repetetive process**, which will eventualy lead to a "best fit tree".
 
 ## Calculating UPGMA: Worked Example.
 
