@@ -210,3 +210,64 @@ Otherwise, you would use the same logic that is seen in the previous clades.
 
 Where UPGMA implicitly assumes a **constant substitution rate**, over ==time== and phylogenetic lineages (known as the molecular clock hypothesis), WPGMA accounts for non-constant substitution rates with the addition of the ***Weight*** parametre. 
 
+| FIRST | a | b | c | d | e |
+| ----- | ----- | ----- | ----- | ----- | :---: |
+| **a** | 0 | 17 | 21 | 31 | 23 |
+| **b** |  | 0 | 30 | 34 | 21 |
+| **c** |  |  | 0 | 28 | 39 |
+| **d** |  |  |  | 0 | 43 |
+| **e** |  |  |  |  | 0 |
+
+| SECOND | AB | C | D | E |
+| ----- | :---- | ----- | ----- | ----- |
+| AB | \- | 25.5 | 32.5 | 22 |
+| C |  | \- | 28 | 39 |
+| D |  |  | \- | 43 |
+| E |  |  |  | \- |
+
+| THIRD | ABE | C | D |
+| ----- | :---- | ----- | ----- |
+| **ABE** | \- | 32.25 | 37.75 |
+| **C** |  | \- | 28 |
+| **D** |  |  | \- |
+
+| FORD | ABE | CD |
+| ----- | :---- | ----- |
+| **ABE** | \- | 35 |
+| **CD** |  | \- |
+
+### Rooted tree with branch lengths
+
+|  |  |  |  |  |  | d1 \= 8.5 |  |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+|  |  |  |  |  | x | x | **A** |
+|  |  |  | x | x |  |  |  |
+|  | **d6= 6.5** |  | x | **d2 \= 2.5** | x | x | **B** |
+| x | x | x | x |  |  | **d1 \= 8.5** |  |
+| x |  |  | x |  |  |  |  |
+| x |  |  | x |  |  |  |  |
+| x |  |  | x | x | x | **E** |  |
+| x |  |  |  |  | **d3 \= \`11** |  |  |
+| x |  |  |  |  |  |  |  |
+| x |  |  |  |  |  |  |  |
+| x |  |  |  |  |  |  |  |
+| x |  |  | **d4 \= 14** |  |  |  |  |
+| x |  | x | x | x | **D** |  |  |
+| x | x |  |  |  |  |  |  |
+|  | **d5=3.5** | x | x | x | **C** |  |  |
+|  |  |  | **d4 \= 14** |  |  |  |  |
+
+#### Workings in detail:
+
+$d1~=~d(A, B)/2 <=> 17~/~2 = 8.5$
+
+$d2~=~d(AuB, E) - d1 <=> 11~-~8.5 = 2.5$
+
+$d3~=~(d(A, E)~+~d(B, E))~/~4 <=> (23~+~21)~/~4 = 11$ 
+^This is practically a correct way to do it but can be confusing.
+
+$d4~=~d(C, D)/2 <=> 28~/~2 = 14$
+
+$d5~=~d(ABE, DC)/2 - d4 <=> 17.5~-~14 = 3.5$
+
+$d6~=~d(ABE, DC)/2 - d1 <=> 17.5~-~11 = 6.5$
