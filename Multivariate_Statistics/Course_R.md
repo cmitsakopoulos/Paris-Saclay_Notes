@@ -514,7 +514,7 @@ Number of Fisher Scoring iterations: 5
 - ==**Intercept**==: simple maths, its the **predicted outcome** of our **dependent variable**, ***==IF== the independent variable is 0***. 
   - In other words, it demonstrates *what the dependent variable will look like* if the independent has **no effect** on it.
     - While a **negative intercept** does exceeds the **minimum for our data range**, it ***does not negate*** the existence of a positive correlation between dependent and independent.
-- ==**Z-value**==: the ==Wald statistic==, where **z demonstrates the deviation of a values from the dataset's mean**. 
+- ==**Z-value**==: the ==Wald statistic==, where **z demonstrates the deviation of values from the dataset's mean**. 
   - If the **z-value is 0**, there is **no deviation** of the value **from the mean** and as such no variance.
   - **Positive or negative values** are if the value is **deviating higher or lower than the mean**, ***respectively***.
 - ==**Null and Residual Deviance**==: how well the dependent variable can be predicted by a model which only has an intercept term and how well the dependent variable can be predicted by the independent variables. **??!!!!???!!???!**
@@ -526,7 +526,7 @@ Number of Fisher Scoring iterations: 5
 
 As we can see from the coefficient estimates, the **independent decreases, as the independent decreases** (see intercept value), ***opposite applies*** for the outcome (CDH), when the **independent increases**.
 
-- ==Most important==: the **p-value**, if the p-value for our **independent variable** is **below 0.05**, we have a significant effect and **correlation** between our dependent and independent.
+- ==Most important==: the **p-value**, in this case it shows that for a model where SMK is the predictor, there is a statistically significant correlation between SMK and CDH.
 
 Additionally, keep note of the **AIC** value, which will determine the relative **fitness** of our model, compared to others; the model with the ***smallest AIC*** for our dataset, is the ***most fit model***.
 
@@ -806,11 +806,25 @@ AIC: 135.06
 
 Number of Fisher Scoring iterations: 5
 ```
+
 Here we observe that the intercept, in ***respect to specific age groups*** demonstrates a ==***positive***== **intercept estimate** and a ==***positive***== **outcome estimate**.
 
 ==Not to mention the horrific p-value estimates==.
 
 Despite the "satisfctory" AIC, the ==model appears to be **unfit**== for demonstrating a **correlation between ages and cases**.
+
+#### Sidenote, the p-value on the last column:
+
+Take $Pr(>|t|) = 0.901$ for ages between 55-59:
+
+This metric essentially **answers the null hypothesis** on the question of what occurs if we were to **remove 55-59 AGE** from the list of variables in our glm. Is our model worse, or better off?
+
+##### If  **$Pr(>|t|) < 0.05$**:
+
+We can say that a **glm involving 55-59 is significantly better than one which doesnt include 55-59**.
+
+However, in our case we can see that 55-59 is NOT a good predictor and our model is primarily dogshit.
+
 ```R
 Call:
 glm(formula = cases ~ 1, family = "poisson", data = eba1977)
