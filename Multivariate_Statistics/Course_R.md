@@ -54,6 +54,14 @@ You would use this statistical model to characterise a **linear relationship** b
 
 When calculating the line of best fit, you want to discover the value of the coefficients, alpha and beta, using the **Ordinary Least Squares** method. 
 
+#### In R:
+
+```R
+model <- lm(dependent~predictor, data = dataset)
+```
+
+Replace dependent with your dependent variable, predictor with an influencing independent variable and dataset...
+
 ### Multivariate regression (MLR): Formula and theory.
 
 Not to be confused with multiple regression, you now have **multiple** dependent variables (aka, criteria) instead of one:
@@ -61,7 +69,8 @@ Not to be confused with multiple regression, you now have **multiple** dependent
 * Here, you have the culmination of x mount of regression models, to reach a conclusion on x amount of criteria.
 
 Therefore, you would have the following transformation of the formula:
-### $ SLR = y = b * x + a$
+
+ $ SLR = y = b * x + a$
 ==>
 ### $ MLR = y = b_1 * x_1 + b_2 * x_2 + ..... + b_9 * x_9 + a$ 
 
@@ -69,7 +78,7 @@ Where the SLR formula would be calculated once per independent variable ($y$), f
 
 ### Coefficient of determination and standard error: R^2^ and STDEV
 
-R^2^ represents the **proportion of variance** wihtin a data set. Alongisde STDEV, it can help determine if the data is for one, **correlated** and by extension, represented through a liner relationship.
+$R^2$ represents the **proportion of variance** wihtin a data set. Alongisde STDEV, it can help determine if the data is for one, **correlated** and by extension, represented through a liner relationship.
 
 Say we have a dataset which contains hours studied, exam score and preparation exams taken.
 
@@ -94,14 +103,19 @@ model <- lm(score~prep_exams+hours, data = df)
 
 summary(model) #Or, if you only want to see the RSquared you can do the following: summary(model)$r.squared
 ```
+
+#### A note on $R^2$:
+
+Normally, you would want an $R^2$ which is **above** ==**0.9**== for a perfectly fitting linear model. However, depending on the quality or ==variance== of the data, you *could accept anything above 0.5*; ***along as the p-value is below 0.05***.
+
 ### Using the lm (linear model) function:
 ```R
-model <- lm(score~prep_exams+hours, data = df) 
+model <- lm(dependent_variable~predictor+predictor, data = df) 
 ```
 Where: 
 * The criteria (**dependent variable**) is placed before the **"~"**
 * The predictors (**independent variables**) are placed after the **"~"**, if there are multiple, use a **"+"** to join them.
-* data should be **assigned** to the **dataframe**.
+* Data should be **assigned** to the **dataframe**.
 
 #### Assumptions for linear models
 
@@ -117,13 +131,13 @@ To obtain
 \hat{\boldsymbol{\beta}} = \left( \mathbf{X}^\text{T} \mathbf{X} \right)^{-1} \mathbf{X}^\text{T} \mathbf{y}
 \]
 
-In a way you could say, this is the method by which you can identify the **slopes** of your **dependent variables**; your **criteria**.
+In a way you could say, this is the method by which you can identify the **slopes** of your **dependent variables**; your **criteria** (predictors).
 
 To reproduce this in R:
 ```R
 X <- #Your dependent variable here
 y <- #Your independet variable here
-ur_hat_beta <- solve(t(X)%*%X)%*%t(X)%*%y
+ur_hat_beta <- solve(t(X)%*%X%*%t(X)%*%y)
 ```
 ### T-test
 The t-value is either produced by calling **summary()** on your model, or can be done manually;
@@ -132,7 +146,7 @@ In the following function, you can perform a **one sample** t-test.
 ```R
 t.test(your_variable, mu = X)
 ```
-Where your_variable relates to either an independent or dependent variable and **mu** the *hypothesised mean for your population*; a metric for analysing the null hypothesis.
+Where your_variable relates to either an independent or dependent variable and **mu** is the *hypothesised mean for your population*; a metric for analysing the null hypothesis.
 
 For **multiple sample** t-tests, replace parts of code as required:
 ```R
@@ -294,15 +308,18 @@ names(Evans)
 To create pairwise scatter plots use the following method and place variable names as needed. Remember that you OBVIOUSLY **shouldnt** be using **scatter plots** for **categorical variables**:
 
 ```R
-pairs(Evans[, c("AGE", "CHL", "SBP", "DBP")])
+pairs(Evans[, names(Evans)])
 ```
 #### Output:
 ![alt text](image-1.png)
 
-Here we see that there is a linear relationship between DBP (Diastolic) and SBP (Systolic). Nothing here is groundbreaking though, we therefore need to keep looking.
+Reminder
+: The plot on the ==right of AGE==, has ***AGE on the y-axis and CHL on the x-axis***. 
+
+  When reading the rest of the graphs, remember that *left is y-axis and down is x-axis*.
 
 Why is this useful?
-: Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: you can ***observe possible correlations between variables***, if not, you can just observe the *distribution of the data points of each variable* on their own.
+: Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: if not, you just observe the *distribution of the data points of each variable* on their own.
 
 ### Generating histograms
 
@@ -318,7 +335,7 @@ hist(plot_title[x_axis_values, y_axis_values])
 
 Or more specifically for TD2:
 ```R
-for(i in c("AGE", "CHL", "SBP", "DBP")) {
+for(i in names(Evans)) {
   hist(Evans[, i])
 }
 ```
@@ -342,7 +359,7 @@ Boxplots are useful to determine distribution of data between different variable
 
 Here we are creating boxplots to visualise the spread of each variable in the list, compared to CDH data:
 ```R
-for(i in c("AGE", "CHL", "SBP", "DBP")) {
+for(i in names(Evans)) {
   boxplot(Evans[, i],Evans$CDH, data = Evans)
 }
 ```
@@ -406,9 +423,9 @@ Here we observe the highest ***proportional correlation*** between **smoking** a
 *HPT*:
 ![alt text](image-13.png)
 
-### Chi squared test
+### Chi squared test: Qualitative Variables, testing proportional correlation.
 
-Upon suspicion of c*orrelation between dependent and independent variables*, even to test that the proportions seen between dependent variables are **not random**, one would use a chi squared test.
+Upon suspicion of *correlation between dependent and independent variables*, even to test that the proportions seen between dependent variables are **not random**, one would use a chi squared test. 
 
 Given the example of the Evans dataset, we have already observed a possible correlation between CDH and smoking (SMK); what we want to do is now disprove the null hypothesis (no correlation; random chance) and accept the possibility of correlation between CDH and SMK.
 
@@ -502,6 +519,7 @@ Number of Fisher Scoring iterations: 5
   - **Positive or negative values** are if the value is **deviating higher or lower than the mean**, ***respectively***.
 - ==**Null and Residual Deviance**==: how well the dependent variable can be predicted by a model which only has an intercept term and how well the dependent variable can be predicted by the independent variables. **??!!!!???!!???!**
   - Once the null and residual deviance are relatively **similar**, one can use this information to **confirm the validity of our model**. 
+- ==**Degrees of freedom**==: Allow us to interpret the applicability of our model. Degrees of freedom can be seen as representing the ***amount of values which can vary*** within our model, ***WITHOUT it affecting the fit of the model***. 
 
 
 ##### Main take-aways:
@@ -887,15 +905,14 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 ```
 With the ANOVA test we can **==disprove== the null hypothesis** and **approve our model**, with a *striking p-value of 2.2e-16*.
 
-### Plot corrected model
-```R
-plot(cases_city_pop)
-```
-#### Output:
-![alt text](image-16.png)
-![alt text](image-17.png)
-![alt text](image-18.png)
-![alt text](image-19.png)
+### Wald test
+
+This statistical test regards hypothesis testing, where if we have outcome x, we want to see how **"extreme"/"detached"** x is, from a null hypothesis ie. x = 0.
+
+Or in other words, how possible is it that the outcome is non-random and the likelihood of x assuming a value>0 is significantly higher than it assuming zero.
+
+
+
 
 ```R
 #The P value of the summary corresponds to the Wald test 
@@ -1100,5 +1117,4 @@ Dont worry about it, we have not done this in class
 
 Logistic regression, which you have to write by hand and not on R
 
-#### 22. How can these parameters be interpreted ?
 
