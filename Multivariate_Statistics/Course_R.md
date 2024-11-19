@@ -552,7 +552,7 @@ print(oddsratio)
 ```
 Here we observe a significantly high odds ratio for the effect of SMK on CDH; indicative of a **strong correlation** between CDH and SMK. 
 
-### Twoby2 analysis
+### Twoby2: Odds ratio for categorical variables.
 
 Having seen that SMK and CDH are highly correlated, with a very significant odds ratio, the `twoby2()` function identifies the **inverse** of what was discussed for odds ratio;
 
@@ -943,14 +943,22 @@ age75 <- (eba1977$age=="75+")
 modellc4 <- glm(cases ~ age55 + age60 + age65 + age70 + age75 + city, offset = log(pop), data = eba1977, family = "poisson")
 modellc5 <- glm(cases ~ age55 + age65 + age70 + age75 + city, offset = log(pop), data = eba1977, family = "poisson")
 anova(modellc4, modellc5) #This gives also the Wald test on age 60-64 DOESNT WORK YET :((
+```
+### Confidence Interval
 
-#1.6
-#Compute a 0.95 confidence interval for the effect of age75+ and interpret this result in terms of number of lung cancer cases.
+If we have a ==p-value threshold of 0.05==, then we would want to evaluate our data for a 95% confidence interval;
 
+Where 95% relates to: if we re-run the model, ***95 out of 100 times***, the predicted values will fall within the (min-max) range of the model.
+
+Now, to produce statistic in R:
+```R 
 exp(confint(modellc, "age75+", level = 0.95))
 confint(modellc3, "age75+", level = 0.95)
+```
 
+### Example
 
+```R
 beta_hat <- coef(modellc3)["age75+"]
 se <- summary(modellc3)$coefficients["age75+", "Std. Error"]
 #se1 <- sqrt(vcov(modellc3)["age75+", "age75+"])
