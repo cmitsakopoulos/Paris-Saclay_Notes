@@ -952,10 +952,13 @@ Where 95% relates to: if we re-run the model, ***95 out of 100 times***, the pre
 
 Now, to produce statistic in R:
 ```R 
-exp(confint(modellc, "age75+", level = 0.95))
 confint(modellc3, "age75+", level = 0.95)
 ```
-
+In a dataset where the values are **normalised** with the ==**natural logarithm**==, such as in the Evans dataset:
+```R
+exp(confint(modellc, "age75+", level = 0.95))
+```
+We have to raise the confidence interval to the ***power of $e$*** by means of `exp()`, to obtain the **non-normalised** value. 
 ### Example
 
 ```R
