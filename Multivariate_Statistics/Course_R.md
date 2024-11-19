@@ -958,11 +958,12 @@ alpha <- 0.05
 xi_hat_alpha_beta <- beta_hat*exp(se^2/2)
 lower_bound <- exp(xi_hat_alpha_beta - qnorm(1 - alpha / 2) * se)
 upper_bound <- exp(xi_hat_alpha_beta + qnorm(1 - alpha / 2) * se)
-
-
+```
+### Prediction function in R
+```R
 #1.7
 #Predict the expected number of lung cancer cases in Kolding for people aged between 60 and 64 (why pop 896)
-predict(modellc3, newdata = data.frame(age = "60-64", city = "Kolding", pop=896), type = "response")
+predict(cases_city_pop, newdata = data.frame(age = "60-64", city = "Kolding", pop=896), type = "response")
 ```
 
 ## Last year's exam
