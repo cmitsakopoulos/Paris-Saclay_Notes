@@ -959,11 +959,30 @@ xi_hat_alpha_beta <- beta_hat*exp(se^2/2)
 lower_bound <- exp(xi_hat_alpha_beta - qnorm(1 - alpha / 2) * se)
 upper_bound <- exp(xi_hat_alpha_beta + qnorm(1 - alpha / 2) * se)
 ```
-### Prediction function in R
+### Prediction: Apply your model to a different offset value.
+
+The basic syntax to keep in mind is the following:
+```R
+predict(model, newdata = xyz, type) 
+```
+Where:
+- model: relates to your fitted model, either lm or glm.
+- newdata: has to be associated with a dataframe, or a dataset; the one you you made the model with.
+- type: if set to "**response**" it will return the probability estimates for the model's predicted values.
+
+If we were to apply this function to the cases_city_pop model with specific parameters we could:
+
+- First we need to convert the dataset to a dataframe which contains our desired variables:
+  - `data.frame` then `()` which will contain **predictor variables**;
+    - In the example beliow, we've chosen to create a dataframe containig only ages between 60-64, the Kolding city and set the population to 896.
 ```R
 #1.7
-#Predict the expected number of lung cancer cases in Kolding for people aged between 60 and 64 (why pop 896)
 predict(cases_city_pop, newdata = data.frame(age = "60-64", city = "Kolding", pop=896), type = "response")
+```
+#### Output:
+```R
+   1
+10.10411
 ```
 
 ## Last year's exam
