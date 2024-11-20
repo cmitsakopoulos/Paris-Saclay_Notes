@@ -135,9 +135,7 @@ In a way you could say, this is the method by which you can identify the **slope
 
 To reproduce this in R:
 ```R
-X <- #Your dependent variable here
-y <- #Your independet variable here
-ur_hat_beta <- solve(t(X)%*%X%*%t(X)%*%y)
+beta_hat <- coef(your_model)
 ```
 ### T-test
 The t-value is either produced by calling **summary()** on your model, or can be done manually; (**sample size<30, each variable**)
