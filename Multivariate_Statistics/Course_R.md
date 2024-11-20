@@ -32,7 +32,7 @@ This would graphically be represented with a linear equation:
 
 *Where*:
 
-$y$ is the **dependent/expected** variable
+$y$ is the **dependent/outcome** variable
 $b$ the **slope**
 $x$ the **independent** 
 $α$ the **y-intercept**
@@ -281,7 +281,9 @@ As such, the "**Min**"= 0, "**Max**" = 1 and the 1st and 3rd Quartiles are 0?
 How can the 3rd Quartile be 0?
 : In a **Boolean** variable, the 4th Quartile (100th Percentile) is where the money is at, the area at which maximum values are represented. When account for 75% of the data from lowest to highest, maximum values are diluted and underrepresented. 
 
-Can also use head(Evans, num=x) to see the x amount of first rows in the data, if num is null, 6 is the default
+- Can also use head(Evans, num=x) to see the x amount of first rows in the data, if num is null, 6 is the default
+
+- Also be mindful of locating a **normal distribution**; if the ==***mean and median are equal***==
 
 ### Gaining access to variable names and structure
 
@@ -469,6 +471,9 @@ Note: The null hypothesis can differ depending on the analysis we are conducting
 Probability density functions are used to compute the probability by which a pre-existing distribution of our dataset could occur in a larger population etc. In other words, the ***probability density functions give us our p-values***.
 
 In a **poisson** distribution, where the distribution is not normal, or **not Guassian**, even if the means between a normal distribtion and poissson distribution are the **same**, a **specific** method of analysis is required to **avoid error**.
+
+Importantly
+: In a poisson distribution, the ==**mean, the variance (standard deviation squared), and standard deviation, must all be equal**==; unlike a gaussian distribution.
 
 ==**Generalised linear models**== are particularly important when trying to calculate correlation probability (*"depndent distribution probability"*) for datasets which involve **binary variables**: 
 

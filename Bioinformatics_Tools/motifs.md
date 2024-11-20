@@ -1,6 +1,13 @@
-# Motifs: Theory and concensus calculations
+# Protein Motifs: Theory and concensus calculations
 
 ## Theory
+
+The motif in the strict sense is generally a short, **continuous and unambiguous segment** of residues which within a protein family, amount to a **conserved function**.
+
+Example
+: Say you have a aligned a number of protein sequences which have high sequence similarity, areas which are conserved and by extension have the same function between them, are the motifs.
+
+After identifying there is a conserved region, you would locate the **pattern** sequence.
 
 ## Consensus
 
