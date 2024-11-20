@@ -119,16 +119,16 @@ Where:
 
 #### Assumptions for linear models
 
-* Linearity: There must be a linear relationship between the dependent and independent variables.
-* Homoscedasticity: The residuals must have a constant variance.
-* Normality: Normally distributed error.
-* No multicollinearity: No high correlation between independent variables; where it is too difficult which independent variable is affecting the dependent the most.
+* **Linearity**: There must be a linear relationship between the dependent and independent variables.
+* **Homoscedasticity**: The residuals must have a constant variance.
+* **Normality**: Normally distributed error.
+* **No multicollinearity**: No high correlation between independent variables; where it is too difficult which independent variable is affecting the dependent the most.
 
 ### Obtain OLS estimators; model parameter, the β~x~ (β-hat).
 
 To obtain 
 \[
-\hat{\boldsymbol{\beta}} = \left( \mathbf{X}^\text{T} \mathbf{X} \right)^{-1} \mathbf{X}^\text{T} \mathbf{y}
+\hat{\boldsymbol{\beta}} = \left( \mathbf{X}^\text{T} \mathbf{X} \right)^{-1} \mathbf{X}^\text{T} \mathbf{Y}
 \]
 
 In a way you could say, this is the method by which you can identify the **slopes** of your **dependent variables**; your **criteria** (predictors).
@@ -140,7 +140,7 @@ y <- #Your independet variable here
 ur_hat_beta <- solve(t(X)%*%X%*%t(X)%*%y)
 ```
 ### T-test
-The t-value is either produced by calling **summary()** on your model, or can be done manually;
+The t-value is either produced by calling **summary()** on your model, or can be done manually; (**sample size<30, each variable**)
 
 In the following function, you can perform a **one sample** t-test.
 ```R
@@ -152,8 +152,6 @@ For **multiple sample** t-tests, replace parts of code as required:
 ```R
 t.test(dependent_variable ~ independent_variable, data = ur_dataframe)
 ```
-
-
 ### ANOVA
 
 Short for Analysis Of VAriance, this method of data analysis attempts to first elucidate ***variability*** *within groups of data* (within a *single* quantitative variable) to then observe observe the **variability** ***between*** groups of data.
@@ -200,6 +198,18 @@ variable_xy <- 3.4
 predict(your_model, data.frame(variable_x =variable_xy))
 ```
 
+### Qnorm: Quantitative Variables
+
+Once we have the mean for **normally distributed** variables, we can determine the maximum value for a user set **percentile**; or in other terms, the ==Z-score of a normal distribution== at a specific percentile.
+
+Say we have a variable who's mean is 70 and the standard deviation of its values is 3, if we want to find the 85th percentile for this variable:
+```R
+qnorm(0.85,mean=70,sd=3)
+```
+#### Output (Relative):
+```R
+73.xyz
+```
 ## Workings and explanations of TD2
 
 ### Initialisation
@@ -320,6 +330,12 @@ Reminder
 
 Why is this useful?
 : Using this function you will receive multiple scatter plots attempting to **represent possible "pairwise" correlation between two variables**: if not, you just observe the *distribution of the data points of each variable* on their own.
+
+Homoscedasticity
+: When x and y values demonstrate ==similar levels of variance==: If **standard deviation is constant** as values increase.
+
+Heteroscedasticity
+: When x and y demonstrate ==heterogeneity in levels of variance==: if **standard deviation is not constant** as values increase.
 
 ### Generating histograms
 
@@ -959,12 +975,13 @@ In a dataset where the values are **normalised** with the ==**natural logarithm*
 exp(confint(modellc, "age75+", level = 0.95))
 ```
 We have to raise the confidence interval to the ***power of $e$*** by means of `exp()`, to obtain the **non-normalised** value. 
+
 ### Example
+
 
 ```R
 beta_hat <- coef(modellc3)["age75+"]
 se <- summary(modellc3)$coefficients["age75+", "Std. Error"]
-#se1 <- sqrt(vcov(modellc3)["age75+", "age75+"])
 alpha <- 0.05
 xi_hat_alpha_beta <- beta_hat*exp(se^2/2)
 lower_bound <- exp(xi_hat_alpha_beta - qnorm(1 - alpha / 2) * se)
