@@ -154,7 +154,7 @@ Therefore, $T(1,1)max = -1$
 | **j=4** | *G* | \-8 |  |  |  |  |  |
 | **j=5** | *T* | \-10 |  |  |  |  |  |
 
-#### Example T-table: Result
+#### Example T-table: Result AND Traceback
 
 Using $ T(x,y)max $ calculations until the end, we get:
 
@@ -170,6 +170,14 @@ Using $ T(x,y)max $ calculations until the end, we get:
 
 To identify the best alignment
 : **Trace-back** from the last diagonal box (ex. $T(5,5)$), joining boxes together based on **where** the **max** was derived from;
+
+#### Result of traceback
+```
+-TGGTG
+ |!||
+ATCGT-
+0+-++0 <=> σ = +2
+```
 
 **Example**:
 
