@@ -70,7 +70,7 @@ We see that for both cancer types, the most common (highest) and therefore most 
 
 coding and non-coding mutations.
 
-### Question 8: How many distinct subgroups of the disease can you propose for each tumor type? What are their molecular characteristics? What is the interest of such classification? (3 points)
+### Question 9: How many distinct subgroups of the disease can you propose for each tumor type? What are their molecular characteristics? What is the interest of such classification? (3 points)
 
 
 
