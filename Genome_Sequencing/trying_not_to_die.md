@@ -76,4 +76,5 @@ Despite the cancer types sharing driver mutations, we observe that for lung carc
 
 By creating such classifications, we can improve outlook for personalised medicine by targeting passanger mutations in newly admitted patients, who match the profile of specific subgroups.
 
+#### Pay attention to look at sample sizes and observe if genes have unique mutations and unique patterns in sample size and specific genes affected.
 
