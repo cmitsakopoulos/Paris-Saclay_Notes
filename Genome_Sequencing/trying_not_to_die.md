@@ -44,3 +44,20 @@ As demonstrated by figure 1, exon reduction should have been the main point of r
 
 The figure we are analysing is a boxplot which graphs the percentage of matched mutations between MC3 and PCAWG, against tumor types. The tumor type with the highest shared amount of matches is SKCM, whereas PRAD has the lowest amount of mutational matches. We can identify this from the mean, located in the middle of each box in the boxplot, which is highest for SKCM and PRAD, as well as observe the distribution for each tumour type (indicated by the box size and vertical lines are SD); where smaller boxes represent homogeneity and the inverse is true for small boxes. 
 
+### Question 5: What does the figure 3a show you ?(Focus your analysis on ‘observed’ data only). Does it fit your expectations? (1,5 points)
+
+Figure 3a is a scatter plot, which depicts recovery fraction of consortium Y, against VAF in consortium X, colours define if values are observed (real world) or simulated(custom model). 
+
+As the VAF increases, the recovery fraction increases, with the distance between simulated and observed VAFs is also gradually clustering/shortening distance. This is expected as with an increase in VAF, we observe common variants which can be shared across a population.
+
+### Question 6: Analyse figure 3B (2 points)
+
+Figure 3b is a density plot which displays the density of GC content percentage of areas surrounding variants, for MC3 only, PCAWG only and for adjacent regions of matched variants. 
+
+Particularly, we observe that, as expected WES has a higher density in high percentage GC content areas, than WGS; as exonic regions have higher GC content by nature and WGS, even following filtering of intronic sequences, will still retain artifacts of introns misidentified as exons.
+
+### Question 7: What is(are) the principal differences between lung adenocarcinoma and skin melanoma mutational landscape? (1,5 points)
+
+
+
+
