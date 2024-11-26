@@ -15,4 +15,12 @@ _______________________
 Analyses of whole genome and whole exome sequences are current strategies to complete identification of genomic variants associated with complex diseases.
 ### 3 Give the advantage(s) of such sequencing strategies compared to the use of pangenomic genotyping arrays (do not cite general advantages of sequencing strategies).
 
+Where in GWAS you would need to locate pre-determined QTLs (GMStool) to look for common variants, WES and WGS enable us to identify variants outside of these QTL markers which would otherwise be elusive. 
+
+Furthermore, considering the capability of Oxford Nanopore to identify DNA methylation, WES using Oxford Nanopore can be particularly advantageous in identifying epigenetic markers and or mechanisms of expressing specific variants. 
+
+Importantly, you can phenotype control samples and specific samples; say to create a control to which you would compare a family with a complex disease against it. 
+
+WES is more appropriate for rare variants with penetrance in families, which do not however lead to phenotypic changes. Variants with strong deleterious effect.
+
 
