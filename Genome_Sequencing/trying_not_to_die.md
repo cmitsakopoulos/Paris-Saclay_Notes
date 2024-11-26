@@ -7,6 +7,6 @@ GWAS focuses on identifying common variants such as SNPs, to create a control pr
 In average, about 4 million of such variants are characterized by genome.
 ### 2 which data will allow to decrease the number of investigated variants per array, independently of their position and their potential deleterious effect? How this data is obtained ?
 
-We would refer to linkage disequilibrium statistical measures 
+We would refer to linkage disequilibrium statistical measures on the relationship between SNPs, which are located on adjacent loci. This statistical measure can decrease depending on the genetic distance of loci (and by extension SNPs), as well as evolutionary developments over time.
 
 
