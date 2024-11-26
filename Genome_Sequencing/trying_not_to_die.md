@@ -1,3 +1,4 @@
+## PART 1
 Genotyping bead cheap arrays are used for pangenomic association studies. Therefore, 1 to 2 million of pangenomic variants are tested in complex diseases such as cancers or autoimmune diseases.
 ### 1 which type of human genome variants are mostly analyzed with these arrays? Give specific characteristics for these variants.
 
@@ -23,4 +24,12 @@ Importantly, you can phenotype control samples and specific samples; say to crea
 
 WES is more appropriate for rare variants with penetrance in families, which do not however lead to phenotypic changes. Variants with strong deleterious effect.
 
+WGS enables identification of structural variance; copy number variation.
+## PART 2
+
+### Question 1: Why do the authors decided to remove variants with a poor coverage? What can be the source(s) of such low coverage? (1,5 points)
+
+The authors removed low coverage regions to ensure variant calling accuracy. This low coverage could occur as a result of bias during library preparation (ex. PCR), or areas of high GC content, repetitive DNA sequences, which are more complicated to sequence and have a higher chance of error. 
+
+### Question 2: What is the principle and aim of the de-duplication step? (1 point)
 
