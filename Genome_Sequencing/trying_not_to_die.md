@@ -58,6 +58,20 @@ Particularly, we observe that, as expected WES has a higher density in high perc
 
 ### Question 7: What is(are) the principal differences between lung adenocarcinoma and skin melanoma mutational landscape? (1,5 points)
 
+We observe that the mutational landscape of lung adenocarcinoma contains more indel and non-coding mutations, especially on key anti-cancer proliferation genes; such as TP53. 
+
+As indels are less common, we could perceive them as passanger mutations. 
+
+For skin melanoma the landscape can be described by primarily noncoding and coding mutations. 
+
+### Question 8: What are the 2 most probable driver mutations in each tumor type?
+
+We see that for both cancer types, the most common (highest) and therefore most present within cancer cells, will be the best candidates for driver mutations;
+
+coding and non-coding mutations.
+
+### Question 8: How many distinct subgroups of the disease can you propose for each tumor type? What are their molecular characteristics? What is the interest of such classification? (3 points)
+
 
 
 
