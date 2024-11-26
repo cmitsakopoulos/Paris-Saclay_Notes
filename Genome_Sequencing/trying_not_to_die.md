@@ -25,6 +25,7 @@ Importantly, you can phenotype control samples and specific samples; say to crea
 WES is more appropriate for rare variants with penetrance in families, which do not however lead to phenotypic changes. Variants with strong deleterious effect.
 
 WGS enables identification of structural variance; copy number variation.
+
 ## PART 2
 
 ### Question 1: Why do the authors decided to remove variants with a poor coverage? What can be the source(s) of such low coverage? (1,5 points)
@@ -32,4 +33,14 @@ WGS enables identification of structural variance; copy number variation.
 The authors removed low coverage regions to ensure variant calling accuracy. This low coverage could occur as a result of bias during library preparation (ex. PCR), or areas of high GC content, repetitive DNA sequences, which are more complicated to sequence and have a higher chance of error. 
 
 ### Question 2: What is the principle and aim of the de-duplication step? (1 point)
+
+To remove duplicates in both datasets, therefore ensuring the identification of unique variants in each dataset.
+
+### Question 3: Once only overlapping samples are considered, what is the step for each dataset that led to the main reduction of the number of variants? How can you explain these observations? (2 points)
+
+As demonstrated by figure 1, exon reduction should have been the main point of reduction of variants. With reference to the PCAWG, variants will be observed in intronic sequences apart from exonic ones, therefore it is natural to observe a reduction in variants after the step involving the removal of introns.
+
+### Question 4: What is the tumor type presenting the highest variant-matching rates for both MC3 and PCAWG? And the lowest one? What do you think of the concordance of MC3 and PCAWG datasets? Justify your answers (2,5 points)
+
+The figure we are analysing is a boxplot which graphs the percentage of matched mutations between MC3 and PCAWG, against tumor types. The tumor type with the highest shared amount of matches is SKCM, whereas PRAD has the lowest amount of mutational matches. We can identify this from the mean, located in the middle of each box in the boxplot, which is highest for SKCM and PRAD, as well as observe the distribution for each tumour type (indicated by the box size and vertical lines are SD); where smaller boxes represent homogeneity and the inverse is true for small boxes. 
 
