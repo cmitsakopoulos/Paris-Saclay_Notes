@@ -82,14 +82,15 @@ class Trip:
         print(customer_id)
 
     @property
-    def destinations_changer(self):
+    def destinations(self):
         print(f"Destinations are: {self.destinations}")
         return self.destinations.copy() 
     
-    @destinations_changer.setter
-    def destinations_changer(self, destinations):
-        for i in destinations.split(" "):
-            if i in destinations:
+    @destinations.setter
+    def destinations(self, destinations):
+        destinations_list = destinations.split(" ")
+        for i in destinations_list:
+            if i in self.destinations:
                 print(f"{i} already in list")
             else:
                 self.destinations.append(i)
@@ -114,6 +115,6 @@ if __name__ == "__main__":
     test.get_id = 200
     print(test._id)
     print(test)
-    update_dest = Trip()
+    update_dest = Trip(0.4)
     ooga = apply_offer("Miou", 200)
     print(ooga)
