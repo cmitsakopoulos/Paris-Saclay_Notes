@@ -84,17 +84,14 @@ class Trip:
     @property
     def destinations(self):
         print(f"Destinations are: {self.destinations}")
-        return self.destinations.copy() 
     
     @destinations.setter
-    def destinations(self, destinations):
-        destinations_list = destinations.split(" ")
-        for i in destinations_list:
+    def destinations(self, dests):
+        for i in dests:
             if i in self.destinations:
                 print(f"{i} already in list")
             else:
                 self.destinations.append(i)
-        print(f"User's name changed to {self.destinations}")
 
     @property
     def costs_changer(self):
@@ -116,5 +113,5 @@ if __name__ == "__main__":
     print(test._id)
     print(test)
     update_dest = Trip(0.4)
-    ooga = apply_offer("Miou", 200)
+    ooga = update_dest.apply_offer("Miou", 200)
     print(ooga)
