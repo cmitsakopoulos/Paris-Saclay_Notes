@@ -1,5 +1,7 @@
 import datetime
 
+
+
 class Customer:
     def __init__(self, name: str, ident: int, balance: int):
         self._name = name          
@@ -69,17 +71,16 @@ class Customer:
         del self._balance
         print("User's balance emptied")
 
-
 class Trip:
+    dests = []
+    costs = []
+    dates = []
     def __init__(self, offer:float):
-        self.destinations = []
-        self.costs = []
-        self.dates = []
         self.offer = offer
 
     def apply_offer(self, choice, customer_id):
         customer_ident = Customer.get_id
-        print(customer_id)
+        print(customer_ident)
 
     @property
     def destinations(self):
@@ -93,7 +94,7 @@ class Trip:
             else:
                 self.destinations.append(i)
 
-    @property
+    @propertyl
     def costs_changer(self):
         print(f"The user's name is {self.costs}")
         return self.costs  
