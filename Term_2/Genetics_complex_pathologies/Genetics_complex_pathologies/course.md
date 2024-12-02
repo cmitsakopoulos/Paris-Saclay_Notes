@@ -8,6 +8,8 @@
 
 - Penetrance is classified as the **proportion of individuals** (within a group) who are carrying a **specific variant** and also **present an associated phenotype** (trait) with that variant.
 
+- It can only be calculated by **comparing genomic data between family members**, NOT large populations.
+
 Or in other words, (in our case), how many people present an allelic variant and trait **within a family**. 
 
 Penentrance is measured with the following formula:
@@ -64,6 +66,12 @@ Are often **frequent variants**, which are thereby associated with **low disease
 
 ### Complex Diseases: Multifactorial
 
-- Characterised by a **range of genetic factors**; both **genetic and environmental**. 
+- Characterised by a **range of genetic factors**; both **genetic and environmental**. Primarily, **environmental factors play a medium to highly important role** in the development of the disease.
+
+Consider the effect of environmental factors in multifactoral diseases as adding petrol to a fire.
+
+Multifactoral diseases are **on a spectrum**, where the **effect environmental factors** have on the individual, greatly depend on the allelic genotype of the individual.
+
+- Characterised by **low** penetrance within families and by extension, ==**multiple confounding genes**==, **confounding factors**, which therfore mean **low familial aggragation**. (Consider that **~5-10% of families have medium-high penetrance** with multifactorial disease)
 
 - 
