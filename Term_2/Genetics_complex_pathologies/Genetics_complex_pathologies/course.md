@@ -118,4 +118,9 @@ Personalised Medicine/Counseling
 
 ## Positional cloning
 
-- ***Linkage analyses***: 
+- ***Linkage analyses***: Linkage analysis to observe the position of the genetic factors/alleles, on the genome; aka find chromosome.
+    - Refine the region by genotyping more markers (SNPs) in linkage region (or in candidate genes of the linkage region).
+        - Observe the mutational patterns around common SNPs, at linkage regions, to see if there are additional factors
+
+## Association Analyses
+
