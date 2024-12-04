@@ -22,6 +22,8 @@ The link contains multiple tools that can supplement analysis by:
 
 ![alt text](<WhatsApp Image 2024-11-05 at 14.43.15.jpeg>)
 
+- Artemis visualisation software, for the end, obtain ESTs from genes of interest
+- Also generate a map from FGENESH or AUGUSTUS
 
 ## Fgenesh output:
 G - predicted gene number, starting from start of sequence;
