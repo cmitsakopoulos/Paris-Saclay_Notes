@@ -21,3 +21,12 @@ Say we have a drug (independent) that will kill breast cancer cells, we don't wa
 - A research hypothesis will commnent more on the general condition of a dependent and independent, whereas a statistical hypothesis will state the mathematical proportions of possible correlation between variables.
     - Take for example, the mean of one variable will be a predictor of another (dependent) variable.
 
+## Types of variables
+
+Random, Qualitative, Quantitative, Discrete Random and Continuous Random.
+
+## Negative and Positive Controls
+## Other controls
+Randomisation, Normalisation, Blind or Double blind experimentation.
+## Desccriptive statistics
+Central Tendency and Dispersion
