@@ -40,3 +40,17 @@ Because of these cellular structures, bacteria can **ONLY** survive up to 80C.
 Whereas for **Archaea** often assume the survivability of **extremophiles**; able to survive in ***highly alkaline, or acidic conditions, or even 121C***.
 
 Remember that eukaryotes can mostly survive up to 62C, to compare.
+
+==Robert Whittacker== was the one who re-arranged the kingdoms for fungi, separating them from **protists** (unicellular) and creating a new kingdom for **filamentous** **multicellular** organisms such as Fungi.
+
+- What was termed as **Monera** in the old classification, he designated them **Prokaryotes**.
+
+## Microbiota
+
+A microbiome has by extension, a **colective genome** *derived from its multiple components*:
+
+To analyse a microbiota, one should "ask" some questions:
+
+- What is there? What are the components? What are their differences and proportions?
+- What are these components doing themselves or in conjunction with each other, what is their purpose? How do they transform their environment?
+
