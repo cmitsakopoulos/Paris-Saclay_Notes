@@ -126,5 +126,55 @@ By absorbing N2, through the efforst of ==**Nitrogenase**== the **N2 will be con
 **Lichens**
 : Specifically, cyanobacteria, can perform both **nitrogen fixation** as explained above, as well as **photorespirate** (eat CO2), being the perfect **symbiotes** for many plant species.
 
+Ground sterilisation
+: Within a gram of soil you have ~10k microbial **species**, you also have the ==**fauna** from **invertebrates**==, which invertebrates interact with the microbiota of the soil; by eliminating the invertebrates using **pesticides**, you ***damage the regulatory balance between invertebrates and microbes***, therefore *rendering the soil innefective for growth* (sterilised).
+
+To solve this problem of invertebrates affecting plant growth, but without using pesticides, we rely on **synthetic biology**.
+
 ## Human food and microbes
 
+Use of **lactic acid bacteria**, in the dairy industries 
+
+-> Acetic bacteria : Acetobacter aceti
+vinegar , the product of wine fermentation:
+yeasts (Alcohol) then by acetic bacteria : Acetobacter aceti (oxidation of ethanol to acetic acid)
+
+## Chemical Industry
+
+***Citric acid***
+- 50% pH regulator for drinks ,
+- 20% for other food applications,
+- 20% in detergents
+- 10% for various applications such as cosmetics, pharmacy and the chemical industry.
+
+99% of world production (stabilizing and preserving food products), reached a volume of 2.39 Million Tons in 2020 and is further expected to reach 2.91 Million
+Tons by 2026, comes from fermentation by the mold ***Aspergillus niger***.
+
+## Food supplements
+
+**Lysine , threonine, tryptophan, glutamic acid** improve the nutritional qualities of plant foods.
+
+ Amino acids improve taste , but are also essential nutrients ,  Cereals have a low lysine composition .
+ Lysine can be added to improve their nutritional quality.
+ Corynebacterium glutamicum and Brevibacterium flavum produce both glutamic acid and lysine.
+
+**Xanthan and dextran**, produced by Xanthomonas and Leuconostoc respectively, widely used in the food industry as thickeners, emulsifiers and gelling agents.
+
+Xanthan (E415) : Exopolysaccharide used as a binder and thickener in hot sauces, vinaigrettes, creams.
+
+Probiotics
+: Non-pathogenic and non-toxic microorganisms, bacteria or yeast, which contribute to the balance of the intestinal microbiota .
+Lactobacillus acidophilus , L. casei and L. rhamnosus , Bifidobacterium , etc.
+
+## Environmental Applications
+
+==Biological wastewater treatment==
+: Wastewater treatment plants contain a complex microbiome which forms naturally in the environment and which, in the presence of air, degrades organic residues by releasing CO2.
+
+==Bioremediation== (or biorehabilitation). 
+: Depolluting microorganisms which contribute to the degradation of hydrocarbons, pesticides, chlorinated and sulfur compounds, N2 oxides (mercury and chromium).
+
+==Bioleaching==
+: A recycling technique that uses bacteria to recover some metals from mineral processing waste or used electronic equipment. Otherwise, think of the extraction of metals of economic interest from a rock, such as copper, zinc, lead, arsenic, antimony, nickel, gold, silver, manganese, cobalt. -> This extraction involves microorganisms capable of converting these metals from solid to soluble form.
+
+## 
