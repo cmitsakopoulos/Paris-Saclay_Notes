@@ -109,9 +109,9 @@ Why do antibiotic agents exist (aka ==**Secondary Metabolites**==)?
 
 ## Use of microbes for production of non-antibiotics
 
-Vitamin B12, B2, C: Mass produced by cultured fungi or bacteria, or both.
+==Vitamin B12, B2, C==: Mass produced by cultured fungi or bacteria, or both.
 
-Hormones such as Cortisol, Insulin, etc: Bacteria/Fungi.
+==Hormones such as Cortisol, Insulin, etc==: Bacteria/Fungi.
 
 These methods are a lot cheaper in comparison to **synthetic methods**?????
 
@@ -121,4 +121,10 @@ Enriched soils with beneficial bacteria or fungi, can enable us to avoid pestici
 
 Otherwise, you would observe bacteria which fix nitrogen from the atmosphere, and secrete it into the soil; a vital nutrient for plants. (N2 fixating bacteria....)
 
-# NOTES CONTINUED IN PPT
+By absorbing N2, through the efforst of ==**Nitrogenase**== the **N2 will be converted to NH3 within the bacteria**, which can then be secreted to its surrounding environment and supplement the growth of plants; bacterial and plant **symbiosis**. 
+
+**Lichens**
+: Specifically, cyanobacteria, can perform both **nitrogen fixation** as explained above, as well as **photorespirate** (eat CO2), being the perfect **symbiotes** for many plant species.
+
+## Human food and microbes
+
