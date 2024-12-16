@@ -54,3 +54,38 @@ To analyse a microbiota, one should "ask" some questions:
 - What is there? What are the components? What are their differences and proportions?
 - What are these components doing themselves or in conjunction with each other, what is their purpose? How do they transform their environment?
 
+Think of the competition induced between the gut microbiome and newly introduced bacteria, otherwise the contribution of the microbiota to our nutriotional acquisition; metabolic processes which we cannot undertake ourselves and require the services of microbes in our gut, which can either digest our food to give us nutrients or even process toxic compounds.
+
+## Antibiotic agents
+- **Penicillin** and **Bacitracin** are ==cell wall== disolvers; *dissolving peptidoglycan*. 
+- **Polymixin B**, **Cyclohexemide** aim to destroy the ==cell memrbnane==.
+- **Chloranmphenicol** and **Streptomycin** target ==protein synthesis== (through bacterial uptake)
+- **Rifampin**, ==inhibits RNA== within the nucleiod. 
+
+## Bacterial structure
+
+Remember the multiple forms in which bacteria can exist; in a **Rod** structure, a **Coccus** (ex. little grain of sand)--a **Diplococcus** is obvious and in **Spirill** formation (squiggly line).
+
+## Fungal structure
+
+You can have **unicellular** fungi, such as Saccharomyces.
+
+You can also have, more common, **filamentous** fungi, formed of a large conga line of fungal cells/==conga line of **hyphae**==, therefore you observe *cell walls separating each cell within this conga line*.
+
+- Remember the fungal cell wall is composed of **chitin**.
+
+==Multinuclear filament fungi can be==:
+- Ascomycetes
+- Basidiomycetes
+- Zygomycetes
+
+Endosporilation
+: Fungal ==**cysts**== can **interject** between the cells of the conga line, which contain **endospores** and are thereby essential in the *further proliferation/colonisation efforts of fungi*, through repeated **secretion** of these endospores from its **permanent** cyst.
+
+Exosporilation
+: Otherwise, you might observe the formation of **sporocysts** in fungi, which do not retain their spores within a cyst, but persist in secreting **exospores**.
+
+- The **Mycete/Mycis** suffix, reffers to fungi and can serve as a descriptor for bacterial names; ==picturing the bacteria as filamentous, although unicellular==.
+
+Actinomycetes therefore are the **conjugation of the mycete suffix** and the prefix **actino**; a **Gram-positive** bacterial species which looks like a starfish.
+
