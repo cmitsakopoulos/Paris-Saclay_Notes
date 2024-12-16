@@ -87,5 +87,38 @@ Exosporilation
 
 - The **Mycete/Mycis** suffix, reffers to fungi and can serve as a descriptor for bacterial names; ==picturing the bacteria as filamentous, although unicellular==.
 
-Actinomycetes therefore are the **conjugation of the mycete suffix** and the prefix **actino**; a **Gram-positive** bacterial species which looks like a starfish.
+Actinomycetes therefore are the **conjugation of the mycete suffix** and the prefix **actino**; a **Gram-positive** bacterial species which looks like a starfish and have very **High GC content (>50%)**.
 
+- Around 60% to 70% of antibiotics utilise the sporification of filamentous microorganisms.
+
+On the contrary, Firmicutes the other phylogenetic group of **Gram-positive** bacteria, have **Low GC content (<50%)**.
+
+## Cyanobacteria
+
+Classified as algae in the past, are **Gram negative** bacteria which are **photosynthetic**; ergo the **cyano** prefix. 
+
+## Diversity of anti-biotics
+
+Specifically termed as **chemotherapeutic** agents, they operate either as **bacteriocides** or **bacteriostatics**. 
+
+Diverse range of applications, **anti-septics** specifically target tissues exposed to the environment.
+
+Why do antibiotic agents exist (aka ==**Secondary Metabolites**==)?
+
+-> To **compete** with other microbes in the microbiota of the soil, for example, due to resource based competition; induced by **resource** constriction/**scarcity**.
+
+## Use of microbes for production of non-antibiotics
+
+Vitamin B12, B2, C: Mass produced by cultured fungi or bacteria, or both.
+
+Hormones such as Cortisol, Insulin, etc: Bacteria/Fungi.
+
+These methods are a lot cheaper in comparison to **synthetic methods**?????
+
+## Agriculture
+
+Enriched soils with beneficial bacteria or fungi, can enable us to avoid pesticides; biopesticides, which can secrete for example special toxins, which avert parasites and preserve the sanctity of the crops. (Bacillus thuringiensis)
+
+Otherwise, you would observe bacteria which fix nitrogen from the atmosphere, and secrete it into the soil; a vital nutrient for plants. (N2 fixating bacteria....)
+
+# NOTES CONTINUED IN PPT
