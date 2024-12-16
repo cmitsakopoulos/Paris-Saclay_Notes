@@ -177,4 +177,40 @@ Lactobacillus acidophilus , L. casei and L. rhamnosus , Bifidobacterium , etc.
 ==Bioleaching==
 : A recycling technique that uses bacteria to recover some metals from mineral processing waste or used electronic equipment. Otherwise, think of the extraction of metals of economic interest from a rock, such as copper, zinc, lead, arsenic, antimony, nickel, gold, silver, manganese, cobalt. -> This extraction involves microorganisms capable of converting these metals from solid to soluble form.
 
-## 
+## Biotechnology applications
+
+- Production of Biological **enzymes**, such as:
+    - ==**Polymerases**== acquired from *Thermus aquaticus*, fundamental for research; PCR, sequencing by synthesis, etc.
+- Production of ==**Esterases**==: **Detergents**, gathered by culturing extremophilic bacteria.
+Biopolymers
+: Bacterial exopolysaccharides used in the food, pharmaceutical and assisted oil extraction industries
+Biofuels
+: Obviously, concerning energy compounds, these can be: - Hydrogen: (from) Photosynthetic microorganisms, or for example, Methane: (from) Methanobacterium, or Ethanol: Zymomonas, Thermoanaerobacter.
+
++++++ Could add additional information into the methods of biofuel production.
+
+Take examples from gourmand plants -> ***First generation biofuels***:
+
+-> Wheat starch is fermented to produce bioethanol .
+-> Sunflower or rapeseed seeds are pressed to produce vegetable oil which can be used to make biodiesel.
+
+### Extra on 1st gen biofuels
+-> The raw materials used to produce this type of biofuel can be used in the animal or human food chain; consequently they enter into direct competition with it.
+-> Energy balance and CO 2 emissions linked to the production of this generation of biofuels are not always very favorable due in particular to the energy required for their extraction (heating for the distillation of bioethanol)
+
+### 2nd Gen biofuels
+
+Enzymatic or thermochemical methods of production:
+
+-> Final products can be bioethanol, biodiesel, biohydrogen or biogas
+
+The resources required to make these fuels could be:
+
+Waste biomass, wheat stalks, corn, wood, fibrous biomass crops.
+
+### 3rd Gen Biofuels
+
+Microalgae can accumulate fatty acids up to 80% of their dry weight, making it possible to envisage yields per hectare higher by a factor of 30 than terrestrial oilseeds;
+
+So we use ***Microalgae, to produce a lipid based biofuel, using less resources***.
+
