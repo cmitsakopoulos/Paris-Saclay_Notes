@@ -119,12 +119,12 @@ These methods are a lot cheaper in comparison to **synthetic methods**?????
 
 Enriched soils with beneficial bacteria or fungi, can enable us to avoid pesticides; biopesticides, which can secrete for example special toxins, which avert parasites and preserve the sanctity of the crops. (Bacillus thuringiensis)
 
-Otherwise, you would observe bacteria which fix nitrogen from the atmosphere, and secrete it into the soil; a vital nutrient for plants. (N2 fixating bacteria....)
+Otherwise, you would observe bacteria which fix nitrogen from the atmosphere, and secrete it into the soil; a vital nutrient for plants. (N~2~ fixating bacteria....)
 
-By absorbing N2, through the efforst of ==**Nitrogenase**== the **N2 will be converted to NH3 within the bacteria**, which can then be secreted to its surrounding environment and supplement the growth of plants; bacterial and plant **symbiosis**. 
+By absorbing N~2~, through the efforst of ==**Nitrogenase**== the **N~2~ will be converted to NH~3~ within the bacteria**, which can then be secreted to its surrounding environment and supplement the growth of plants; bacterial and plant **symbiosis**. 
 
 **Lichens**
-: Specifically, cyanobacteria, can perform both **nitrogen fixation** as explained above, as well as **photorespirate** (eat CO2), being the perfect **symbiotes** for many plant species.
+: Specifically, cyanobacteria, can perform both **nitrogen fixation** as explained above, as well as **photorespirate** (eat CO~2~), being the perfect **symbiotes** for many plant species.
 
 Ground sterilisation
 : Within a gram of soil you have ~10k microbial **species**, you also have the ==**fauna** from **invertebrates**==, which invertebrates interact with the microbiota of the soil; by eliminating the invertebrates using **pesticides**, you ***damage the regulatory balance between invertebrates and microbes***, therefore *rendering the soil innefective for growth* (sterilised).
@@ -208,9 +208,85 @@ The resources required to make these fuels could be:
 
 Waste biomass, wheat stalks, corn, wood, fibrous biomass crops.
 
-### 3rd Gen Biofuels
+### 3rd Gen Biofuels: Microalgae
 
 Microalgae can accumulate fatty acids up to 80% of their dry weight, making it possible to envisage yields per hectare higher by a factor of 30 than terrestrial oilseeds;
 
+Microalgae exhibit a fast growth rate, a higher photosynthetic efficiency, and a better land utilization rate, which can yield a range of biofuel products.
+
+Triacylglycerol (TAG) is the preferred lipid component for use as biodiesel feedstocks, and is usually expressed as the total lipid content as a percentage of dry weight.
+
 So we use ***Microalgae, to produce a lipid based biofuel, using less resources***.
+
+## Microbial metabolism "on earth"
+
+We observe that microbes can produce bio-energy, either through **photosynthesis**, **aerobic respiration**, or **chemical "respiration"**: for the production of chemical energy, through the conversion of the input form of energy (energy is conserved, never lost).
+
+# Add for everything before slide 91
+## Synthrophy
+
+Mainly concerns the fermentation of alcohols and fatty acids
+- This occurs as two different microorganisms cooperate to degrade a substance that cannot be degraded in one organism alone
+    - Think of bacteria breaking down stuff for us, so that we can break it down even further.
+
+In the case of the microbial world, we observe that **synthrophic** organisms will exchange H~2~ between them:
+
+![alt text](image_syntrophy.png)
+
+We can also observe the case in which the **inverse** methanogenesis reaction occurs, and we observe that with the combination of the **hydrogenotroph and a methanotroph** cooperate to transform the **exchanged methane and hydrogen**, into water, hydrogen carbonate etc:
+
+![alt text](methanotroph.png)
+
+## Protein Catabolism
+
+Especially pathogenic bacteria and fungi, can use proteins as a source of carbon and energy (think to why food goes off).
+
+They secrete ==***proteases***== which will produce **amino acids and peptides**; which peptides will be consequently degraded.
+
+The degradation of aminoacids is done by:
+==**Deamination, Transamination or by Decarboxylation**==
+
+### Deamination
+
+A chemical process to produce amino acids, which as a **byproduct**, leads to the **release of the NH~2~ group** most often in the form of ==**ammonia**==. (Why food thats gone off stinks to hell)
+
+The most popular/key **deaminases** are:
+• ==Lysine deaminase : LDA==
+• ==Tryptophan deaminase : TDA==
+• ==Phenylalanine deaminase : PDA==
+
+![alt text](image.png)
+
+- Converted to pyruvate, acetyl-CoA or intermediate of tricarboxylic cycles and oxidized to release energy.
+
+- It can also be used as a source of carbon in biosynthesis (Krebs Cycle????).
+
+### Transamination
+
+As can be deduced by the name of the reaction, Decarboxylation ***releases the carboxyl group in the form of CO2*** ==and== an **amine**.
+
+The following **transaminases** should be remembered for their medical importance:
+- LDC transforms lysine into cadaverine
+- ODC transforms ornithine into putrescine
+
+### Transamination_further
+
+![alt text](image-1.png)
+
+## Ammonia in biosynthesis: Dehydrogentate Glutamate Pathway
+
+While microbes could also sequester and "absorb" straight nitrogen from their environment, ammonia is preferred if it is ==**high in concentration**==;
+
+![alt text](image-2.png)
+
+Due to its abundance, it is preferred by organisms, especially those such as microbes, to synthesize **Glutamate** or **Alanine**.
+
+![alt text](image-3.png)
+
+Once this reaction has occured, the ==a-amino group== is transferred from **C~5~H~9~NO~4~** (Glutamate) and be used by **Transamination** to create other molecules;
+
+A-amino group
+: The nitrogen atom which is bonded to an **a-carbon**; a carbon which has **both a carboxyl (COOH) and amino group bonded (NH~2~)**. In our case, **Glutamate** is a powerful candidate for an **a-amino group**.
+
+## Ammonia in biosynthesis: Combination of enzymes
 
