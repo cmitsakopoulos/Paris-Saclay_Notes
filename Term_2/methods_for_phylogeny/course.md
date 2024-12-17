@@ -308,4 +308,36 @@ Thereafter, *Glutamine is repurposed to* **Glutamate**:
 
 - The electron required to engage the chemical reaction can be: ATP + an electron source such as NADPH or reduced ferredoxin.
 
-## 
+# Tutorials
+
+## Tutorial 2
+
+### A.1
+
+Methanogens-> CH~4~ essential greenhouse gas??
+
+Synthrophy/-> fertilisation of soils to enhance plant groth (nitrogen fixation); or alternatively, bacterial maintenance of the microbial balance within soils enabling ecosystem balance and avoiding soil death.
+
+### A.2
+
+Eukarya are unique to Bacteria due to their enveloped DNA (nucleus). Bacteria on the other hand have a nucleiod. Eukarya have an endoplasmic reticulum whilst bacteria and archaea dont.
+
+### A.3
+
+Due to Archaea having a cell wall composed of glycerol which are joined to phytanols through esther links, they do not make use of peptidoglycan; penicillin is an antibiotic agent which dissolves peptidoglycan and is therefore an innapropriate approach to lyse Archaea.
+
+### A.4
+
+G = 
+
+### B.1
+
+a) Aerobic respiration makes use of oxygen in catabolic reactions that can produce large amounts of energy in the form of adenosine triphosphate (ATP). On the other hand anaerobic respiration does not require oxygen; a series of oxidative phosphorylation reactions which convert organic or non organic compounds into ATP.
+b) While fermentation concerns the glycolysis of glucose during for example, alcohol fermentation, to produce ethanol, CO~2~ and yeasts after glucose has been used up, in respirative metabolism chemical compounds are utilised to obtain glucose. So in summary, fermentation involves the break down of sugars into different compounds, whereas respiration concerns the production of sugars; these reactions are not reversible to each other.
+
+### B.2
+
+Due to its chemical structure which makes it prefferential for breaking down (glycolysis) and its subsequent release of energy.
+
+### B.3
+
