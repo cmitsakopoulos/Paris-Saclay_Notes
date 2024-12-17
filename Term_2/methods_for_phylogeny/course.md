@@ -290,3 +290,22 @@ A-amino group
 
 ## Ammonia in biosynthesis: Combination of enzymes
 
+In ==**low ammonia conditions**==, a different pathway must be used which foregoes the need for transamination.
+
+Two enzymes are required for this process to occur, which operate in a sequential manner:
+
+- ==Glutamine and Glutamate synthetases==.
+
+First, **Glutamine is produced** throuhg a biochemical reaction involving **ammonia as substrate**:
+
+![alt text](image-4.png)
+
+Thereafter, *Glutamine is repurposed to* **Glutamate**:
+
+![alt text](image-5.png)
+
+- **a-ketoglutarate**; is derived from other cellular processes, but is a key part of the reaction to produce glutamates.
+
+- The electron required to engage the chemical reaction can be: ATP + an electron source such as NADPH or reduced ferredoxin.
+
+## 
