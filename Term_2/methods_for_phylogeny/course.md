@@ -314,6 +314,11 @@ Thereafter, *Glutamine is repurposed to* **Glutamate**:
 2. Biofuel Production: Methanogens in creating methane gas, which can be processed further into composite biofuels.
 3. Biopolymers: Or often for Bioplastics (PHAs)-> Haloferax species to produce plastics -> Preferred over bacteria for synthetics:
     - Haloferax is an extremophile, a halophile (lives with high conc of salt-unfavourable for other organisms). Bacteria need stable conditions to grow (expensive) and can be contaminated easily by other bacteria, inducing inter-species competition; using up lots of resources, risking massive loss in production (obvs).
+4. Nanotechnology: Devices used for diagnostic purposes and drug delivery;
+    - Halomonas: Production/fixation of Silver nanoparticles.
+5. Fermentation used for food industry; pickling etc.
+6. Antibiotics: Archaeasin, which appears to be a novel antibiotic factor, an enzyme.
+7. Enzyme for products: Enzymes for bioremediation, metalloproteins, detergents, polymers for PCR etc.
 
 # Tutorials
 
