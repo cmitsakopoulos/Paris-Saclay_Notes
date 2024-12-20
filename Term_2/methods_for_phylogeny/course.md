@@ -39,7 +39,7 @@ Because of these cellular structures, bacteria can **ONLY** survive up to 80C.
 
 Whereas for **Archaea** often assume the survivability of **extremophiles**; able to survive in ***highly alkaline, or acidic conditions, or even 121C***.
 
-Remember that eukaryotes can mostly survive up to 62C, to compare.
+Remember that eukaryotes can mostly survive up to 62C, in comparison.
 
 ==Robert Whittacker== was the one who re-arranged the kingdoms for fungi, separating them from **protists** (unicellular) and creating a new kingdom for **filamentous** **multicellular** organisms such as Fungi.
 
@@ -341,3 +341,6 @@ Due to its chemical structure which makes it prefferential for breaking down (gl
 
 ### B.3
 
+## Tutorial 23
+
+### 8
