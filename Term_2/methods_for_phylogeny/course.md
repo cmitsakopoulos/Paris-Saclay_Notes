@@ -308,15 +308,20 @@ Thereafter, *Glutamine is repurposed to* **Glutamate**:
 
 - The electron required to engage the chemical reaction can be: ATP + an electron source such as NADPH or reduced ferredoxin.
 
+## Archaea in Biotechnology
+
+1. Bioleaching: Removal of minerals from the soil/environement -> Sulfolobus, Ferroplasma
+2. Biofuel Production: Methanogens in creating methane gas, which can be processed further into composite biofuels.
+3. Biopolymers: Or often for Bioplastics (PHAs)-> Haloferax species to produce plastics -> Preferred over bacteria for synthetics:
+    - Haloferax is an extremophile, a halophile (lives with high conc of salt-unfavourable for other organisms). Bacteria need stable conditions to grow (expensive) and can be contaminated easily by other bacteria, inducing inter-species competition; using up lots of resources, risking massive loss in production (obvs).
+
 # Tutorials
 
 ## Tutorial 2
 
 ### A.1
 
-Methanogens-> CH~4~ essential greenhouse gas??
 
-Synthrophy/-> fertilisation of soils to enhance plant groth (nitrogen fixation); or alternatively, bacterial maintenance of the microbial balance within soils enabling ecosystem balance and avoiding soil death.
 
 ### A.2
 
@@ -344,3 +349,4 @@ Due to its chemical structure which makes it prefferential for breaking down (gl
 ## Tutorial 23
 
 ### 8
+
